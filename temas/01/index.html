@@ -1,0 +1,2027 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jssdocente.github.io/pg2526d/temas/01/index.html">
+      
+      
+        <link rel="prev" href="../../index.html">
+      
+      
+      
+      <link rel="icon" href="../../imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>01 - Introducción a la programación - Programación - Curso 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01-introduccion-a-la-programacion-software" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación - Curso 25/26" class="md-header__button md-logo" aria-label="Programación - Curso 25/26" data-md-component="logo">
+      
+  <img src="../../imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación - Curso 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              01 - Introducción a la programación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación - Curso 25/26" class="md-nav__button md-logo" aria-label="Programación - Curso 25/26" data-md-component="logo">
+      
+  <img src="../../imagenes/logofp.png" alt="logo">
+
+    </a>
+    Programación - Curso 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    01 - Introducción a la programación
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Introducción a la programación
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamentos-de-la-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Fundamentos de la Programación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Fundamentos de la Programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-es-programar" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. ¿Qué es Programar?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-algoritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Algoritmos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Lenguajes de Programación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Lenguajes de Programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conceptos-fundamentales-del-lenguaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Conceptos Fundamentales del Lenguaje
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-paradigmas-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Paradigmas de Programación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-clasificacion-de-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Clasificación de Lenguajes de Programación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-segun-su-mecanismo-de-traduccion-compilados-interpretados-mixtos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2. Según su mecanismo de traducción (Compilados, Interpretados, Mixtos)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elementos-fundamentales-en-la-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Elementos Fundamentales en la Programación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Elementos Fundamentales en la Programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-estructura-y-bloques-fundamentales-de-un-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Estructura y Bloques Fundamentales de un Programa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tipos-de-datos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Tipos de Datos Básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-variables-constantes-y-literales" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Variables, Constantes y Literales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-conversiones-de-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Conversiones de Tipo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-operadores-y-expresiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Operadores y Expresiones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-comentarios-y-documentacion-basica-del-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Comentarios y Documentación Básica del Código
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-el-lenguaje-de-programacion-pseudocodigo-daw" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. El Lenguaje de Programación Pseudocódigo DAW
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamentos-de-la-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Fundamentos de la Programación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Fundamentos de la Programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-es-programar" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. ¿Qué es Programar?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-algoritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Algoritmos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Lenguajes de Programación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Lenguajes de Programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conceptos-fundamentales-del-lenguaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Conceptos Fundamentales del Lenguaje
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-paradigmas-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Paradigmas de Programación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-clasificacion-de-lenguajes-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Clasificación de Lenguajes de Programación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-segun-su-mecanismo-de-traduccion-compilados-interpretados-mixtos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2. Según su mecanismo de traducción (Compilados, Interpretados, Mixtos)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elementos-fundamentales-en-la-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Elementos Fundamentales en la Programación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Elementos Fundamentales en la Programación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-estructura-y-bloques-fundamentales-de-un-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Estructura y Bloques Fundamentales de un Programa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tipos-de-datos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Tipos de Datos Básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-variables-constantes-y-literales" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Variables, Constantes y Literales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-conversiones-de-tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Conversiones de Tipo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-operadores-y-expresiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Operadores y Expresiones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-comentarios-y-documentacion-basica-del-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. Comentarios y Documentación Básica del Código
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-el-lenguaje-de-programacion-pseudocodigo-daw" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. El Lenguaje de Programación Pseudocódigo DAW
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="01-introduccion-a-la-programacion-software">01 - Introducción a la Programación Software<a class="headerlink" href="#01-introduccion-a-la-programacion-software" title="Permanent link">¶</a></h1>
+<h2 id="1-fundamentos-de-la-programacion">1. Fundamentos de la Programación<a class="headerlink" href="#1-fundamentos-de-la-programacion" title="Permanent link">¶</a></h2>
+<h3 id="11-que-es-programar">1.1. ¿Qué es Programar?<a class="headerlink" href="#11-que-es-programar" title="Permanent link">¶</a></h3>
+<p><strong>Programar</strong> es el proceso de crear software. Esta disciplina abarca desde la concepción inicial de una idea hasta que el programa está implementado y funcionando en un ordenador, enfocándose en los principios y metodologías para el desarrollo y mantenimiento de sistemas de software. Algunos autores consideran que el término "desarrollo de software" es más apropiado que "ingeniería de software".</p>
+<p><strong>Definición de Programa Software</strong>
+Un <strong>programa software</strong> es la parte intangible o lógica de un sistema informático, un conjunto de programas que actúan sobre el hardware para ejecutar las tareas deseadas por el usuario. Los programas son métodos para resolver problemas, procesando información para obtener un resultado a partir de datos de entrada. Para que un programa comience a funcionar, sus instrucciones deben ser traducidas a un lenguaje que la máquina entienda.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/entrada_salid2.png" data-desc-position="bottom"><img align="center" alt="img01" src="images/entrada_salid2.png"></a></p>
+<p><strong>El Proceso de Desarrollo de Software</strong>
+El desarrollo de software implica una serie de etapas obligatorias para construir software fiable y de calidad. Estas fases se dividen en tres pasos genéricos: definición (qué desarrollar), desarrollo, y mantenimiento.
+Las fases principales del desarrollo de una aplicación informática son:
+*   <strong>Fase de Resolución del Problema</strong>:
+    *   <strong>Análisis</strong>: Requiere que el problema sea definido y comprendido claramente. Se establecen los objetivos, el alcance y se realiza un estudio de viabilidad y costes. Se identifican los requisitos funcionales (qué funciones realizará la aplicación) y no funcionales (características de calidad del sistema). También implica analizar la documentación, investigar y recopilar información útil. La culminación es el Documento de Especificación de Requisitos del Software (ERS), que actúa como contrato entre cliente y desarrollador.
+    *   <strong>Diseño</strong>: Se define "cómo" hacer la solución. Se convierte la especificación del análisis en un diseño detallado, indicando el comportamiento o la secuencia lógica de instrucciones que resuelvan el problema. Se descompone la aplicación en operaciones más sencillas y se asignan a módulos. Incluye el diseño arquitectónico, diseño detallado, diseño de datos y de interfaz de usuario. Es crucial realizar una <strong>prueba o traza del programa</strong> para asegurar la solución antes de la implementación.
+*   <strong>Fase de Implementación</strong>:
+    *   <strong>Codificación o Construcción</strong>: Consiste en transformar o traducir los resultados obtenidos a un determinado lenguaje de programación. Se escribe el <strong>código fuente</strong> siguiendo las reglas gramaticales y la sintaxis del lenguaje. El código debe ser modular, correcto, legible, eficiente y portable.
+    *   <strong>Pruebas de Ejecución y Validación</strong>: Se implanta la aplicación en el sistema y se verifica su funcionamiento. Se utilizan diferentes datos de prueba para ver si el programa responde a los requerimientos. Incluye pruebas unitarias, de integración, funcionales, estructurales y beta testing.
+    *   <strong>Documentación</strong>: Es vital para el desarrollo y mantenimiento. Se distinguen la <strong>documentación interna</strong> (comentarios en el código fuente) y <strong>documentación externa</strong> (manuales técnicos, de usuario, de instalación, diagramas).
+*   <strong>Fase de Explotación y Mantenimiento</strong>:
+    *   <strong>Explotación (Despliegue)</strong>: Los usuarios finales utilizan la aplicación. Implica instalación, puesta a punto y funcionamiento en el equipo del cliente.
+    *   <strong>Mantenimiento</strong>: Periódicamente, se realizan evaluaciones y modificaciones para adaptar el programa a nuevas necesidades, corregir errores o actualizarlo.
+    *   <strong>Retirada del Software</strong>: Ocurre cuando el software llega al final de su vida útil y no es rentable mantenerlo.</p>
+<p>A lo largo de todo el proceso de desarrollo de software, se debe aplicar siempre un <strong>modelo de ciclo de vida</strong>. Estos modelos son la serie de pasos a seguir para desarrollar un programa.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/metodologias-desarrollo-software.jpeg" data-desc-position="bottom"><img _="," align="center" alt="img02" src="images/metodologias-desarrollo-software.jpeg" width="40%"></a></p>
+<h3 id="12-algoritmos">1.2. Algoritmos<a class="headerlink" href="#12-algoritmos" title="Permanent link">¶</a></h3>
+<p><strong>Concepto de Algoritmo y sus Características</strong>
+Un <strong>algoritmo</strong> es una serie de pasos claros y ordenados que te permiten resolver un problema específico. No es un programa de computadora en sí mismo, sino la <strong>idea</strong> detrás del programa. Piensa en él como una receta de cocina: sin importar si la preparas en una estufa de gas, eléctrica o de leña, el resultado es el mismo porque la receta (el algoritmo) es independiente de la herramienta. Un algoritmo te dice <strong>qué hacer</strong> y en qué <strong>orden</strong>, sin importar la máquina o el lenguaje de programación.</p>
+<h4 id="121-caracteristicas-esenciales">1.2.1. Características Esenciales<a class="headerlink" href="#121-caracteristicas-esenciales" title="Permanent link">¶</a></h4>
+<p>Para que un algoritmo sea considerado de calidad, debe cumplir con las siguientes características:</p>
+<ul>
+<li><strong>Finito</strong>: Siempre debe terminar en un número limitado de pasos. No puede ser un proceso infinito.</li>
+<li><strong>Preciso</strong>: Cada paso debe ser claro y no dar lugar a ambigüedades.</li>
+<li><strong>Definido</strong>: Si usas los mismos datos de entrada, el algoritmo siempre debe producir el mismo resultado.</li>
+<li><strong>Eficiente</strong>: Debe utilizar la menor cantidad de recursos (tiempo y memoria) posible.</li>
+<li><strong>General</strong>: Debe servir para resolver una clase de problemas, no solo un caso particular.</li>
+<li><strong>Correcto</strong>: Debe resolver el problema para el cual fue diseñado.</li>
+</ul>
+<p>Además de estas características fundamentales, un buen algoritmo debe ser <strong>comprensible</strong>, <strong>modificable</strong> y <strong>reutilizable</strong>, lo que facilita su uso y mantenimiento a lo largo del tiempo. Para lograrlo, es crucial que esté bien <strong>estructurado</strong> y <strong>documentado</strong> con comentarios. Finalmente, todo algoritmo debe ser <strong>probado</strong> para asegurar que funciona correctamente en todos los casos posibles.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/algoritmo.jpg" data-desc-position="bottom"><img _="," align="center" alt="img03" src="images/algoritmo.jpg" width="40%"></a></p>
+<p><strong>Reglas para el Diseño de Algoritmos (Abstracción, Modularidad)</strong></p>
+<p>Para diseñar soluciones correctas y eficientes, se deben considerar los siguientes conceptos:
+1.  <strong>Abstracción</strong>: Realizar un análisis del problema para descomponerlo en problemas más pequeños y de menor complejidad, describiendo cada uno de manera precisa.
+2.  <strong>Divide y vencerás</strong>: Una filosofía general para resolver problemas, central en el enfoque de abstracción y modularidad.
+3.  <strong>Encapsulación</strong>: Ocultar la información para poder implementarla de diferentes maneras sin que esto influya en el resto de elementos.
+4.  <strong>Modularidad</strong>: Estructurar cada parte en módulos independientes, donde cada uno tendrá su función correspondiente. El diseño modular (top-down design) descompone un problema en subproblemas más sencillos.</p>
+<p>Para representar los algoritmos gráficamente, se pueden usar herramientas como <strong>diagramas de flujo</strong> (que usan símbolos gráficos y se utilizan en fases de análisis) y <strong>pseudocódigo</strong> (basado en palabras clave en lenguaje natural y es la técnica más utilizada).</p>
+<h4 id="122-diferencia-entre-algoritmo-y-programa">1.2.2. Diferencia entre Algoritmo y Programa<a class="headerlink" href="#122-diferencia-entre-algoritmo-y-programa" title="Permanent link">¶</a></h4>
+<p>La <strong>diferencia fundamental entre algoritmo y programa</strong> radica en que el algoritmo es una descripción de los pasos para resolver un problema de forma genérica e independiente de la máquina y del lenguaje de programación. En cambio, el <strong>programa</strong> consiste en esos mismos pasos, pero escritos en un lenguaje de programación específico para que puedan ser ejecutados en un ordenador y obtener la solución. Los lenguajes de programación son solo un medio para expresar el algoritmo, y el ordenador es el procesador para ejecutarlo.</p>
+<p><strong>Tabla 1: Comparación entre Algoritmo y Programa</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Característica</th>
+<th style="text-align: left;">Algoritmo</th>
+<th style="text-align: left;">Programa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Nivel de Abstracción</strong></td>
+<td style="text-align: left;">Genérico, independiente de la máquina y el lenguaje.</td>
+<td style="text-align: left;">Específico, escrito en un lenguaje de programación.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Formato</strong></td>
+<td style="text-align: left;">Secuencia de pasos lógicos, pseudocódigo, diagramas de flujo.</td>
+<td style="text-align: left;">Código fuente, instrucciones en un lenguaje concreto.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ejecución</strong></td>
+<td style="text-align: left;">No ejecutable directamente por una máquina.</td>
+<td style="text-align: left;">Ejecutable por un ordenador después de ser traducido.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Objetivo</strong></td>
+<td style="text-align: left;">Describir la solución a un problema.</td>
+<td style="text-align: left;">Implementar la solución para que una máquina la ejecute.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-lenguajes-de-programacion">2. Lenguajes de Programación<a class="headerlink" href="#2-lenguajes-de-programacion" title="Permanent link">¶</a></h2>
+<h3 id="21-conceptos-fundamentales-del-lenguaje">2.1. Conceptos Fundamentales del Lenguaje<a class="headerlink" href="#21-conceptos-fundamentales-del-lenguaje" title="Permanent link">¶</a></h3>
+<p>Un <strong>lenguaje de programación</strong> es un idioma artificial, un conjunto de reglas sintácticas y semánticas, símbolos y palabras especiales establecidas para la construcción de programas. Estos elementos permiten al programador escribir secuencias de comandos para que una máquina realice un comportamiento deseado.</p>
+<p>Los elementos que componen un lenguaje de programación son:</p>
+<ul>
+<li><strong>Léxico (Alfabeto)</strong>: Es el conjunto finito de símbolos permitidos y palabras especiales, el vocabulario del lenguaje: letras, dígitos, operadores, signos de puntuación y palabras reservadas. Estos símbolos se combinan para formar los elementos básicos del lenguaje, como identificadores, literales y operadores. Ejemplos de léxico son: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>=</code>, <code>;</code>, <code>{}</code>, <code>()</code>, <code>if</code>, <code>else</code>, <code>while</code>, <code>for</code>, <code>int</code>, <code>decimal</code>, <code>string</code>, <code>bool</code>, etc.</li>
+<li><strong>Sintaxis</strong>: Son las normas de construcción que rigen la estructura de las declaraciones y expresiones válidas en el lenguaje. Se refiere a las posibles combinaciones de los símbolos y palabras especiales. Define cómo se deben organizar los elementos léxicos para formar sentencias correctas. Por ejemplo, en muchos lenguajes, una sentencia de asignación debe seguir la estructura <code>identificador = expresión;</code>. La sintaxis es crucial para que el compilador o intérprete pueda entender y procesar el código correctamente. Ejemplo de una sentencia sintácticamente correcta: <code>int numero = 10;</code>.</li>
+<li><strong>Semántica</strong>: Es el significado de las construcciones y define las acciones que se llevarán a cabo con las combinaciones de los símbolos. Es importante tener en cuenta que pueden existir sentencias sintácticamente correctas, pero semánticamente incorrectas. Por ejemplo, la sentencia <code>int numero = "texto";</code> es sintácticamente correcta, pero semánticamente incorrecta porque intenta asignar un valor de tipo cadena a una variable de tipo entero. La semántica asegura que las operaciones y combinaciones de elementos tengan sentido dentro del contexto del lenguaje y el problema que se está resolviendo.</li>
+</ul>
+<h3 id="22-paradigmas-de-programacion">2.2. Paradigmas de Programación<a class="headerlink" href="#22-paradigmas-de-programacion" title="Permanent link">¶</a></h3>
+<p>Un <strong>paradigma de programación</strong> es un modelo fundamental o una filosofía para el diseño y la implementación de programas. Este modelo determina cómo será el proceso de diseño y la estructura final del código. Son como las "reglas del juego" que guían cómo se aborda la solución de un problema. El objetivo es reducir la dificultad para el mantenimiento, mejorar el rendimiento del programador y, en general, mejorar la productividad y calidad de los programas.</p>
+<p><strong>Tipos de Paradigmas</strong></p>
+<p>Existen diversos paradigmas, y muchos lenguajes modernos son multiparadigma, combinando características de varios para ofrecer flexibilidad (ej. Python, JavaScript, Java, Kotlin, C#).</p>
+<ul>
+<li><strong>Programación Imperativa/Estructurada</strong>: Se basa en una serie de comandos que la computadora ejecuta en orden para cambiar el estado del programa. Utiliza estructuras como sentencias secuenciales, selectivas (condicionales) y repetitivas (bucles). Ejemplos incluyen C y Pascal.</li>
+<li><strong>Programación Procedimental</strong>: Un subtipo del paradigma imperativo. Los programas se organizan en procedimientos (o funciones) que manipulan el estado global del programa, buscando la modularidad. Ejemplos incluyen C, Pascal y BASIC.</li>
+<li><strong>Programación Orientada a Objetos (POO)</strong>: Es el paradigma más utilizado. Los programas se construyen como una colección de <strong>objetos</strong> que interactúan entre sí. Un objeto es una instancia de una <strong>clase</strong> que contiene datos (atributos) y métodos para operar sobre ellos. La POO promueve la reutilización de código, depuración más sencilla y mejor mantenimiento, basándose en pilares como el polimorfismo, la herencia y la encapsulación. Ejemplos: C++, Python, Kotlin, C#. Java es un lenguaje totalmente orientado a objetos.</li>
+<li><strong>Programación Declarativa</strong>: Los programas describen el <strong>resultado deseado</strong>, no el proceso paso a paso para lograrlo. Suelen ser lenguajes interpretados.<ul>
+<li><strong>Lógica</strong>: Utiliza reglas y afirmaciones de lógica formal para que la computadora deduzca la respuesta, muy usada en inteligencia artificial. Ejemplo: Prolog.</li>
+<li><strong>Funcional</strong>: Se enfoca en el uso de <strong>funciones matemáticas</strong> que no cambian el estado ni los datos externos, promoviendo código modular y estructurado. Ejemplos: Lisp, Haskell, Scala.</li>
+</ul>
+</li>
+<li><strong>Programación de Eventos</strong>: El flujo del programa es impulsado por <strong>eventos</strong> (clics, movimientos del ratón, etc.). Común en interfaces gráficas de usuario (GUI) y servidores.</li>
+<li><strong>Programación Reactiva</strong>: Un subtipo de la programación de eventos que gestiona flujos de datos asincrónicos y la propagación de cambios, ideal para aplicaciones en tiempo real.</li>
+<li><strong>Programación Multiparadigma</strong>: Lenguajes que admiten y combinan múltiples paradigmas, permitiendo elegir el mejor enfoque para cada parte del problema. Ejemplos: C++, JavaScript, Python, Kotlin, C#.</li>
+</ul>
+<h3 id="23-clasificacion-de-lenguajes-de-programacion">2.3. Clasificación de Lenguajes de Programación<a class="headerlink" href="#23-clasificacion-de-lenguajes-de-programacion" title="Permanent link">¶</a></h3>
+<p>Los lenguajes de programación pueden ser clasificados en función de lo cerca que estén del lenguaje humano o del lenguaje de los computadores.</p>
+<div class="admonition info">
+<p class="admonition-title">Según su cercanía al lenguaje humano (Nivel de Abstracción)</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Lenguajes de Bajo Nivel</label><label for="__tabbed_1_2">Lenguajes de Bajo Medio</label><label for="__tabbed_1_3">Lenguajes de Alto Nivel</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Totalmente dependientes de la máquina; un programa no puede migrarse a otras máquinas. Aprovechan al máximo las características del hardware.</p>
+<ul>
+<li>
+<p><strong>Lenguaje Máquina</strong>: Instrucciones en combinaciones de unos y ceros (código binario). Es el único lenguaje que el ordenador entiende directamente (no necesita traducción). Fue el primer lenguaje, único para cada procesador (no portable), rápido pero difícil de manejar y depurar.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operación</th>
+<th style="text-align: left;">Lenguaje máquina</th>
+<th style="text-align: left;">Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">SUMAR</td>
+<td style="text-align: left;">00101101</td>
+<td style="text-align: left;">45</td>
+</tr>
+<tr>
+<td style="text-align: left;">RESTAR</td>
+<td style="text-align: left;">00010011</td>
+<td style="text-align: left;">19</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOVER</td>
+<td style="text-align: left;">00111010</td>
+<td style="text-align: left;">58</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Lenguaje Ensamblador</strong>: Sustituyó al lenguaje máquina, utilizando mnemotécnicos (códigos de operación) en lugar de binarios. Necesita un programa ensamblador que lo traduzca a lenguaje máquina para ejecutarse. Aunque más legible, sigue siendo de bajo nivel, dependiente del hardware y difícil de usar, interpretar y modificar.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operación</th>
+<th style="text-align: left;">Mnemotécnico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">MULTIPLICAR</td>
+<td style="text-align: left;">MUL</td>
+</tr>
+<tr>
+<td style="text-align: left;">DIVIDIR</td>
+<td style="text-align: left;">DIV</td>
+</tr>
+<tr>
+<td style="text-align: left;">MOVER</td>
+<td style="text-align: left;">MOV</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Lenguajes de Medio Nivel</strong>: Término no universalmente aceptado, se refiere a lenguajes como C que pueden acceder a registros del sistema y direcciones de memoria (características de bajo nivel) mientras realizan operaciones de alto nivel.   </p>
+</div>
+<div class="tabbed-block">
+<p><strong>Lenguajes de Alto Nivel</strong>: Cercanos al lenguaje natural (inglés), independientes de la arquitectura del ordenador. Permiten al programador abstraerse del funcionamiento interno de la máquina. Utilizan sentencias y órdenes derivadas del idioma inglés. Necesitan un traductor para ser entendidos por la máquina. Incorporan librerías, funciones predeterminadas y suelen ofrecer <em>frameworks</em>. La mayoría de los lenguajes actuales se engloban aquí. Ejemplos: C++, Java, Python, JavaScript, PHP.</p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="232-segun-su-mecanismo-de-traduccion-compilados-interpretados-mixtos">2.3.2. Según su mecanismo de traducción (Compilados, Interpretados, Mixtos)<a class="headerlink" href="#232-segun-su-mecanismo-de-traduccion-compilados-interpretados-mixtos" title="Permanent link">¶</a></h3>
+<p>Los programas se traducen a código binario ejecutable mediante compilación o interpretación.</p>
+<ul>
+<li>
+<p><strong>Lenguajes Compilados</strong>: Necesitan un <strong>compilador</strong> que traduce el código fuente completo a código objeto (o código máquina) en un solo paso, antes de la ejecución. La ejecución es eficiente. Requieren un enlazador para unir el código objeto con librerías. El código es más seguro, ya que el código fuente no es directamente accesible. Ejemplos: C y C++.</p>
+<p>Un compilador realiza varias fases:
+1.  Análisis Léxico: Agrupa el código fuente en <em>tokens</em>.
+2.  Análisis Sintáctico: Comprueba la estructura gramatical y genera un árbol sintáctico.
+3.  Análisis Semántico: Verifica la lógica y compatibilidad de tipos.
+4.  Generación de Código Intermedio: Un código de bajo nivel independiente de la arquitectura.
+5.  Optimización de Código: Mejora el código para mayor eficiencia.
+6.  Generación de Código Objeto: Convierte el código a lenguaje máquina específico.
+7.  Enlazador (Linker): Une el código objeto con librerías.</p>
+</li>
+<li>
+<p><strong>Lenguajes Interpretados</strong>: No generan código objeto. Un <strong>intérprete</strong> lee y ejecuta el código fuente línea a línea, o instrucción por instrucción, en el momento. Son menos eficientes en ejecución que los compilados, ya que se traducen en tiempo de ejecución. Requieren que el intérprete esté cargado en memoria. El código fuente es legible, lo que puede comprometer la seguridad. Ejemplos: Perl, PHP, Python, JavaScript.</p>
+</li>
+<li>
+<p><strong>Lenguajes Mixtos o Virtuales (Intermediarios)</strong>: Combinan características de ambos. El código fuente se compila a un código binario intermedio (no ejecutable) llamado <strong>bytecode</strong>. Este bytecode es luego interpretado por una <strong>máquina virtual</strong> para ejecutarlo en cualquier plataforma compatible. Son más portables, buscando "compilar una vez y ejecutar en cualquier sistema". Java y C# son ejemplos clave de lenguajes mixtos.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/compilado_interpretado.jpeg" data-desc-position="bottom"><img _="," align="center" alt="img04" src="images/compilado_interpretado.jpeg" width="40%"></a></p>
+<h4 id="233-segun-su-sistema-de-tipos-rigidez-momento-de-verificacion-declaracion-sin-tipado">2.3.3. Según su sistema de tipos (Rigidez, Momento de Verificación, Declaración, Sin Tipado)<a class="headerlink" href="#233-segun-su-sistema-de-tipos-rigidez-momento-de-verificacion-declaracion-sin-tipado" title="Permanent link">¶</a></h4>
+<p>Un <strong>tipo de dato</strong> es una clasificación que define el conjunto de valores que una variable puede tomar y las operaciones válidas que se pueden realizar sobre esos valores. Esta clasificación es fundamental porque <strong>determina la cantidad de memoria que el sistema operativo debe reservar</strong> para la variable.</p>
+<p>El <strong>sistema de tipos</strong> de un lenguaje de programación es un conjunto de reglas que definen cómo se manejan y verifican estos tipos de datos.</p>
+<div class="admonition tip">
+<p class="admonition-title">Sistemas de Tipado</p>
+<ul>
+<li><strong>Rigidez (Tipado Fuerte vs. Tipado Débil)</strong>:<ul>
+<li><strong>Tipado Fuerte</strong>: Requiere que los tipos de datos sean compatibles para realizar operaciones, evitando conversiones automáticas o "implícitas" entre tipos no relacionados. Esto previene errores inesperados y hace el código más robusto. Ejemplos: Python, Java, C#, Ruby.</li>
+<li><strong>Tipado Débil</strong>: Permite conversiones de tipo automáticas, lo que puede llevar a errores difíciles de detectar. Ejemplos: JavaScript, PHP, VBScript.</li>
+</ul>
+</li>
+<li><strong>Momento de Verificación (Tipado Estático vs. Tipado Dinámico)</strong>:<ul>
+<li><strong>Tipado Estático</strong>: La verificación de tipos se realiza en <strong>tiempo de compilación</strong>. El tipo de cada variable debe ser conocido y, a menudo, declarado explícitamente antes de ejecutar el programa. Si hay un error de tipo, el programa no compilará. Garantiza mayor seguridad y rendimiento. Ejemplos: C++, Java, C#, Swift.</li>
+<li><strong>Tipado Dinámico</strong>: La verificación de tipos se realiza en <strong>tiempo de ejecución</strong>. No es necesario declarar el tipo de una variable explícitamente; el intérprete lo determina automáticamente. Una misma variable puede cambiar de tipo durante la ejecución. Ofrece flexibilidad, pero los errores de tipo solo se descubren en ejecución. Ejemplos: Python, JavaScript, Ruby, PHP.</li>
+</ul>
+</li>
+<li><strong>Declaración (Tipado Explícito vs. Implícito - Inferencia)</strong>:<ul>
+<li><strong>Tipado Explícito</strong>: El programador debe declarar manualmente el tipo de cada variable. Ejemplo en C++: <code>int numero = 10;</code>.</li>
+<li><strong>Tipado Implícito (Inferencia de Tipos)</strong>: El compilador o intérprete deduce el tipo de la variable a partir del valor asignado, sin que el programador tenga que declararlo. Esto hace el código más conciso y rápido de escribir. Ejemplo en Python: <code>numero = 10;</code>.</li>
+</ul>
+</li>
+<li><strong>Lenguajes sin Tipado (Tipado Nulo)</strong>: En lenguajes de muy bajo nivel, como el ensamblador, no existe un sistema de tipos formal. Las variables se manejan como secuencias de bits, y es responsabilidad del programador interpretar los datos.</li>
+</ul>
+<p><br>    </p>
+<p><em>Tabla: Clasificación de Lenguajes según su Sistema de Tipado</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Sistema de Tipado</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Ejemplos de Lenguajes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Estático y Fuerte</strong></td>
+<td style="text-align: left;">Tipos verificados en compilación; no hay conversiones implícitas.</td>
+<td style="text-align: left;">C++, Java, C#</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dinámico y Fuerte</strong></td>
+<td style="text-align: left;">Tipos verificados en ejecución; no hay conversiones implícitas.</td>
+<td style="text-align: left;">Python, Ruby</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Estático y Débil</strong></td>
+<td style="text-align: left;">Tipos verificados en compilación; sí hay conversiones implícitas.</td>
+<td style="text-align: left;">C, VBScript (algunos)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dinámico y Débil</strong></td>
+<td style="text-align: left;">Tipos verificados en ejecución; sí hay conversiones implícitas.</td>
+<td style="text-align: left;">JavaScript, PHP</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="234-segun-generaciones">2.3.4. Según Generaciones<a class="headerlink" href="#234-segun-generaciones" title="Permanent link">¶</a></h4>
+<p>La evolución de los lenguajes de programación se puede dividir en 5 etapas o generaciones:</p>
+<ul>
+<li><strong>Primera Generación</strong>: Lenguaje máquina.</li>
+<li><strong>Segunda Generación</strong>: Creación de los primeros lenguajes ensambladores.</li>
+<li><strong>Tercera Generación</strong>: Creación de los primeros lenguajes de alto nivel (C, Pascal, Cobol).</li>
+<li><strong>Cuarta Generación</strong>: Lenguajes capaces de generar código por sí solos (RAD), con los cuales se pueden realizar aplicaciones sin ser experto. Incluyen lenguajes orientados a objetos, permitiendo la reutilización de código. Suelen tener acceso a bases de datos, capacidades gráficas y generación de código automática. Ej. Visual Studio, IntelliJ.</li>
+<li><strong>Quinta Generación</strong>: Lenguajes orientados a la inteligencia artificial (LISP).</li>
+</ul>
+<h2 id="3-elementos-fundamentales-en-la-programacion">3. Elementos Fundamentales en la Programación<a class="headerlink" href="#3-elementos-fundamentales-en-la-programacion" title="Permanent link">¶</a></h2>
+<h3 id="31-estructura-y-bloques-fundamentales-de-un-programa">3.1. Estructura y Bloques Fundamentales de un Programa<a class="headerlink" href="#31-estructura-y-bloques-fundamentales-de-un-programa" title="Permanent link">¶</a></h3>
+<p>Para escribir programas, es importante seguir una estructura definida que facilite su comprensión y mantenimiento. A lo largo de este tema usaremos el pseudocódigo especial o <a href="#4-el-lenguaje-de-programación-pseudocódigo-daw">lenguaje de DAW</a>. Este lenguaje de nuestro curso es estructurado, similar a C# y Java, pero con una sintaxis simplificada y adaptada para el aprendizaje.</p>
+<p><strong>Estructura General de un Programa (Función Principal <code>Main()</code>)</strong>
+Un programa se organiza alrededor de una bloque principal que sirve como punto de entrada para su ejecución. Este bloque se denomina <code>Main()</code> en el lenguaje DAW. Todo programa debe tener este bloque principal, que contiene las instrucciones que se ejecutan al iniciar el programa. Es decir, la lógica del programa y/o algoritmo se escribe dentro de este bloque.</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Mi primer programa en pseudocódigo DAW</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="c1">// Aquí se escribirá el código principal del programa</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"¡Hola, mundo de la programación!"</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Reglas de Sintaxis Básicas (Bloques de Código <code>{ }</code>, Punto y Coma <code>;</code>)</strong></p>
+<ul>
+<li><strong>Bloques de código <code>{ }</code></strong>: Son conjuntos de instrucciones que se agrupan, marcadas por la apertura y cierre de llaves. El código dentro de ellas es considerado interno al bloque.</li>
+<li><strong>Punto y coma <code>;</code></strong>: Cada instrucción o sentencia (que no sea un bloque de código o una declaración de bloque) debe finalizar con un punto y coma. Su omisión resulta en errores sintácticos.</li>
+<li><strong>Comentarios <code>//</code> y <code>/* */</code></strong>: Se utilizan para agregar notas explicativas al código. Los comentarios de una línea comienzan con <code>//</code>, mientras que los de varias líneas se encierran entre <code>/*</code> y <code>*/</code>.</li>
+<li><strong>Espacios en blanco</strong>: Se pueden usar espacios en blanco y tabulaciones para mejorar la legibilidad del código. No afectan la ejecución, pero es importante ser consistente. Es obligatorio usar tabulaciones o espacios para la indentación del código dentro de bloques. Se recomienda usar 4 espacios por nivel de indentación.</li>
+<li><strong>Saltos de línea</strong>: Se pueden usar para separar instrucciones y mejorar la legibilidad. Cada instrucción debe estar en una línea separada.</li>
+<li><strong>Identación</strong>: Es la práctica de alinear el código dentro de bloques para reflejar su estructura jerárquica. Mejora la legibilidad y facilita la comprensión del flujo del programa.</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Ejemplo de indentación correcta</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Inicio del programa"</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Condición verdadera"</span><span class="p">);</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Condición falsa"</span><span class="p">);</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Fin del programa"</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Sensibilidad a Mayúsculas y Minúsculas</strong></p>
+<p>El pseudocódigo, al igual que muchos lenguajes de programación reales, es sensible a mayúsculas y minúsculas. Esto significa que <code>variable</code> y <code>Variable</code> serían consideradas dos elementos distintos. Es una buena práctica mantener una convención de nomenclatura consistente.</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable en minúsculas</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">Numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable en mayúscula, diferente de 'numero'</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 10</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="n">Numero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 20</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="32-tipos-de-datos-basicos">3.2. Tipos de Datos Básicos<a class="headerlink" href="#32-tipos-de-datos-basicos" title="Permanent link">¶</a></h3>
+<h4 id="321-concepto-de-tipo-de-dato-valores-validos-operaciones-y-espacio-en-memoria">3.2.1. Concepto de Tipo de Dato: Valores válidos, operaciones y espacio en memoria**<a class="headerlink" href="#321-concepto-de-tipo-de-dato-valores-validos-operaciones-y-espacio-en-memoria" title="Permanent link">¶</a></h4>
+<p>Un <strong>tipo de dato</strong> es una clasificación fundamental que especifica:
+*   El <strong>conjunto de valores válidos</strong> que una variable puede tomar.
+*   Las <strong>operaciones permitidas</strong> sobre esos valores.
+*   La <strong>cantidad de memoria</strong> que el sistema operativo debe reservar para la variable.</p>
+<p>En un lenguaje fuertemente tipado, como el que se simula, a todo dato se le asigna un tipo que se conoce antes de la ejecución del programa, y el lenguaje controla exhaustivamente la compatibilidad de tipos. esto ayuda a prevenir errores y garantiza que las operaciones se realicen de manera segura y predecible. En lenguajes de tipado dinámico, los tipos se determinan en tiempo de ejecución, lo que ofrece mayor flexibilidad pero puede introducir errores si no se manejan adecuadamente.</p>
+<h4 id="322-tipos-de-datos-comunes-y-su-uso-de-memoria">3.2.2. Tipos de Datos Comunes (y su uso de memoria)<a class="headerlink" href="#322-tipos-de-datos-comunes-y-su-uso-de-memoria" title="Permanent link">¶</a></h4>
+<p>Los tipos de datos que más utilizaremos en el pseudocódigo son <code>int</code>, <code>decimal</code>, <code>string</code> y <code>bool</code>.</p>
+<ul>
+<li><strong>Enteros (<code>int</code>)</strong>:<ul>
+<li>Almacena números enteros (sin decimales), positivos y negativos.</li>
+<li><strong>Valores</strong>: Un rango amplio, por ejemplo, de aproximadamente -2.147.483.648 a 2.147.483.647. Se utilizan para contar o en operaciones matemáticas sin fracciones.</li>
+<li><strong>Uso de memoria</strong>: Generalmente ocupan <strong>32 bits (4 bytes)</strong> en la mayoría de los sistemas.</li>
+</ul>
+</li>
+<li><strong>Reales (<code>decimal</code>)</strong>:<ul>
+<li>Almacena números con decimales. Se usan para operaciones financieras o científicas.</li>
+<li><strong>Valores</strong>: Con alta precisión (hasta 15 o 16 dígitos decimales). Los números reales se representan de forma aproximada en un ordenador debido a su capacidad finita de almacenamiento.</li>
+<li><strong>Uso de memoria</strong>: Generalmente ocupan <strong>64 bits (8 bytes)</strong>.</li>
+</ul>
+</li>
+<li><strong>Cadenas (<code>string</code>)</strong>:<ul>
+<li>Almacena una secuencia de caracteres. Se utiliza para texto, nombres, frases.</li>
+<li><strong>Valores</strong>: Cualquier texto entre comillas dobles.</li>
+<li><strong>Uso de memoria</strong>: Las cadenas son tipos de referencia, lo que significa que su tamaño varía según la longitud de la cadena, ya que almacenan una dirección de memoria a la cadena real.</li>
+</ul>
+</li>
+<li><strong>Booleanos (<code>bool</code>)</strong>:<ul>
+<li>Almacena un valor lógico. Se utiliza para condiciones de verdadero o falso.</li>
+<li><strong>Valores</strong>: Solo <code>true</code> o <code>false</code>.</li>
+<li><strong>Uso de memoria</strong>: Generalmente ocupan <strong>1 bit</strong>, pero suelen almacenarse en un <strong>byte</strong> para eficiencia.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Tabla 5: Tipos de Datos Básicos, Valores y Uso de Memoria</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Rango/Valores Comunes</th>
+<th style="text-align: left;">Uso de Memoria (Típico)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>int</code></td>
+<td style="text-align: left;">Números enteros</td>
+<td style="text-align: left;">± 2 mil millones (aprox. 32 bits)</td>
+<td style="text-align: left;">4 bytes (32 bits)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>decimal</code></td>
+<td style="text-align: left;">Números con decimales</td>
+<td style="text-align: left;">± 1.7E+308 (aprox. 64 bits)</td>
+<td style="text-align: left;">8 bytes (64 bits)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>string</code></td>
+<td style="text-align: left;">Secuencia de caracteres</td>
+<td style="text-align: left;">Texto entre comillas dobles</td>
+<td style="text-align: left;">Variable (tipo referencia)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>bool</code></td>
+<td style="text-align: left;">Valores lógicos</td>
+<td style="text-align: left;"><code>true</code>, <code>false</code></td>
+<td style="text-align: left;">1 byte (para 1 bit)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-tipos-de-datos-enumerados-enum">3.2.3. Tipos de Datos Enumerados (<code>enum</code>)<a class="headerlink" href="#323-tipos-de-datos-enumerados-enum" title="Permanent link">¶</a></h4>
+<p>Los tipos enumerados (<code>enum</code>) permiten definir un nuevo tipo cuyos valores posibles son un conjunto de nombres simbólicos predefinidos. Son útiles para representar un conjunto fijo de constantes con significado.
+Para declararlos se usa la palabra reservada <code>enum</code>, seguida del nombre del <code>enum</code> y la lista de valores que puede tomar entre llaves <code>{}</code>. Los valores se consideran constantes, van separados por comas y deben ser únicos.</p>
+<p></p><div class="language-c# highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">enum</span><span class="w"> </span><span class="n">Dias</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">LUNES</span><span class="p">,</span><span class="w"> </span><span class="n">MARTES</span><span class="p">,</span><span class="w"> </span><span class="n">MIERCOLES</span><span class="p">,</span><span class="w"> </span><span class="n">JUEVES</span><span class="p">,</span><span class="w"> </span><span class="n">VIERNES</span><span class="p">,</span><span class="w"> </span><span class="n">SABADO</span><span class="p">,</span><span class="w"> </span><span class="n">DOMINGO</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="n">Dias</span><span class="w"> </span><span class="n">diaActual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dias</span><span class="p">.</span><span class="n">MARTES</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="n">Dias</span><span class="w"> </span><span class="n">diaSiguiente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dias</span><span class="p">.</span><span class="n">MIERCOLES</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Hoy es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diaActual</span><span class="p">);</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Mañana es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diaSiguiente</span><span class="p">);</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</span></code></pre></div>
+El <code>enum</code> permite definir un nuevo tipo cuyos valores posibles son los que nosotros definamos.<p></p>
+<h4 id="324-control-de-nulos-null-en-tipos-de-datos-operador-para-tipos-de-valor">3.2.4. Control de Nulos (<code>null</code>) en Tipos de Datos (operador <code>?</code> para tipos de valor)<a class="headerlink" href="#324-control-de-nulos-null-en-tipos-de-datos-operador-para-tipos-de-valor" title="Permanent link">¶</a></h4>
+<p>En muchos lenguajes de programación, incluido el pseudocódigo que estamos utilizando, es importante manejar la posibilidad de que una variable no tenga un valor asignado, es decir, que sea <code>null</code>. Esto es especialmente relevante para evitar errores en tiempo de ejecución cuando se intenta acceder a una variable que no ha sido inicializada. Null implica que la variable no apunta a ningún valor válido en memoria.</p>
+<ul>
+<li>Los tipos de valor (como <code>int</code>, <code>decimal</code>, <code>bool</code>) no pueden ser <code>null</code> por defecto. Para permitir que almacenen la ausencia de valor (nulo), se les puede añadir el símbolo <code>?</code>.</li>
+<li>Los tipos de referencia (como <code>string</code>) pueden ser <code>null</code> por defecto.</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kt">int?</span><span class="w"> </span><span class="n">numeroNulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// Un entero que puede ser nulo</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="n">textoOpcional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// Una cadena que puede ser nula</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeroNulo</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"NumeroNulo es nulo."</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">textoOpcional</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"TextoOpcional es nulo."</span><span class="p">);</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="33-variables-constantes-y-literales">3.3. Variables, Constantes y Literales<a class="headerlink" href="#33-variables-constantes-y-literales" title="Permanent link">¶</a></h3>
+<h4 id="331-identificadores-y-palabras-reservadas">3.3.1. Identificadores y Palabras Reservadas<a class="headerlink" href="#331-identificadores-y-palabras-reservadas" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>Identificadores</strong>: Son los nombres que se les dan a las variables, constantes, funciones y otros elementos en un programa. Un identificador es una secuencia de letras y dígitos, donde el primer símbolo debe ser una letra, un guion bajo (<code>_</code>) o el símbolo de dólar (<code>$</code>). En el pseudocódigo se recomienda seguir convenciones de nomenclatura como <code>camelCase</code> para variables y funciones (ej. <code>nombreVariable</code>) y mayúsculas con guiones bajos para constantes (ej. <code>MAX_VALUE</code>).</p>
+<div class="admonition info">
+<p class="admonition-title">Reglas y Convenciones para Identificadores</p>
+<ul>
+<li>
+<p><strong>Reglas Obligatorias:</strong></p>
+<ul>
+<li>Comienza con una letra, <code>_</code> o <code>$</code>.</li>
+<li>No incluye espacios en blanco.</li>
+<li>No puede ser una palabra reservada ni los literales <code>true</code>, <code>false</code>, <code>null</code>.</li>
+<li>Es sensible a mayúsculas y minúsculas (ej. <code>edad</code> y <code>Edad</code> son distintos).</li>
+<li>Puede tener cualquier longitud.</li>
+</ul>
+</li>
+<li>
+<p><strong>Convenciones Recomendadas (pseudocódigo):</strong></p>
+<ul>
+<li><strong>Variables</strong>: <code>camelCase</code> (ej. <code>cantidadAlumnos</code>, <code>longitudPiscina</code>).</li>
+<li><strong>Constantes</strong>: <code>MAYUSCULAS_CON_GUIONES_BAJOS</code> (ej. <code>MAXIMO_PLANTAS</code>, <code>PI</code>).</li>
+<li><strong>Nombres de Funciones/Métodos</strong>: <code>camelCase</code> (ej. <code>calculaArea()</code>, <code>obtenerDato()</code>).</li>
+<li>Evitar <code>$</code> o <code>_</code> al principio para identificadores de usuario.</li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Palabras Reservadas</strong>: Son secuencias de caracteres cuyo uso está reservado por el lenguaje y no pueden utilizarse para crear identificadores. Ejemplos de palabras reservadas pueden incluir <code>const</code>, <code>var</code>, <code>if</code>, <code>else</code>, <code>while</code>, <code>for</code>, <code>true</code>, <code>false</code>, <code>int</code>, <code>decimal</code>, <code>string</code>, <code>bool</code>, <code>Funcion</code>, <code>Main</code>, <code>enum</code>, <code>writeLine</code>, <code>readLine</code>, etc..</p>
+<div class="admonition info">
+<p class="admonition-title">Palabras Reservadas y Literales Especiales</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Categoría</th>
+<th style="text-align: left;">Palabras / Literales</th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tipos de datos</strong></td>
+<td style="text-align: left;"><code>int</code>, <code>decimal</code>, <code>string</code>, <code>bool</code></td>
+<td style="text-align: left;">Tipos de datos primitivos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Modificadores</strong></td>
+<td style="text-align: left;"><code>const</code>, <code>var</code>, <code>readonly</code></td>
+<td style="text-align: left;">Para constantes, inferencia de tipos, variables de solo lectura.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Control de flujo</strong></td>
+<td style="text-align: left;"><code>if</code>, <code>else</code>, <code>switch</code>, <code>for</code>, <code>while</code>, <code>do</code></td>
+<td style="text-align: left;">Estructuras para la lógica del programa.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Funciones</strong></td>
+<td style="text-align: left;"><code>Funcion</code>, <code>Main</code>, <code>writeLine</code>, <code>readLine</code></td>
+<td style="text-align: left;">Para definir funciones, el punto de entrada, salida y entrada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Literales</strong></td>
+<td style="text-align: left;"><code>true</code>, <code>false</code>, <code>null</code></td>
+<td style="text-align: left;">Valores booleanos y valor nulo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Enumeraciones</strong></td>
+<td style="text-align: left;"><code>enum</code></td>
+<td style="text-align: left;">Para definir tipos enumerados.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+<h4 id="332-variables-concepto-declaracion-e-inicializacion-inferencia-de-tipos-var">3.3.2. Variables: Concepto, Declaración e Inicialización, Inferencia de Tipos (<code>var</code>)<a class="headerlink" href="#332-variables-concepto-declaracion-e-inicializacion-inferencia-de-tipos-var" title="Permanent link">¶</a></h4>
+<p>Una <strong>variable</strong> es un contenedor cuyo valor puede cambiar a lo largo de la ejecución de un programa.
+*   <strong>Concepto</strong>: Representan valores en el programa y tienen atributos como nombre (identificador), tipo, valor y mutabilidad.
+*   <strong>Declaración e Inicialización</strong>: Antes de usar una variable, debe ser <strong>declarada</strong>, indicando su identificador y su tipo de dato. Opcionalmente, se puede <strong>inicializar</strong> asignándole un valor inicial en el momento de la declaración o posteriormente.</p>
+<p></p><div class="language-c# highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">cantidadLargos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">           </span><span class="c1">// Declaración e inicialización</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="kt">decimal</span><span class="w"> </span><span class="n">longitudPiscina</span><span class="p">;</span><span class="w">            </span><span class="c1">// Declarada pero no inicializada</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Juan"</span><span class="p">;</span><span class="w">            </span><span class="c1">// Declaración e inicialización</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">encontrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span><span class="w">           </span><span class="c1">// Declaración e inicialización</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w">                          </span><span class="c1">// Declaración</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">                         </span><span class="c1">// Inicialización posterior</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
+</span></code></pre></div>
+*   <strong>Inferencia de Tipos (<code>var</code>)</strong>: El pseudocódigo permite usar la palabra clave <code>var</code> para que el sistema infiera el tipo de la variable a partir del valor que se le asigna. Cuando se usa <code>var</code>, la variable siempre debe ser inicializada al declararse.<p></p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="kt">var</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">         </span><span class="c1">// El sistema infiere que es de tipo int</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="kt">var</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">99.99</span><span class="p">;</span><span class="w">    </span><span class="c1">// El sistema infiere que es de tipo decimal</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="kt">var</span><span class="w"> </span><span class="n">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hola"</span><span class="p">;</span><span class="w">  </span><span class="c1">// El sistema infiere que es de tipo string</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="333-constantes-const-y-variables-de-solo-lectura-readonly">3.3.3. Constantes (<code>const</code>) y Variables de solo lectura (<code>readonly</code>)<a class="headerlink" href="#333-constantes-const-y-variables-de-solo-lectura-readonly" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Constantes (<code>const</code>)</strong>: Son valores fijos que no pueden cambiar su contenido a lo largo de la ejecución del programa. Deben ser inicializadas al declararse. Se utilizan para facilitar la modificabilidad de programas y dar nombre a valores concretos. Se conocen como <strong>constantes literales</strong> (tiempo de compilación).</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXIMO_NUMERO_PLANTAS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415926536</span><span class="p">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"El número máximo de plantas es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MAXIMO_NUMERO_PLANTAS</span><span class="p">);</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"El valor de PI es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">PI</span><span class="p">);</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Variables de solo lectura (<code>readonly</code>)</strong>: Se inicializan una sola vez y su valor no puede ser modificado después. A diferencia de <code>const</code>, el valor puede ser asignado en tiempo de ejecución.</li>
+</ul>
+<h4 id="334-literales-concepto-y-ejemplos-booleanos-enteros-caracteres-cadenas">3.3.4. Literales: Concepto y ejemplos (booleanos, enteros, caracteres, cadenas)<a class="headerlink" href="#334-literales-concepto-y-ejemplos-booleanos-enteros-caracteres-cadenas" title="Permanent link">¶</a></h4>
+<p>Un <strong>literal</strong>, <strong>valor literal</strong> o <strong>constante literal</strong> es un valor concreto que se escribe directamente en el código.</p>
+<ul>
+<li><strong>Literales booleanos</strong>: Son <code>true</code> y <code>false</code>.</li>
+<li><strong>Literales numéricos</strong>: Son los números que se escriben directamente, como <code>12</code> (entero), <code>3.14</code> (real). Se pueden usar <code>_</code> para mejorar la legibilidad.</li>
+<li><strong>Literales de cadenas</strong>: Una secuencia de caracteres encerrada entre comillas dobles, como <code>"Hola Mundo"</code>.</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="c1">// Literales booleanos</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">estaActivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">tienePermiso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="c1">// Literales numéricos (enteros y reales)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroEntero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="kt">decimal</span><span class="w"> </span><span class="n">numeroReal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">45.67</span><span class="p">;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="kt">decimal</span><span class="w"> </span><span class="n">numeroCientifico</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.23E+5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 123000.0</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="c1">// Literales de cadena</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="n">saludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hola, "</span><span class="p">;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Mundo"</span><span class="p">;</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="n">fraseCompleta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saludo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"!"</span><span class="p">;</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Activo: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">estaActivo</span><span class="p">);</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Permiso: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tienePermiso</span><span class="p">);</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Entero: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numeroEntero</span><span class="p">);</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Real: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numeroReal</span><span class="p">);</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Científico: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numeroCientifico</span><span class="p">);</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Frase: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fraseCompleta</span><span class="p">);</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="34-conversiones-de-tipo">3.4. Conversiones de Tipo<a class="headerlink" href="#34-conversiones-de-tipo" title="Permanent link">¶</a></h3>
+<p>Las conversiones de tipo son procesos que permiten cambiar un valor de un tipo de dato a otro.</p>
+<ul>
+<li>
+<p><strong>Conversiones Implícitas (Automáticas)</strong>: Ocurren automáticamente cuando se asigna un valor de un tipo numérico a una variable de otro tipo numérico que puede contenerlo <strong>sin pérdida de datos</strong>. Por ejemplo, asignar un <code>int</code> a un <code>decimal</code>. En operaciones aritméticas con valores de distinto tipo, el valor más pequeño se "promociona" al tipo más grande.</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">real</span><span class="p">;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entero</span><span class="p">;</span><span class="w"> </span><span class="c1">// Conversión implícita: int (4 bytes) a decimal (8 bytes)</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Entero: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entero</span><span class="p">);</span><span class="w">   </span><span class="c1">// Salida: Entero: 10</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Real (implícito): "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">real</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Real (implícito): 10.0</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Conversiones Explícitas (Casting)</strong>: Se deben indicar de forma manual cuando hay una <strong>posible pérdida de datos</strong> (ej. de un tipo con más bits a uno con menos bits). Esto se hace colocando el tipo de dato deseado entre paréntesis delante del valor o expresión a convertir. Hay que tener cuidado con el <em>casting</em>, ya que puede suponer pérdida de precisión.</p>
+<p></p><div class="language-c# highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.75M</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">entero</span><span class="p">;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">real</span><span class="p">;</span><span class="w"> </span><span class="c1">// Conversión explícita (casting): decimal (8 bytes) a int (4 bytes).</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">                        </span><span class="c1">// Se pierde la parte decimal (.75)</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Real: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">real</span><span class="p">);</span><span class="w">           </span><span class="c1">// Salida: Real: 15.75</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Entero (explícito): "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">entero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Entero (explícito): 15</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">}</span>
+</span></code></pre></div>
+También para convertir entradas de <code>string</code> a <code>int</code> o <code>decimal</code>:
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Introduce un número entero:"</span><span class="p">);</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">entradaTexto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReadLine</span><span class="p">();</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">entradaTexto</span><span class="p">;</span><span class="w"> </span><span class="c1">// Conversión explícita de string a int (asumiendo valor válido)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Número introducido: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numero</span><span class="p">);</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
+</span></code></pre></div><p></p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Conversiones de Tipos Primitivos (Pseudocódigo)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo Destino</th>
+<th style="text-align: left;"><code>bool</code></th>
+<th style="text-align: left;"><code>int</code></th>
+<th style="text-align: left;"><code>decimal</code></th>
+<th style="text-align: left;"><code>string</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>bool</code></strong></td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>int</code></strong></td>
+<td style="text-align: left;">N</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>decimal</code></strong></td>
+<td style="text-align: left;">N</td>
+<td style="text-align: left;">CI</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">C</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>string</code></strong></td>
+<td style="text-align: left;">CI</td>
+<td style="text-align: left;">CI</td>
+<td style="text-align: left;">CI</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>CI</strong>: Conversión Implícita (automática).</li>
+<li><strong>C</strong>: Conversión Explícita (Casting).</li>
+<li><strong>N</strong>: No es posible la conversión directa (o no tiene sentido).<ul>
+<li><em>Nota</em>: La conversión a/desde <code>string</code> generalmente implica funciones específicas para analizar (<code>Parse</code>) o formatear (<code>ToString</code>) que se realizarían con <em>casting</em> si el lenguaje lo permite de forma concisa.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="35-operadores-y-expresiones">3.5. Operadores y Expresiones<a class="headerlink" href="#35-operadores-y-expresiones" title="Permanent link">¶</a></h3>
+<h4 id="351-concepto-de-operador-y-expresion">3.5.1. Concepto de Operador y Expresión<a class="headerlink" href="#351-concepto-de-operador-y-expresion" title="Permanent link">¶</a></h4>
+<ul>
+<li>Un <strong>operador</strong> es un símbolo que lleva a cabo operaciones sobre uno o más datos u operandos. Los operadores pueden ser unarios (un operando), binarios (dos operandos) o ternarios (tres operandos). Actúan sobre los tipos de datos y devuelven un resultado de un tipo determinado.</li>
+<li>Una <strong>expresión</strong> es una combinación de operadores y operandos que se evalúa produciendo un único resultado de un tipo determinado. Las expresiones pueden ser parte de otras expresiones o sentencias.</li>
+</ul>
+<h4 id="352-tipos-de-operadores">3.5.2. Tipos de Operadores<a class="headerlink" href="#352-tipos-de-operadores" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Aritméticos</strong>: Se utilizan para realizar operaciones matemáticas.<ul>
+<li>Suma (<code>+</code>), Resta (<code>-</code>), Multiplicación (<code>*</code>), División (<code>/</code>), Módulo (<code>%</code>, que devuelve el resto de una división).</li>
+</ul>
+</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">     </span><span class="c1">// 13</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">    </span><span class="c1">// 7</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">mult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">     </span><span class="c1">// 30</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="kt">decimal</span><span class="w"> </span><span class="n">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3.333... (con casting para división real)</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">modulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// 1 (resto de 10/3)</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Suma: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Resta: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resta</span><span class="p">);</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Multiplicación: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mult</span><span class="p">);</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"División: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">div</span><span class="p">);</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Módulo: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">modulo</span><span class="p">);</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Relacionales (o de Comparación)</strong>: Comparan dos operandos y devuelven un valor booleano (<code>true</code> o <code>false</code>).<ul>
+<li>Igual a (<code>==</code>), Diferente de (<code>!=</code>), Mayor que (<code>&gt;</code>), Menor que (<code>&lt;</code>), Mayor o igual que (<code>&gt;=</code>), Menor o igual que (<code>&lt;=</code>).</li>
+</ul>
+</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">igual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">      </span><span class="c1">// false</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">diferente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">  </span><span class="c1">// true</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">mayor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">       </span><span class="c1">// false</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">menor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">       </span><span class="c1">// true</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">mayorIgual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">menorIgual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="c1">// true</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"X igual a Y: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">igual</span><span class="p">);</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">  </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"X diferente de Y: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diferente</span><span class="p">);</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">  </span><span class="c1">// ...</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>
+<p><strong>Lógicos</strong>: Realizan operaciones sobre valores booleanos o resultados de expresiones relacionales, devolviendo un valor booleano.</p>
+<ul>
+<li>AND (<code>&amp;&amp;</code>): Verdadero si ambas condiciones son verdaderas.</li>
+<li>OR (<code>||</code>): Verdadero si al menos una condición es verdadera.</li>
+<li>NOT (<code>!</code>): Invierte el resultado de una condición.</li>
+</ul>
+<details class="tip">
+<summary>Operadores Lógicos y Tablas de Verdad</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;"><code>NOT A</code></th>
+<th style="text-align: center;"><code>A AND B</code></th>
+<th style="text-align: center;"><code>A OR B</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">condicion1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">   </span><span class="c1">// true</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kt">bool</span><span class="w"> </span><span class="n">condicion2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w">   </span><span class="c1">// false</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="kt">bool</span><span class="w"> </span><span class="n">resultadoAND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condicion1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">condicion2</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="kt">bool</span><span class="w"> </span><span class="n">resultadoOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">condicion1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">condicion2</span><span class="p">;</span><span class="w">  </span><span class="c1">// true</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="kt">bool</span><span class="w"> </span><span class="n">resultadoNOT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">condicion1</span><span class="p">;</span><span class="w">              </span><span class="c1">// false</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"AND: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultadoAND</span><span class="p">);</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"OR: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultadoOR</span><span class="p">);</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"NOT: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultadoNOT</span><span class="p">);</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>De Asignación</strong>: Se utilizan para asignar un valor a una variable.</p>
+<ul>
+<li>Asignación simple (<code>=</code>).</li>
+<li>Asignaciones compuestas (<code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, que realizan la operación y luego asignan el resultado).</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">numero</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// Equivalente a numero = numero + 3; (numero ahora es 8)</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">numero</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Equivalente a numero = numero * 2; (numero ahora es 16)</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"Numero: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Numero: 16</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Operador Alfanumérico (Concatenación <code>+</code>)</strong>: Se utiliza para concatenar (unir) datos de tipo cadena. También puede usarse para combinar cadenas con otros tipos de datos, convirtiendo estos últimos a cadena automáticamente.</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">saludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hola"</span><span class="p">;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="kt">string</span><span class="w"> </span><span class="n">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saludo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">", "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"!"</span><span class="p">;</span><span class="w"> </span><span class="c1">// Concatenación</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="kt">string</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Tu edad es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w"> </span><span class="c1">// Concatena string con int</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">writeLine</span><span class="p">(</span><span class="n">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Hola, Ana!</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">writeLine</span><span class="p">(</span><span class="n">info</span><span class="p">);</span><span class="w">    </span><span class="c1">// Salida: Tu edad es: 25</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Especiales</strong>:</p>
+<ul>
+<li>
+<p><strong>Ternario (<code>? :</code>)</strong>: Evalúa una condición y devuelve un resultado u otro en función de si es verdadera o falsa. Es el único operador ternario.</p>
+<ul>
+<li>Sintaxis: <code>condicion ? valorSiVerdadero : valorSiFalso;</code>.</li>
+</ul>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">"X es mayor"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">"Y es mayor o igual"</span><span class="p">;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: X es mayor</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maximo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"El máximo es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">maximo</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: El máximo es: 10</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Operador de Nulidad (<code>??</code>)</strong>: Devuelve el valor del operando de la izquierda si no es nulo; de lo contrario, devuelve el de la derecha. Útil para proporcionar un valor predeterminado.</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kt">string?</span><span class="w"> </span><span class="n">nombreUsuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">nombreAMostrar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombreUsuario</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s">"Invitado"</span><span class="p">;</span><span class="w"> </span><span class="c1">// Si nombreUsuario es null, usa "Invitado"</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Bienvenido, "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombreAMostrar</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Bienvenido, Invitado</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="n">nombreUsuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"María"</span><span class="p">;</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="n">nombreAMostrar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombreUsuario</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s">"Invitado"</span><span class="p">;</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">    </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Bienvenido, "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombreAMostrar</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Bienvenido, María</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+</ul>
+<details class="tip">
+<summary>Avanzado: Leyes de De Morgan</summary>
+<p>Las Leyes de De Morgan son reglas que te permiten simplificar expresiones lógicas y son muy útiles al trabajar con condiciones en programación. Básicamente, te dicen cómo la negación de una expresión compleja puede ser "distribuida" entre sus componentes.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Primera Ley de De Morgan</label><label for="__tabbed_2_2">Segunda Ley de De Morgan</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>La negación de una <strong>conjunción</strong> (<code>AND</code>) es equivalente a la disyunción (<code>OR</code>) de las negaciones de sus componentes. En otras palabras, "no A y B" es lo mismo que "no A o no B".</p>
+<ul>
+<li><strong>Expresión original</strong>: <code>!(A &amp;&amp; B)</code></li>
+<li><strong>Equivalente</strong>: <code>!A || !B</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;"><code>A AND B</code></th>
+<th style="text-align: center;"><code>NOT (A AND B)</code></th>
+<th style="text-align: center;"><code>NOT A</code></th>
+<th style="text-align: center;"><code>NOT B</code></th>
+<th style="text-align: center;"><code>NOT A OR NOT B</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>La negación de una <strong>disyunción</strong> (<code>OR</code>) es equivalente a la conjunción (<code>AND</code>) de las negaciones de sus componentes. Dicho de otro modo, "no A o B" es lo mismo que "no A y no B".</p>
+<ul>
+<li><strong>Expresión original</strong>: <code>!(A || B)</code></li>
+<li><strong>Equivalente</strong>: <code>!A &amp;&amp; !B</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;"><code>A OR B</code></th>
+<th style="text-align: center;"><code>NOT (A OR B)</code></th>
+<th style="text-align: center;"><code>NOT A</code></th>
+<th style="text-align: center;"><code>NOT B</code></th>
+<th style="text-align: center;"><code>NOT A AND NOT B</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</details>
+<h4 id="353-precedencia-de-operadores-y-asociatividad">3.5.3. Precedencia de Operadores y Asociatividad<a class="headerlink" href="#353-precedencia-de-operadores-y-asociatividad" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Precedencia</strong>: Es la prioridad de los operadores, que determina el orden en que se evalúan en una expresión. Por ejemplo, la multiplicación y división tienen mayor precedencia que la suma y resta.</li>
+<li><strong>Asociatividad</strong>: Indica qué operador se evalúa primero en caso de que varios operadores tengan la misma precedencia. Generalmente, la mayoría son asociativos por la izquierda (se evalúan de izquierda a derecha), mientras que los de asignación y el condicional son asociativos por la derecha. El uso de paréntesis <code>()</code> puede modificar el orden de evaluación, forzando una precedencia específica y mejorando la legibilidad.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Precedencia de Operadores (Pseudocódigo DAW)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operador</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Asociatividad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>( )</code></td>
+<td style="text-align: left;">Agrupación</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>!</code></td>
+<td style="text-align: left;">Lógico Unario</td>
+<td style="text-align: left;">Derecha</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>* / %</code></td>
+<td style="text-align: left;">Aritméticos</td>
+<td style="text-align: left;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>+ -</code></td>
+<td style="text-align: left;">Aritméticos</td>
+<td style="text-align: left;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt; &lt;= &gt; &gt;=</code></td>
+<td style="text-align: left;">Relacionales</td>
+<td style="text-align: left;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>== !=</code></td>
+<td style="text-align: left;">Relacionales</td>
+<td style="text-align: left;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&amp;&amp;</code></td>
+<td style="text-align: left;">Lógico AND</td>
+<td style="text-align: left;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>|                      |</code></td>
+<td style="text-align: left;">Lógico OR</td>
+<td style="text-align: left;">Izquierda</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>? :</code></td>
+<td style="text-align: left;">Condicional Ternario</td>
+<td style="text-align: left;">Derecha</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>= += -= *= /= %= ??</code></td>
+<td style="text-align: left;">Asignación y Nulidad</td>
+<td style="text-align: left;">Derecha</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="36-comentarios-y-documentacion-basica-del-codigo">3.6. Comentarios y Documentación Básica del Código<a class="headerlink" href="#36-comentarios-y-documentacion-basica-del-codigo" title="Permanent link">¶</a></h3>
+<p><strong>Importancia y tipos de Comentarios (una línea <code>//</code>, múltiples líneas <code>/* */</code>)</strong>
+Los <strong>comentarios</strong> son notas que los programadores dejan en el código para explicar su funcionamiento, describir el programa, o cualquier otra indicación útil. El programa ignora los comentarios durante su ejecución. Son esenciales para la legibilidad, el desarrollo y el mantenimiento colaborativo.</p>
+<p>Los tipos de comentarios comunes en el pseudocódigo DAW son:</p>
+<ul>
+<li>
+<p><strong>Comentarios de una sola línea (<code>//</code>)</strong>: Se inician con dos barras y afectan el texto hasta el final de esa línea.</p>
+<p></p><div class="language-c# highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// Esto es un comentario de una sola línea</span>
+</span></code></pre></div>
+*   <strong>Comentarios de múltiples líneas (<code>/* */</code>)</strong>: Se inician con <code>/*</code> y finalizan con <code>*/</code>, abarcando varias líneas.<p></p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cm">/*</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="cm">Esto es un comentario</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="cm">que ocupa</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="cm">varias líneas.</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="cm">*/</span>
+</span></code></pre></div>
+</li>
+</ul>
+<p><strong>Documentación Interna del Código</strong></p>
+<p>La documentación interna se refiere a los comentarios, encabezados, descripciones y declaraciones del problema que se incluyen directamente dentro del código fuente. Una buena práctica es que cada programa comience con comentarios que indiquen, al menos, una breve descripción del programa, el autor y la última fecha de modificación.
+Además, en el pseudocódigo, como en lenguajes como Java con Javadoc, podrían emplearse comentarios especiales (<code>/** */</code>) para generar documentación automática del programa a partir del código fuente.</p>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cm">/**</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="cm"> * Nombre del Programa: CalculadoraSimple</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="cm"> * Autor: [Tu Nombre]</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="cm"> * Fecha de Última Modificación: 2024-10-27</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="cm"> * Descripción: Este programa realiza operaciones aritméticas básicas</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="cm"> *              solicitando dos números al usuario.</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="cm"> */</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">  </span><span class="c1">// Declaración de variables</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Primer número introducido por el usuario</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Segundo número introducido por el usuario</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">resultadoSuma</span><span class="p">;</span><span class="w"> </span><span class="cm">/* Variable para almacenar</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="cm">                          el resultado de la suma */</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">  </span><span class="c1">// El resto del código del programa iría aquí</span>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="4-el-lenguaje-de-programacion-pseudocodigo-daw">4. El Lenguaje de Programación Pseudocódigo DAW<a class="headerlink" href="#4-el-lenguaje-de-programacion-pseudocodigo-daw" title="Permanent link">¶</a></h2>
+<p>El pseudocódigo DAW es un lenguaje de programación diseñado para ser sencillo y fácil de entender, ideal para principiantes en programación. Combina elementos de varios lenguajes de programación populares, como C#, Java y Python, para ofrecer una sintaxis clara y concisa.</p>
+<p>Se usará para aprender los conceptos fundamentales de la programación antes de pasar a lenguajes más complejos y con ello facilitar la transición a lenguajes de programación reales. Con él se pueden crear programas estructurados y modulares y resolver problemas de programación comunes.</p>
+<p>Esta guía proporciona una visión general de los conceptos básicos del lenguaje DAW, diseñado para ser sencillo y fácil de aprender. Este lenguaje es ideal para principiantes en programación, ya que combina elementos de lenguajes populares como C#, Java, Kotlin y JavaScript, adaptados a un entorno educativo.</p>
+<p>Se usará como base para aprender los fundamentos de la programación estructurada y modular y servirá como base para aprender otros lenguajes más complejos en el futuro.</p>
+<p>A continuación, se describen los elementos fundamentales que componen este lenguaje.</p>
+<hr>
+<h4 id="a-comentarios">A. Comentarios<a class="headerlink" href="#a-comentarios" title="Permanent link">¶</a></h4>
+<p>Los comentarios son notas que el programa ignora. Sirven para explicar el código a otros desarrolladores o a ti mismo.</p>
+<ul>
+<li><strong>Comentario de una línea:</strong> Se inicia con dos barras (<code>//</code>).
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1">// Esto es un comentario de una sola línea.</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="c1">// También se puede poner al final de una línea de código.</span>
+</span></code></pre></div></li>
+<li><strong>Comentario de varias líneas:</strong> Se inicia con <code>/*</code> y finaliza con <code>*/</code>.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="cm">/*</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="cm">Este es un comentario</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="cm">que se extiende</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="cm">por varias líneas.</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="cm">*/</span>
+</span></code></pre></div></li>
+</ul>
+<hr>
+<h4 id="b-estructura-del-programa">B. Estructura del Programa<a class="headerlink" href="#b-estructura-del-programa" title="Permanent link">¶</a></h4>
+<p>El punto de entrada será un bloque principal llamado <code>Main()</code>, donde se escribirá todo el código que se ejecutará al iniciar el programa. 
+Este bloque es obligatorio en todos los programas. Todo programa debe tener este bloque principal, que contiene las instrucciones que se ejecutan al iniciar el programa. Es decir, la lógica del programa y/o algoritmo se escribe dentro de este bloque.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="c1">// Aquí va el código de nuestro programa.</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="c1">// Es el primer código que se ejecuta.</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr>
+<h4 id="c-variables-constantes-y-literales">C. Variables, Constantes y Literales<a class="headerlink" href="#c-variables-constantes-y-literales" title="Permanent link">¶</a></h4>
+<p>Seguiremos la convención de nomenclatura <strong><code>camelCase</code></strong> (<code>ejemploVariable</code>, <code>nombreUsuario</code>).</p>
+<ul>
+<li><strong>Variables:</strong> Son contenedores cuyo valor puede cambiar. Se declaran con un tipo de dato y un nombre.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
+</span></code></pre></div></li>
+<li><strong>Inferencia de Tipos con <code>var</code>:</strong> Con <code>var</code>, el sistema <strong>infiere</strong> el tipo de la variable a partir del valor que se le asigna. Esto hace que el código sea más corto y legible. La única regla es que <strong>siempre</strong> debes inicializar la variable cuando usas <code>var</code>.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">       </span><span class="c1">// Se infiere que 'edad' es de tipo int.</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">nombreCompleto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Juan Pérez"</span><span class="p">;</span><span class="w">  </span><span class="c1">// Se infiere que es de tipo string.</span>
+</span></code></pre></div></li>
+<li><strong>Variables que almacenan nulos:</strong> Para los tipos que normalmente no pueden ser <code>null</code> (como <code>int</code> o <code>bool</code>), se les puede añadir el símbolo <code>?</code> para permitirles almacenar la ausencia de valor. Los tipos de referencia como <code>string</code> ya pueden ser <code>null</code> por defecto.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">int?</span><span class="w"> </span><span class="n">edadOpcional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// Un string ya puede ser nulo por defecto</span>
+</span></code></pre></div></li>
+<li><strong>Conversiones entre Tipos:</strong><ul>
+<li><strong>Conversión Implícita:</strong> Ocurre automáticamente cuando se asigna un valor a una variable de un tipo que puede contenerlo sin pérdida de datos.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">numeroInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kt">decimal</span><span class="w"> </span><span class="n">numeroDecimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numeroInt</span><span class="p">;</span><span class="w"> </span><span class="c1">// Conversión implícita de int a decimal.</span>
+</span></code></pre></div></li>
+<li><strong>Conversión Explícita (Casting):</strong> Se debe indicar de forma manual cuando hay una posible pérdida de datos. Se hace colocando el tipo de dato entre paréntesis delante del valor.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">decimal</span><span class="w"> </span><span class="n">numeroDecimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.75m</span><span class="p">;</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">numeroInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">numeroDecimal</span><span class="p">;</span><span class="w"> </span><span class="c1">// Conversión explícita, se pierde el .75</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">writeLine</span><span class="p">(</span><span class="n">numeroInt</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muestra 10</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>Constantes:</strong> Son valores fijos que no pueden cambiar. Se utiliza la palabra clave <code>const</code> y deben ser inicializados al declararse.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159m</span><span class="p">;</span>
+</span></code></pre></div></li>
+<li><strong>Variables de solo lectura:</strong> Se inicializan una sola vez y su valor no puede ser modificado después. Usamos la palabra clave <code>readonly</code>.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">readonly</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1.0"</span><span class="p">;</span>
+</span></code></pre></div></li>
+<li><strong>Literales:</strong> Son valores fijos que se escriben directamente en el código (números, texto entre comillas, o los valores <code>true</code> y <code>false</code>).</li>
+</ul>
+<hr>
+<h4 id="d-tipos-de-datos-y-control-de-nulos">D. Tipos de Datos y Control de Nulos<a class="headerlink" href="#d-tipos-de-datos-y-control-de-nulos" title="Permanent link">¶</a></h4>
+<p>Los tipos de datos que más utilizaremos son <code>int</code>, <code>decimal</code>, <code>string</code> y <code>bool</code>.</p>
+<ul>
+<li>
+<p><strong><code>int</code> (Entero):</strong> Almacena números enteros sin decimales, positivos y negativos. Se utiliza para contar o en operaciones matemáticas sin fracciones.</p>
+<ul>
+<li><strong>Valores:</strong> de <code>2.147.483.648</code> a <code>2.147.483.647</code> (aprox.).</li>
+<li><strong>Operaciones:</strong> Suma, resta, multiplicación, división, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>decimal</code> (Decimal):</strong> Almacena números con decimales. Se usa para operaciones financieras o científicas que requieren alta precisión. A diferencia de <code>decimal</code>, no tiene la "m" al final por defecto, pero es una buena práctica añadirla para indicar explícitamente que es un literal de tipo decimal.</p>
+<ul>
+<li><strong>Valores:</strong> Con hasta 28 o 29 dígitos decimales de precisión.</li>
+<li><strong>Operaciones:</strong> Las mismas que los enteros, pero con manejo de decimales.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>string</code> (Cadena):</strong> Almacena una secuencia de caracteres. Se utiliza para texto, nombres, frases.</p>
+<ul>
+<li><strong>Valores:</strong> Cualquier texto entre comillas dobles.</li>
+<li><strong>Operaciones:</strong> Concatenación (<code>+</code>), búsqueda de subcadenas, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>bool</code> (Booleano):</strong> Almacena un valor lógico. Se utiliza para condiciones de verdadero o falso.</p>
+<ul>
+<li><strong>Valores:</strong> Solo <code>true</code> o <code>false</code>.</li>
+<li><strong>Operaciones:</strong> Operadores lógicos (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>).</li>
+</ul>
+</li>
+<li>
+<p>Los tipos de valor (<code>int</code>, <code>decimal</code>, <code>bool</code>, etc.) no pueden ser <code>null</code> a menos que se use el operador <code>?</code>.</p>
+</li>
+<li>
+<p>Los tipos de referencia (<code>string</code>) pueden ser <code>null</code> por defecto.</p>
+</li>
+</ul>
+<hr>
+<h4 id="e-enumeraciones-enum">E. Enumeraciones (<code>enum</code>)<a class="headerlink" href="#e-enumeraciones-enum" title="Permanent link">¶</a></h4>
+<p>Una enumeración es un tipo de dato que consiste en un conjunto de constantes nombradas. Se utiliza para hacer el código más legible y menos propenso a errores, ya que en lugar de usar números "mágicos" (como <code>1</code> o <code>2</code>), se usan nombres con significado.</p>
+<ul>
+<li><strong>Sintaxis:</strong>
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">enum</span><span class="w"> </span><span class="n">DiasSemana</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">Lunes</span><span class="p">,</span><span class="w">     </span><span class="c1">// Se le asigna 0 por defecto</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="n">Martes</span><span class="p">,</span><span class="w">    </span><span class="c1">// Se le asigna 1 por defecto</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span><span class="n">Miercoles</span><span class="p">,</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span><span class="n">Jueves</span><span class="p">,</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="w">    </span><span class="n">Viernes</span><span class="p">,</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="w">    </span><span class="n">Sabado</span><span class="p">,</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="w">    </span><span class="n">Domingo</span>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="p">}</span>
+</span></code></pre></div></li>
+<li><strong>Ejemplo de uso:</strong>
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">hoy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DiasSemana</span><span class="p">.</span><span class="n">Miercoles</span><span class="p">;</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hoy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DiasSemana</span><span class="p">.</span><span class="n">Miercoles</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">        </span><span class="n">writeLine</span><span class="p">(</span><span class="s">"Hoy es mitad de semana"</span><span class="p">);</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="p">}</span>
+</span></code></pre></div></li>
+</ul>
+<hr>
+<h4 id="f-operadores">F. Operadores<a class="headerlink" href="#f-operadores" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Operadores Matemáticos:</strong><ul>
+<li><code>+</code> : Suma</li>
+<li><code>-</code> : Resta</li>
+<li><code>*</code> : Multiplicación</li>
+<li><code>/</code> : División</li>
+<li><code>%</code> : Módulo (devuelve el resto de una división)</li>
+</ul>
+</li>
+<li><strong>Operadores de Asignación:</strong> Sirven para asignar un valor a una variable.<ul>
+<li><code>=</code> : Asigna el valor (ej: <code>x = 5;</code>)</li>
+<li><code>+=</code> : Suma y asigna</li>
+<li><code>-=</code> : Resta y asigna</li>
+<li><code>*=</code> : Multiplica y asigna</li>
+<li><code>/=</code> : Divide y asigna</li>
+</ul>
+</li>
+<li><strong>Operadores Lógicos y de Comparación:</strong><ul>
+<li><code>==</code> : Es igual a</li>
+<li><code>!=</code> : Es diferente de</li>
+<li><code>&gt;</code> : Mayor que</li>
+<li><code>&lt;</code> : Menor que</li>
+<li><code>&gt;=</code> : Mayor o igual que</li>
+<li><code>&lt;=</code> : Menor o igual que</li>
+<li><code>&amp;&amp;</code> (AND): Verdadero si ambas condiciones son verdaderas.</li>
+<li><code>||</code> (OR): Verdadero si al menos una condición es verdadera.</li>
+<li><code>!</code> (NOT): Invierte el resultado de una condición.</li>
+</ul>
+</li>
+<li><strong>Operadores Especiales:</strong><ul>
+<li><strong>Operador Ternario (<code>? :</code>):</strong> Es una forma abreviada de escribir una sentencia <code>if-else</code> simple.<ul>
+<li><strong>Sintaxis:</strong> <code>condicion ? valorSiVerdadero : valorSiFalso;</code>
+<!-- end list -->
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">esMayorDeEdad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">"Sí"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">"No"</span><span class="p">;</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+<li><strong>Operador de Nulidad (<code>??</code>):</strong><ul>
+<li><strong><code>??</code> (Null-Coalescing):</strong> Devuelve el valor del operando de la izquierda si no es nulo; de lo contrario, devuelve el de la derecha. Es útil para proporcionar un valor predeterminado.
+<!-- end list -->
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">nombreCompleto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s">"Desconocido"</span><span class="p">;</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="g-entrada-y-salida">G. Entrada y Salida<a class="headerlink" href="#g-entrada-y-salida" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Salida (<code>writeLine</code>):</strong> Muestra texto en la consola.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"Hola, esto es un mensaje."</span><span class="p">);</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"El resultado es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span>
+</span></code></pre></div></li>
+<li><strong>Entrada (<code>readLine</code> y casting):</strong> Lee una cadena de texto desde la consola. Se debe hacer un casting explícito para convertirla a otro tipo, asumiendo que el valor es válido.
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"Introduce tu edad:"</span><span class="p">);</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="c1">// Se lee una cadena y se convierte a int</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">edadUsuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">readLine</span><span class="p">();</span><span class="w"> </span>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="n">writeLine</span><span class="p">(</span><span class="s">"Introduce tu peso (en kg):"</span><span class="p">);</span>
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="c1">// Se lee una cadena y se convierte a decimal</span>
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="kt">var</span><span class="w"> </span><span class="n">pesoUsuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">readLine</span><span class="p">();</span>
+</span></code></pre></div></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Jesús García - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<jssgarcia.docente@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.13c-.15.01-.29.06-.39.17l-1 1 2.05 2 1-1c.22-.21.22-.56 0-.77l-1.24-1.23a.56.56 0 0 0-.38-.17m-2 1.75L13 19.94V22h2.06l6.06-6.07M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v-.89l8.24-8.22c.47-.49 1.12-.76 1.8-.76.34 0 .68.06 1 .19V6c0-1.12-.92-2-2.04-2m0 4-8 5-8-5V6l8 5 8-5"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.tabs.link", "content.code.copy", "content.code.select", "navigation.top", "navigation.expand", "navigation.path", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
