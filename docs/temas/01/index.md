@@ -1,5 +1,9 @@
 # 01 - Introducción a la Programación Software
 
+<iframe width="780" height="440"  src="https://www.youtube.com/embed/4h7z0VSSMas?list=PLGIH-7eZDbVw6q2AdcAUe2r6YxJYBkfCi" title="(PROG) Programación (1º DAW). UD01. Introducción a la Programación de Software. Ejemplo de Java" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 ## 1. Fundamentos de la Programación
 
 ### 1.1. ¿Qué es Programar?
@@ -7,20 +11,33 @@
 **Programar** es el proceso de crear software. Esta disciplina abarca desde la concepción inicial de una idea hasta que el programa está implementado y funcionando en un ordenador, enfocándose en los principios y metodologías para el desarrollo y mantenimiento de sistemas de software. Algunos autores consideran que el término "desarrollo de software" es más apropiado que "ingeniería de software".
 
 **Definición de Programa Software**
+
 Un **programa software** es la parte intangible o lógica de un sistema informático, un conjunto de programas que actúan sobre el hardware para ejecutar las tareas deseadas por el usuario. Los programas son métodos para resolver problemas, procesando información para obtener un resultado a partir de datos de entrada. Para que un programa comience a funcionar, sus instrucciones deben ser traducidas a un lenguaje que la máquina entienda.
 
-![img01](images/entrada_salid2.png){ align="center" }
+<figure>
+    <img src="images/entrada_salid2.png" alt="Proceso de Entrada, Proceso y Salida en un Programa" width="100%" align="center"/>
+    <figcaption align="center">Proceso de Entrada, Proceso y Salida en un Programa</figcaption>
+</figure>
 
 **El Proceso de Desarrollo de Software**
+
 El desarrollo de software implica una serie de etapas obligatorias para construir software fiable y de calidad. Estas fases se dividen en tres pasos genéricos: definición (qué desarrollar), desarrollo, y mantenimiento.
+
 Las fases principales del desarrollo de una aplicación informática son:
+
 *   **Fase de Resolución del Problema**:
     *   **Análisis**: Requiere que el problema sea definido y comprendido claramente. Se establecen los objetivos, el alcance y se realiza un estudio de viabilidad y costes. Se identifican los requisitos funcionales (qué funciones realizará la aplicación) y no funcionales (características de calidad del sistema). También implica analizar la documentación, investigar y recopilar información útil. La culminación es el Documento de Especificación de Requisitos del Software (ERS), que actúa como contrato entre cliente y desarrollador.
     *   **Diseño**: Se define "cómo" hacer la solución. Se convierte la especificación del análisis en un diseño detallado, indicando el comportamiento o la secuencia lógica de instrucciones que resuelvan el problema. Se descompone la aplicación en operaciones más sencillas y se asignan a módulos. Incluye el diseño arquitectónico, diseño detallado, diseño de datos y de interfaz de usuario. Es crucial realizar una **prueba o traza del programa** para asegurar la solución antes de la implementación.
+
+    <br/>
+
 *   **Fase de Implementación**:
     *   **Codificación o Construcción**: Consiste en transformar o traducir los resultados obtenidos a un determinado lenguaje de programación. Se escribe el **código fuente** siguiendo las reglas gramaticales y la sintaxis del lenguaje. El código debe ser modular, correcto, legible, eficiente y portable.
     *   **Pruebas de Ejecución y Validación**: Se implanta la aplicación en el sistema y se verifica su funcionamiento. Se utilizan diferentes datos de prueba para ver si el programa responde a los requerimientos. Incluye pruebas unitarias, de integración, funcionales, estructurales y beta testing.
     *   **Documentación**: Es vital para el desarrollo y mantenimiento. Se distinguen la **documentación interna** (comentarios en el código fuente) y **documentación externa** (manuales técnicos, de usuario, de instalación, diagramas).
+    
+    <br>
+
 *   **Fase de Explotación y Mantenimiento**:
     *   **Explotación (Despliegue)**: Los usuarios finales utilizan la aplicación. Implica instalación, puesta a punto y funcionamiento en el equipo del cliente.
     *   **Mantenimiento**: Periódicamente, se realizan evaluaciones y modificaciones para adaptar el programa a nuevas necesidades, corregir errores o actualizarlo.
@@ -28,12 +45,42 @@ Las fases principales del desarrollo de una aplicación informática son:
 
 A lo largo de todo el proceso de desarrollo de software, se debe aplicar siempre un **modelo de ciclo de vida**. Estos modelos son la serie de pasos a seguir para desarrollar un programa.
 
-![img02](images/metodologias-desarrollo-software.jpeg){ width="40%", align="center" }
+<figure>
+    <img src="images/metodologias-desarrollo-software.jpeg" alt="Ciclo de Vida del Software" width="40%" align="center"/>
+    <figcaption align="center">Ciclo de Vida del Software</figcaption>
+</figure>
 
-### 1.2. Algoritmos
+### 1.2. Algoritmos: La Receta para Resolver Problemas 🍳
+
+Imagina que quieres hacer una tortilla de patatas. ¿Qué haces? No empiezas a echar ingredientes al azar, ¿verdad? Sigues una serie de pasos ordenados: pelar y cortar las patatas, batir los huevos, freír las patatas, mezclarlo todo y cuajar la tortilla.
+
+Pues bien, un algoritmo es exactamente eso: una secuencia de pasos finitos, claros y ordenados que nos llevan a la solución de un problema o a la consecución de una tarea.
+
+Los algoritmos están por todas partes en nuestra vida, no solo en la informática.
 
 **Concepto de Algoritmo y sus Características**
+
 Un **algoritmo** es una serie de pasos claros y ordenados que te permiten resolver un problema específico. No es un programa de computadora en sí mismo, sino la **idea** detrás del programa. Piensa en él como una receta de cocina: sin importar si la preparas en una estufa de gas, eléctrica o de leña, el resultado es el mismo porque la receta (el algoritmo) es independiente de la herramienta. Un algoritmo te dice **qué hacer** y en qué **orden**, sin importar la máquina o el lenguaje de programación.
+
+!!! tip "Ejemplos de Algoritmos de la Vida Cotidiana"
+
+    -   **Receta de cocina:** Como hemos visto, una receta es un algoritmo perfecto. Te dice qué ingredientes necesitas (datos de entrada) y qué pasos seguir (proceso) para obtener un plato concreto (resultado).
+
+    -   **Montar un mueble de IKEA:** Las instrucciones son un algoritmo. Si te saltas un paso o lo haces en el orden incorrecto, lo más probable es que el mueble no quede bien.
+
+    -   **Seguir una ruta en Google Maps:** Le dices a dónde quieres ir (problema), y la aplicación calcula una serie de instrucciones paso a paso ("gira a la derecha en 200 metros", "continúa recto"...) para que llegues a tu destino (solución).
+
+    -   **Sacar dinero de un cajero:**
+
+        1.  Introducir tarjeta.
+        2.  Teclear el PIN.
+        3.  Seleccionar "Sacar dinero".
+        4.  Elegir la cantidad.
+        5.  Recoger el dinero.
+        6.  Recoger la tarjeta.
+        7.  Finalizar.
+
+    En programación, antes de escribir una sola línea de código, primero pensamos en el algoritmo que resolverá nuestro problema
 
 #### 1.2.1. Características Esenciales
 
@@ -48,7 +95,12 @@ Para que un algoritmo sea considerado de calidad, debe cumplir con las siguiente
 
 Además de estas características fundamentales, un buen algoritmo debe ser **comprensible**, **modificable** y **reutilizable**, lo que facilita su uso y mantenimiento a lo largo del tiempo. Para lograrlo, es crucial que esté bien **estructurado** y **documentado** con comentarios. Finalmente, todo algoritmo debe ser **probado** para asegurar que funciona correctamente en todos los casos posibles.
 
-![img03](images/algoritmo.jpg){ width="40%", align="center" }
+<figure>
+    <img src="images/algoritmo.jpg" alt="Diagrama de flujo de un algoritmo" width="40%" align="center"/>
+    <figcaption align="center">Diagrama de flujo de un algoritmo</figcaption>
+</figure>
+
+<!-- ![img03](images/algoritmo.jpg){ width="40%", align="center" } -->
 
 **Reglas para el Diseño de Algoritmos (Abstracción, Modularidad)**
 
@@ -139,6 +191,8 @@ Los lenguajes de programación pueden ser clasificados en función de lo cerca q
 
         **Lenguajes de Alto Nivel**: Cercanos al lenguaje natural (inglés), independientes de la arquitectura del ordenador. Permiten al programador abstraerse del funcionamiento interno de la máquina. Utilizan sentencias y órdenes derivadas del idioma inglés. Necesitan un traductor para ser entendidos por la máquina. Incorporan librerías, funciones predeterminadas y suelen ofrecer *frameworks*. La mayoría de los lenguajes actuales se engloban aquí. Ejemplos: C++, Java, Python, JavaScript, PHP.
 
+<br/>
+
 ### 2.3.2. Según su mecanismo de traducción (Compilados, Interpretados, Mixtos)
 
 Los programas se traducen a código binario ejecutable mediante compilación o interpretación.
@@ -158,9 +212,13 @@ Los programas se traducen a código binario ejecutable mediante compilación o i
  
 - **Lenguajes Mixtos o Virtuales (Intermediarios)**: Combinan características de ambos. El código fuente se compila a un código binario intermedio (no ejecutable) llamado **bytecode**. Este bytecode es luego interpretado por una **máquina virtual** para ejecutarlo en cualquier plataforma compatible. Son más portables, buscando "compilar una vez y ejecutar en cualquier sistema". Java y C# son ejemplos clave de lenguajes mixtos.
 
-![img04](images/compilado_interpretado.jpeg){ width="40%", align="center" }
+<figure>
+    <img src="images/compilado_interpretado.jpeg" alt="Diferencias entre lenguajes compilados, interpretados y mixtos" width="40%" align="center"/>
+    <figcaption align="center">Diferencias entre lenguajes compilados, interpretados y mixtos</figcaption>
+</figure>
 
 #### 2.3.3. Según su sistema de tipos (Rigidez, Momento de Verificación, Declaración, Sin Tipado)
+
 Un **tipo de dato** es una clasificación que define el conjunto de valores que una variable puede tomar y las operaciones válidas que se pueden realizar sobre esos valores. Esta clasificación es fundamental porque **determina la cantidad de memoria que el sistema operativo debe reservar** para la variable.
 
 El **sistema de tipos** de un lenguaje de programación es un conjunto de reglas que definen cómo se manejan y verifican estos tipos de datos.
@@ -199,6 +257,7 @@ La evolución de los lenguajes de programación se puede dividir en 5 etapas o g
 *   **Cuarta Generación**: Lenguajes capaces de generar código por sí solos (RAD), con los cuales se pueden realizar aplicaciones sin ser experto. Incluyen lenguajes orientados a objetos, permitiendo la reutilización de código. Suelen tener acceso a bases de datos, capacidades gráficas y generación de código automática. Ej. Visual Studio, IntelliJ.
 *   **Quinta Generación**: Lenguajes orientados a la inteligencia artificial (LISP).
 
+<br>
 
 ## 3. Elementos Fundamentales en la Programación
 
@@ -206,7 +265,13 @@ La evolución de los lenguajes de programación se puede dividir en 5 etapas o g
 
 Para escribir programas, es importante seguir una estructura definida que facilite su comprensión y mantenimiento. A lo largo de este tema usaremos el pseudocódigo especial o [lenguaje de DAW](#4-el-lenguaje-de-programación-pseudocódigo-daw). Este lenguaje de nuestro curso es estructurado, similar a C# y Java, pero con una sintaxis simplificada y adaptada para el aprendizaje.
 
+
+<iframe width="780" height="440" src="https://www.youtube.com/embed/xu9iVQpgxvc?list=PLGIH-7eZDbVw6q2AdcAUe2r6YxJYBkfCi" title="(PROG) Programación (1º DAW). UD01. Introducción a la Programación de Software. Lenguaje DAW I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br>
+
 **Estructura General de un Programa (Función Principal `Main()`)**
+
 Un programa se organiza alrededor de una bloque principal que sirve como punto de entrada para su ejecución. Este bloque se denomina `Main()` en el lenguaje DAW. Todo programa debe tener este bloque principal, que contiene las instrucciones que se ejecutan al iniciar el programa. Es decir, la lógica del programa y/o algoritmo se escribe dentro de este bloque.
 
 ```c#
@@ -253,6 +318,10 @@ Main() {
 ```
 
 ### 3.2. Tipos de Datos Básicos
+
+<iframe width="780" height="440" src="https://www.youtube.com/embed/5qcnOjamqTk?list=PLGIH-7eZDbVw6q2AdcAUe2r6YxJYBkfCi" title="(PROG) Programación (1º DAW). UD01. Introducción a la Programación de Software. Tipos de Datos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br>
 
 #### 3.2.1. Concepto de Tipo de Dato: Valores válidos, operaciones y espacio en memoria**
 
@@ -749,7 +818,7 @@ A continuación, se describen los elementos fundamentales que componen este leng
 
 -----
 
-#### A. Comentarios
+### A. Comentarios
 
 Los comentarios son notas que el programa ignora. Sirven para explicar el código a otros desarrolladores o a ti mismo.
 
@@ -769,7 +838,7 @@ Los comentarios son notas que el programa ignora. Sirven para explicar el códig
 
 -----
 
-#### B. Estructura del Programa
+### B. Estructura del Programa
 
 El punto de entrada será un bloque principal llamado `Main()`, donde se escribirá todo el código que se ejecutará al iniciar el programa. 
 Este bloque es obligatorio en todos los programas. Todo programa debe tener este bloque principal, que contiene las instrucciones que se ejecutan al iniciar el programa. Es decir, la lógica del programa y/o algoritmo se escribe dentro de este bloque.
@@ -783,7 +852,7 @@ Main() {
 
 -----
 
-#### C. Variables, Constantes y Literales
+### C. Variables, Constantes y Literales
 
 Seguiremos la convención de nomenclatura **`camelCase`** (`ejemploVariable`, `nombreUsuario`).
 
@@ -827,7 +896,7 @@ Seguiremos la convención de nomenclatura **`camelCase`** (`ejemploVariable`, `n
 
 -----
 
-#### D. Tipos de Datos y Control de Nulos
+### D. Tipos de Datos y Control de Nulos
 
 Los tipos de datos que más utilizaremos son `int`, `decimal`, `string` y `bool`.
 
@@ -857,7 +926,7 @@ Los tipos de datos que más utilizaremos son `int`, `decimal`, `string` y `bool`
 
 -----
 
-#### E. Enumeraciones (`enum`)
+### E. Enumeraciones (`enum`)
 
 Una enumeración es un tipo de dato que consiste en un conjunto de constantes nombradas. Se utiliza para hacer el código más legible y menos propenso a errores, ya que en lugar de usar números "mágicos" (como `1` o `2`), se usan nombres con significado.
 
@@ -886,7 +955,7 @@ Una enumeración es un tipo de dato que consiste en un conjunto de constantes no
 
 -----
 
-#### F. Operadores
+### F. Operadores
 
   * **Operadores Matemáticos:**
       * `+` : Suma
@@ -894,12 +963,18 @@ Una enumeración es un tipo de dato que consiste en un conjunto de constantes no
       * `*` : Multiplicación
       * `/` : División
       * `%` : Módulo (devuelve el resto de una división)
+      
+      <br>
+
   * **Operadores de Asignación:** Sirven para asignar un valor a una variable.
       * `=` : Asigna el valor (ej: `x = 5;`)
       * `+=` : Suma y asigna
       * `-=` : Resta y asigna
       * `*=` : Multiplica y asigna
       * `/=` : Divide y asigna
+  
+      <br>
+
   * **Operadores Lógicos y de Comparación:**
       * `==` : Es igual a
       * `!=` : Es diferente de
@@ -910,6 +985,9 @@ Una enumeración es un tipo de dato que consiste en un conjunto de constantes no
       * `&&` (AND): Verdadero si ambas condiciones son verdaderas.
       * `||` (OR): Verdadero si al menos una condición es verdadera.
       * `!` (NOT): Invierte el resultado de una condición.
+  
+      <br>
+  
   * **Operadores Especiales:**
       * **Operador Ternario (`? :`):** Es una forma abreviada de escribir una sentencia `if-else` simple.
           * **Sintaxis:** `condicion ? valorSiVerdadero : valorSiFalso;`
@@ -926,7 +1004,7 @@ Una enumeración es un tipo de dato que consiste en un conjunto de constantes no
 
 -----
 
-#### G. Entrada y Salida
+### G. Entrada y Salida
 
   * **Salida (`writeLine`):** Muestra texto en la consola.
     ```csharp
