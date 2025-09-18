@@ -105,6 +105,7 @@ Además de estas características fundamentales, un buen algoritmo debe ser **co
 **Reglas para el Diseño de Algoritmos (Abstracción, Modularidad)**
 
 Para diseñar soluciones correctas y eficientes, se deben considerar los siguientes conceptos:
+
 1.  **Abstracción**: Realizar un análisis del problema para descomponerlo en problemas más pequeños y de menor complejidad, describiendo cada uno de manera precisa.
 2.  **Divide y vencerás**: Una filosofía general para resolver problemas, central en el enfoque de abstracción y modularidad.
 3.  **Encapsulación**: Ocultar la información para poder implementarla de diferentes maneras sin que esto influya en el resto de elementos.
@@ -213,7 +214,7 @@ Los programas se traducen a código binario ejecutable mediante compilación o i
 - **Lenguajes Mixtos o Virtuales (Intermediarios)**: Combinan características de ambos. El código fuente se compila a un código binario intermedio (no ejecutable) llamado **bytecode**. Este bytecode es luego interpretado por una **máquina virtual** para ejecutarlo en cualquier plataforma compatible. Son más portables, buscando "compilar una vez y ejecutar en cualquier sistema". Java y C# son ejemplos clave de lenguajes mixtos.
 
 <figure>
-    <img src="images/compilado_interpretado.jpeg" alt="Diferencias entre lenguajes compilados, interpretados y mixtos" width="40%" align="center"/>
+    <img src="images/compilado_interpretado.jpeg" alt="Diferencias entre lenguajes compilados, interpretados y mixtos" width="70%" align="center"/>
     <figcaption align="center">Diferencias entre lenguajes compilados, interpretados y mixtos</figcaption>
 </figure>
 
@@ -1023,5 +1024,76 @@ Una enumeración es un tipo de dato que consiste en un conjunto de constantes no
     var pesoUsuario = (decimal)readLine();
     ```
 
+-----
+
+Si recibes la edad de una persona, indica la siguiente información:
+- Si es menor de 0 años => "Edad no válida".
+- Si es menor de 1 año => "Eres un bebé".
+- Si es menor de edad (menos de 18 años) => "Eres menor de edad".
+- Si es mayor de edad pero menor de 65 años => "Eres mayor de edad".
+- Si es mayor o igual de 65 años => "Eres jubilado".
+- Si es mayor de 120 años => "Te has pasado el juego".
 
 
+### H. Los condicionales nos permiten ejecutar una parte de código u otra dependiendo del resultado de una condición lógica (true o false).
+
+Pueden ser:
+
+- Condicionales simples: Se ejecuta una parte de código u otra dependiendo de una condición (if). La parte de código que se ejecuta se llama rama verdadera y la otra rama falsa. La parte asociada a else es opcional.
+
+```java
+// Condicionales simples
+if (edadAlumno >= 18) 
+    println("Eres mayor de edad");
+else 
+    println("Eres menor de edad");
+
+```
+
+- Condicionales múltiples: Pueden tener varios casos (if-else-if-else). Se ejecuta una parte de código u otra dependiendo de una condición.
+
+```java
+// Condicionales múltiples
+if (edadAlumno >= 18) 
+    println("Eres mayor de edad")
+else if (edadAlumno >= 16) 
+    println("Casi eres mayor de edad")
+else 
+    println("Eres menor de edad")
+
+```
+
+Tambien podemos usar if-múltiples con una opción más potente, como `when`:
+
+```java
+// Condicionales múltiples
+when (edadAlumno) {
+    >18 -> println("Eres mayor de edad")
+    16..18 -> println("Casi eres mayor de edad")
+
+    else -> println("Eres menor de edad")
+}
+```
+
+### I. Bucles o Iteradores
+
+Los bucles o iteradores nos permiten ejecutar una parte de código varias veces. Existen varios tipos.
+
+<img src="./images/while_image.png" alt="Bucle while" align="right" width="40%" />
+
+```java
+// Bucles indefinidos
+// Ejemplo while
+var i = 0
+while (i < 10) {
+    println(i)
+    i++
+}
+
+// Ejemplo do-while
+var i = 0
+do {
+    println(i)
+    i++
+} while (i < 10)
+```
