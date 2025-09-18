@@ -540,6 +540,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#h-los-condicionales-nos-permiten-ejecutar-una-parte-de-codigo-u-otra-dependiendo-del-resultado-de-una-condicion-logica-true-o-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      H. Los condicionales nos permiten ejecutar una parte de código u otra dependiendo del resultado de una condición lógica (true o false).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-bucles-o-iteradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      I. Bucles o Iteradores
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -805,6 +823,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#h-los-condicionales-nos-permiten-ejecutar-una-parte-de-codigo-u-otra-dependiendo-del-resultado-de-una-condicion-logica-true-o-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      H. Los condicionales nos permiten ejecutar una parte de código u otra dependiendo del resultado de una condición lógica (true o false).
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-bucles-o-iteradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      I. Bucles o Iteradores
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -927,11 +963,13 @@
 <!-- ![img03](images/algoritmo.jpg){ width="40%", align="center" } -->
 
 <p><strong>Reglas para el Diseño de Algoritmos (Abstracción, Modularidad)</strong></p>
-<p>Para diseñar soluciones correctas y eficientes, se deben considerar los siguientes conceptos:
-1.  <strong>Abstracción</strong>: Realizar un análisis del problema para descomponerlo en problemas más pequeños y de menor complejidad, describiendo cada uno de manera precisa.
-2.  <strong>Divide y vencerás</strong>: Una filosofía general para resolver problemas, central en el enfoque de abstracción y modularidad.
-3.  <strong>Encapsulación</strong>: Ocultar la información para poder implementarla de diferentes maneras sin que esto influya en el resto de elementos.
-4.  <strong>Modularidad</strong>: Estructurar cada parte en módulos independientes, donde cada uno tendrá su función correspondiente. El diseño modular (top-down design) descompone un problema en subproblemas más sencillos.</p>
+<p>Para diseñar soluciones correctas y eficientes, se deben considerar los siguientes conceptos:</p>
+<ol>
+<li><strong>Abstracción</strong>: Realizar un análisis del problema para descomponerlo en problemas más pequeños y de menor complejidad, describiendo cada uno de manera precisa.</li>
+<li><strong>Divide y vencerás</strong>: Una filosofía general para resolver problemas, central en el enfoque de abstracción y modularidad.</li>
+<li><strong>Encapsulación</strong>: Ocultar la información para poder implementarla de diferentes maneras sin que esto influya en el resto de elementos.</li>
+<li><strong>Modularidad</strong>: Estructurar cada parte en módulos independientes, donde cada uno tendrá su función correspondiente. El diseño modular (top-down design) descompone un problema en subproblemas más sencillos.</li>
+</ol>
 <p>Para representar los algoritmos gráficamente, se pueden usar herramientas como <strong>diagramas de flujo</strong> (que usan símbolos gráficos y se utilizan en fases de análisis) y <strong>pseudocódigo</strong> (basado en palabras clave en lenguaje natural y es la técnica más utilizada).</p>
 <h4 id="122-diferencia-entre-algoritmo-y-programa">1.2.2. Diferencia entre Algoritmo y Programa<a class="headerlink" href="#122-diferencia-entre-algoritmo-y-programa" title="Permanent link">¶</a></h4>
 <p>La <strong>diferencia fundamental entre algoritmo y programa</strong> radica en que el algoritmo es una descripción de los pasos para resolver un problema de forma genérica e independiente de la máquina y del lenguaje de programación. En cambio, el <strong>programa</strong> consiste en esos mismos pasos, pero escritos en un lenguaje de programación específico para que puedan ser ejecutados en un ordenador y obtener la solución. Los lenguajes de programación son solo un medio para expresar el algoritmo, y el ordenador es el procesador para ejecutarlo.</p>
@@ -1090,7 +1128,7 @@
 </li>
 </ul>
 <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/compilado_interpretado.jpeg" data-desc-position="bottom"><img src="images/compilado_interpretado.jpeg" alt="Diferencias entre lenguajes compilados, interpretados y mixtos" width="40%" align="center"></a>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/compilado_interpretado.jpeg" data-desc-position="bottom"><img src="images/compilado_interpretado.jpeg" alt="Diferencias entre lenguajes compilados, interpretados y mixtos" width="70%" align="center"></a>
     <figcaption align="center">Diferencias entre lenguajes compilados, interpretados y mixtos</figcaption>
 </figure>
 
@@ -2165,6 +2203,63 @@ Este bloque es obligatorio en todos los programas. Todo programa debe tener este
 </span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="kt">var</span><span class="w"> </span><span class="n">pesoUsuario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">readLine</span><span class="p">();</span>
 </span></code></pre></div></li>
 </ul>
+<hr>
+<p>Si recibes la edad de una persona, indica la siguiente información:
+- Si es menor de 0 años =&gt; "Edad no válida".
+- Si es menor de 1 año =&gt; "Eres un bebé".
+- Si es menor de edad (menos de 18 años) =&gt; "Eres menor de edad".
+- Si es mayor de edad pero menor de 65 años =&gt; "Eres mayor de edad".
+- Si es mayor o igual de 65 años =&gt; "Eres jubilado".
+- Si es mayor de 120 años =&gt; "Te has pasado el juego".</p>
+<h3 id="h-los-condicionales-nos-permiten-ejecutar-una-parte-de-codigo-u-otra-dependiendo-del-resultado-de-una-condicion-logica-true-o-false">H. Los condicionales nos permiten ejecutar una parte de código u otra dependiendo del resultado de una condición lógica (true o false).<a class="headerlink" href="#h-los-condicionales-nos-permiten-ejecutar-una-parte-de-codigo-u-otra-dependiendo-del-resultado-de-una-condicion-logica-true-o-false" title="Permanent link">¶</a></h3>
+<p>Pueden ser:</p>
+<ul>
+<li>Condicionales simples: Se ejecuta una parte de código u otra dependiendo de una condición (if). La parte de código que se ejecuta se llama rama verdadera y la otra rama falsa. La parte asociada a else es opcional.</li>
+</ul>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="c1">// Condicionales simples</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edadAlumno</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Eres mayor de edad"</span><span class="p">);</span>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="k">else</span><span class="w"> </span>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Eres menor de edad"</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li>Condicionales múltiples: Pueden tener varios casos (if-else-if-else). Se ejecuta una parte de código u otra dependiendo de una condición.</li>
+</ul>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="c1">// Condicionales múltiples</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edadAlumno</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Eres mayor de edad"</span><span class="p">)</span>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edadAlumno</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Casi eres mayor de edad"</span><span class="p">)</span>
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="k">else</span><span class="w"> </span>
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">"Eres menor de edad"</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Tambien podemos usar if-múltiples con una opción más potente, como <code>when</code>:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1">// Condicionales múltiples</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="n">when</span><span class="w"> </span><span class="p">(</span><span class="n">edadAlumno</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="o">&gt;</span><span class="mi">18</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"Eres mayor de edad"</span><span class="p">)</span>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span><span class="mf">16..18</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"Casi eres mayor de edad"</span><span class="p">)</span>
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">"Eres menor de edad"</span><span class="p">)</span>
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="i-bucles-o-iteradores">I. Bucles o Iteradores<a class="headerlink" href="#i-bucles-o-iteradores" title="Permanent link">¶</a></h3>
+<p>Los bucles o iteradores nos permiten ejecutar una parte de código varias veces. Existen varios tipos.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./images/while_image.png" data-desc-position="bottom"><img src="./images/while_image.png" alt="Bucle while" align="right" width="40%"></a></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="c1">// Bucles indefinidos</span>
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="c1">// Ejemplo while</span>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="kd">var</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="w">    </span><span class="n">i</span><span class="o">++</span>
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="p">}</span>
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a><span class="c1">// Ejemplo do-while</span>
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a><span class="kd">var</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-41-12"><a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a><span class="w">    </span><span class="n">i</span><span class="o">++</span>
+</span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+</span></code></pre></div>
 
 
 
