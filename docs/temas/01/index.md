@@ -1035,7 +1035,9 @@ Si recibes la edad de una persona, indica la siguiente información:
 - Si es mayor de 120 años => "Te has pasado el juego".
 
 
-### H. Los condicionales nos permiten ejecutar una parte de código u otra dependiendo del resultado de una condición lógica (true o false).
+### H. Los condicionales.
+
+Los condicionales nos permiten ejecutar una parte de código u otra dependiendo de si se cumple o no una condición. La condición es una expresión que se evalúa como verdadera (`true`) o falsa (`false`).
 
 Pueden ser:
 
