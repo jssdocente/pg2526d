@@ -1,0 +1,1561 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jssdocente.github.io/pg2526d/temas/03/3.2-prog-modular.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../imagenes/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>UT3.2 Programación modular - Programación - Curso 25/26</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ut32-programacion-modular" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../index.html" title="Programación - Curso 25/26" class="md-header__button md-logo" aria-label="Programación - Curso 25/26" data-md-component="logo">
+      
+  <img src="../../imagenes/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación - Curso 25/26
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UT3.2 Programación modular
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="Teal" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="Teal" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Programación - Curso 25/26" class="md-nav__button md-logo" aria-label="Programación - Curso 25/26" data-md-component="logo">
+      
+  <img src="../../imagenes/logofp.png" alt="logo">
+
+    </a>
+    Programación - Curso 25/26
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Introducción a la programación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Elementos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    03 - Programación Estructurada y modular
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            03 - Programación Estructurada y modular
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3.1-prog-estructurada.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.1 - Prog. estructurada
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#321-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 Funciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#322-procedimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Procedimientos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#323-parametros-y-argumentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 Parámetros y Argumentos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#324-paso-por-valor-y-paso-por-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 Paso por valor y paso por referencia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#325-ambito-de-las-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5. Ámbito de las variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#326-sobrecarga-de-funciones-y-procedimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6 Sobrecarga de funciones y procedimientos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#327-parametros-de-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.7 Parámetros de salida
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3210-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.10 Resumen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3210-reflexiones-el-contrato-de-la-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.10 Reflexiones: El Contrato de la Función
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3212-early-return-para-simplificar-condicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.12. Early Return para simplificar condicionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32132-recursividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.13.2. Recursividad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3214-paquete-o-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.14. Paquete o módulo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3215-control-de-excepciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.15. Control de excepciones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ut32-programacion-modular"><strong>UT3.2 Programación modular</strong><a class="headerlink" href="#ut32-programacion-modular" title="Permanent link">¶</a></h1>
+<p>La <strong>programación modular</strong> es un paradigma que consiste en dividir un programa grande y complejo en partes más pequeñas, manejables e independientes, llamadas <strong>módulos</strong>. Cada módulo se encarga de una tarea específica. En un lenguaje de programación, estos módulos se implementan como <strong>funciones</strong> y <strong>procedimientos</strong>.</p>
+<p>Las ventajas que ofrece la programación modular son:
+- Facilita la resolución del problema.
+- Aumenta la claridad y legibilidad de todo el programa.
+- Permite que varios programadores trabajen en el mismo proyecto.
+- Reduce el tiempo de desarrollo ya que se pueden reutilizar esos módulos en varios programas.
+- Aumenta la fiabilidad porque es más sencillo diseñar y depurar módulos y el mantenimiento en mas fácil.</p>
+<p>La descomposición modular se basa en la técnica “Divide y Vencerás” (DAC o Divide And Conquer), esta técnica tiene dos pasos:
+- Identificación de los subproblemas y construcción de los módulos que lo resuelven.
+- Combinación de los módulos para resolver el problema original.</p>
+<figcaption>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="./images/funciones.jpg" data-desc-position="bottom"><img src="./images/funciones.jpg" width="100%" align="center"></a>
+    <figcaption align="center">Concepto de función</figcaption>
+</figcaption>
+
+<h3 id="321-funciones">3.2.1 Funciones<a class="headerlink" href="#321-funciones" title="Permanent link">¶</a></h3>
+<p>Una <strong>función</strong> es un bloque de código que realiza una tarea específica y devuelve un valor. Las funciones pueden recibir datos de entrada (argumentos) y siempre devuelven un resultado mediante la sentencia <code>return</code>.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">function</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// Esta función toma dos enteros como argumentos y devuelve su suma.</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve la suma de a y b</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1">// Llamamos a la función sumar y almacenamos el resultado en la variable resultado</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumar</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"La suma es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime "La suma es: 8"</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="322-procedimientos">3.2.2 Procedimientos<a class="headerlink" href="#322-procedimientos" title="Permanent link">¶</a></h3>
+<p>Un <strong>procedimiento</strong> es similar a una función, pero no devuelve ningún valor. Se utiliza para ejecutar una serie de instrucciones que realizan una tarea específica. Los procedimientos pueden recibir datos de entrada (argumentos) pero no tienen una sentencia <code>return</code>.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">procedure</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="c1">// Este procedimiento toma un nombre como argumento y muestra un saludo personalizado.</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Hola, "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"! Bienvenido al programa."</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="c1">// Llamamos al procedimiento saludar con el nombre "Ana"</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">saludar</span><span class="p">(</span><span class="s">"Ana"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime "Hola, Ana! Bienvenido al programa."</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="323-parametros-y-argumentos">3.2.3 Parámetros y Argumentos<a class="headerlink" href="#323-parametros-y-argumentos" title="Permanent link">¶</a></h3>
+<p>Los <strong>parámetros</strong> son las variables que se definen en la declaración de una función o procedimiento. Actúan como "marcadores de posición" para los valores que se pasarán cuando se llame a la función o procedimiento.</p>
+<p>Los <strong>argumentos</strong> son los valores reales que se pasan a la función o procedimiento cuando se llama. Estos valores se asignan a los parámetros correspondientes.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">function</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">multiplicar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="c1">// x e y son los parámetros de la función</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve el producto de x e y</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="c1">// 4 y 5 son los argumentos que se pasan a la función</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">multiplicar</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"El producto es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime "El producto es: 20"</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<h5 id="la-regla-de-la-exactitud-de-tipos">La Regla de la Exactitud de Tipos<a class="headerlink" href="#la-regla-de-la-exactitud-de-tipos" title="Permanent link">¶</a></h5>
+<p>En el Lenguaje Java, se aplica una política <strong>estricta</strong> de <strong>coincidencia de tipos</strong> para garantizar la seguridad y previsibilidad del código. Esto significa que el tipo de cada argumento pasado debe <strong>coincidir exactamente</strong> con el tipo de su parámetro correspondiente.</p>
+<p><strong>Conversiones (Ampliación o Estrechamiento)</strong></p>
+<p>Si un argumento es de un tipo diferente al parámetro, se considera un error a menos que se use un <strong><em>casting</em> explícito</strong> para forzar la conversión. Esta regla se aplica incluso en las llamadas "conversiones de ampliación" donde no hay pérdida de datos (por ejemplo de de entero a decimal, en este caso no lo permitiremos aunque haya lenguajes que sí, solo por fines didácticos), forzando al programador/a a ser consciente de la transformación de datos.</p>
+<ul>
+<li>Conversiones por ampliación (de un tipo "más pequeño" a uno "más grande"): <code>int</code> a <code>decimal</code> (no permitido sin <em>casting</em> explícito).</li>
+<li>Conversiones por estrechamiento (de un tipo "más grande" a uno "más pequeño"): <code>decimal</code> a <code>int</code> (no permitido sin <em>casting</em> explícito). Estas conversiones pueden provocar pérdida de datos y, por lo tanto, siempre requieren <em>casting</em> explícito.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Parámetro Esperado</th>
+<th style="text-align: center;">Argumento Pasado</th>
+<th style="text-align: center;">¿Válido?</th>
+<th style="text-align: left;">Acción Requerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>decimal</code></td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td style="text-align: left;">Requiere <strong>Casting Explícito</strong>: <code>(decimal)mi_entero</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><code>decimal</code></td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td style="text-align: left;">Requiere <strong>Casting Explícito</strong>: <code>(int)mi_decimal</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><strong>SÍ</strong></td>
+<td style="text-align: left;">Paso Directo (Coincidencia Exacta)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>decimal</code></td>
+<td style="text-align: center;"><code>decimal</code></td>
+<td style="text-align: center;"><strong>SÍ</strong></td>
+<td style="text-align: left;">Paso Directo (Coincidencia Exacta)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>int?</code></td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><strong>SÍ</strong></td>
+<td style="text-align: left;">Paso Directo (Conversión Segura a Anulable)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><code>int?</code></td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td style="text-align: left;">Requiere Verificación y <strong>Casting Explícito</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: center;"><strong>SÍ</strong></td>
+<td style="text-align: left;">Paso Directo (Coincidencia Exacta)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><strong>NO</strong></td>
+<td style="text-align: left;">Requiere <strong>Casting Explícito</strong>: <code>(string)mi_char</code></td>
+</tr>
+</tbody>
+</table>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">function</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">calcularMedia</span><span class="p">(</span><span class="kt">decimal</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nota1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nota2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="c1">// ERROR: Se espera decimal, se pasa int. Requiere casting.</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="c1">// decimal resultado = calcularMedia(nota1, nota2); </span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="c1">// SOLUCIÓN: Usar casting explícito para forzar la conversión segura</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularMedia</span><span class="p">((</span><span class="kt">decimal</span><span class="p">)</span><span class="n">nota1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">nota2</span><span class="p">);</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Media: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime "Media: 7.5"</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Resumen de la Regla de la Exactitud de Tipos</strong></p>
+<p>La exactitud con los tipos de datos que pasas a una función (<code>int</code>, <code>string</code>, <code>decimal</code>, etc.) permite que tu código sea <strong>seguro, limpio y fácil de entender</strong> desde el principio.</p>
+<p><u>Regla de Oro: Control Total sobre la Transformación (Tipos Diferentes)</u></p>
+<p>Si pasas un dato de un tipo a otro (ej. de <code>int</code> a <code>decimal</code>, o de <code>string</code> a <code>int</code>), <strong>siempre</strong> debes usar el <strong><code>Casting</code> Explícito</strong> (<code>(tipo)valor</code>). La regla es que los tipos deben coincidir exactamente, y si no lo hacen, <strong>tú tienes que forzar la conversión</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Escenario de Conversión</th>
+<th style="text-align: left;">¿Por qué te obligamos al <code>casting</code>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Transformación Segura</strong> (<code>int</code> a <code>decimal</code>)</td>
+<td style="text-align: left;">Queremos que <strong>seas consciente</strong> de que la forma en que se guarda el dato en la memoria cambia. Al usar <code>(decimal)mi_entero</code>, confirmas tu intención de transformar el dato, incluso si no hay riesgo de pérdida. Realmente esta sería una transformación segura por ampliación en casi todos los lenguajes. Queremos que seas consciente de que la forma en que se guarda el dato cambia. Al escribir (decimal)5, confirmas que quieres que el 5 se convierta en 5.0. ¡No queremos magia, queremos control!</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transformación Peligrosa</strong> (<code>decimal</code> a <code>int</code>, <code>string</code> a <code>int</code>)</td>
+<td style="text-align: left;">Hay un alto riesgo de <strong>pérdida de información</strong> (ej. quitar decimales) o un <strong>fallo</strong> (ej. si el <code>string</code> es "hola"). El <em>casting</em> te obliga a <strong>asumir la responsabilidad</strong> de que el valor pueda ser corrupto o causar un error. en definitiva, estás haciendo una Conversión Peligrosa (estrechamiento). Quitas los decimales (truncamiento). Esto es una pérdida de datos y no suele estar permitida por los lenguajes. El casting obligatorio te obliga a asumir la responsabilidad de esa pérdida.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión:</strong> El <em>casting</em> explícito siempre es tu herramienta para <strong>controlar</strong> y <strong>documentar</strong> cualquier cambio en el formato de los datos. Si los tipos no son idénticos, ¡el control es tuyo! Es una cuestión de disciplina y claridad.</p>
+<h3 id="324-paso-por-valor-y-paso-por-referencia">3.2.4 Paso por valor y paso por referencia<a class="headerlink" href="#324-paso-por-valor-y-paso-por-referencia" title="Permanent link">¶</a></h3>
+<p>Esta es una de las distinciones más importantes sobre cómo se pasan los argumentos a los módulos:</p>
+<ul>
+<li><strong>Paso por valor (por defecto)</strong>: Cuando pasas un argumento por valor, la función recibe una <strong>copia</strong> del dato original. Cualquier modificación que hagas al parámetro dentro de la función <strong>no afectará a la variable original</strong> fuera de ella. Este es el comportamiento por defecto en la mayoría de los lenguajes de programación, incluido DAW.</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="n">function</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">incrementar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">      </span><span class="c1">// Esta función recibe una copia del valor original.</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Incrementa la copia, no el original.</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve el valor incrementado.</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="kt">var</span><span class="w"> </span><span class="n">valorOriginal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor original antes de la función: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valorOriginal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 10</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="kt">var</span><span class="w"> </span><span class="n">nuevoValor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">incrementar</span><span class="p">(</span><span class="n">valorOriginal</span><span class="p">);</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor devuelto por la función: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nuevoValor</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 11</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor original después de la función: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valorOriginal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Sigue imprimiendo 10</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>
+<p><strong>Paso por referencia</strong>: Cuando pasas un argumento por referencia, en lugar de una copia, la función recibe la <strong>dirección de memoria</strong> de la variable original. Esto significa que cualquier cambio que hagas al parámetro dentro de la función <strong>modificará directamente la variable original</strong>.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">void</span><span class="w"> </span><span class="nf">duplicar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="c1">// Esta función recibe una referencia al valor original.</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modifica directamente el valor original.</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">valorOriginal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor original antes de la función: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valorOriginal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 10</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">duplicar</span><span class="p">(</span><span class="n">valorOriginal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pasamos la variable por referencia</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor original después de la función: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valorOriginal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ahora imprime 20</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/parametros.gif" data-desc-position="bottom"><img alt="Paso por valor y paso por referencia" src="images/parametros.gif"></a></p>
+</li>
+</ul>
+<p>En Java, el mecanismo de paso de parámetros a los métodos es a menudo una fuente de confusión:</p>
+<ol>
+<li>
+<p><strong>Tipos Primitivos (como <code>int</code>, <code>boolean</code>, <code>double</code>, etc.):</strong> Se pasan <strong>siempre por valor</strong>. Se crea una copia del valor de la variable original y esa copia es la que se pasa al método. Cualquier modificación dentro del método afecta solo a esa copia local, no a la variable original. *</p>
+</li>
+<li>
+<p><strong>Objetos (Tipos de Referencia, como instancias de clases):</strong> Se pasan <strong>por valor de la referencia</strong> (a veces llamado "paso por copia de la referencia" o <em>pass-by-value of the reference</em>). Esto significa:</p>
+<ul>
+<li>La variable que se pasa al método <strong>contiene la dirección de memoria</strong> (la referencia) donde reside el objeto.</li>
+<li>El método recibe una <strong>copia de esta referencia</strong> (la dirección de memoria).</li>
+<li>Si usas esta copia de la referencia dentro del método para <strong>modificar el estado interno del objeto</strong> (por ejemplo, llamar a un <em>setter</em>), el objeto original <strong>sí</strong> se verá afectado, porque ambas referencias apuntan al mismo objeto en la memoria <em>heap</em>.</li>
+<li>Sin embargo, si dentro del método <strong>reasignas la variable de referencia</strong> a un <em>nuevo</em> objeto, esto solo cambiará la referencia local dentro del método; la referencia original en el código llamador <strong>permanecerá sin cambios</strong>, apuntando al objeto original.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>💡 Un <code>String</code> no es un objeto primitivo y por tanto se pasa por <em>referencia</em>. Además los <code>String</code> son inmutables. No se pueden modificar, si queremos modificar se necesita crear una copia de ellos.</p>
+</blockquote>
+<h3 id="325-ambito-de-las-variables">3.2.5. Ámbito de las variables<a class="headerlink" href="#325-ambito-de-las-variables" title="Permanent link">¶</a></h3>
+<p>El <strong>ámbito</strong> (o alcance) de una variable determina dónde puede ser accedida o modificada dentro del código. </p>
+<ul>
+<li>
+<p><strong>Ámbito global</strong>: Las variables declaradas fuera de cualquier función o procedimiento tienen ámbito global. Esto significa que pueden ser accedidas y modificadas desde cualquier parte del programa, incluyendo dentro de funciones y procedimientos. Sin embargo, abusar de las variables globales puede llevar a código difícil de mantener y depurar, ya que cualquier parte del programa puede cambiar su valor. <strong>Usa las variables globales con moderación y solo cuando sea absolutamente necesario, aunque es mejor no hacerlo</strong>.</p>
+</li>
+<li>
+<p><strong>Ámbito local</strong>: Las variables declaradas dentro de una función o procedimiento tienen ámbito local. Solo pueden ser accedidas y modificadas dentro de ese bloque específico. Esto ayuda a evitar conflictos de nombres y hace que el código sea más modular y fácil de entender.</p>
+</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">contadorGlobal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable global, OJO que puedes suspender por usarlas, porque siempre se puede usar paso por referencia si lo necesitas</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">void</span><span class="w"> </span><span class="nf">incrementarContador</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">contadorLocal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable local</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">contadorLocal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contadorLocal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Incrementa la variable local</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">contadorGlobal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contadorGlobal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Incrementa la variable global</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Contador local: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">contadorLocal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Siempre imprimirá 1</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Contador global: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">contadorGlobal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Incrementa cada vez que se llama a la función</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="n">incrementarContador</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llama a la función</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="n">incrementarContador</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llama a la función de nuevo</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="n">incrementarContador</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llama a la función de nuevo</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Es importante entender que puedes tener variables que se llamen igual en diferentes ámbitos (una en Main y otra local, ya sea función/procedimiento y bucle, o if), pero son variables completamente distintas. La variable local "oculta" a la global dentro de su ámbito.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable global</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">void</span><span class="w"> </span><span class="nf">mostrarValor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable local, oculta a la global</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor dentro de la función: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 50</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable local en Main, oculta a la global</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor en Main: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 75</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="n">mostrarValor</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llama a la función que imprime 50</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor global: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 75, la variable global sigue siendo 100 </span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor global accedido directamente: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="c1">// Variable local en el if, oculta a la de Main</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">        </span><span class="c1">// Para evitar estas cosas nombra bien tus variables y no repitas nombres</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor dentro del if: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 25</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Valor en Main después del if: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="326-sobrecarga-de-funciones-y-procedimientos">3.2.6 Sobrecarga de funciones y procedimientos<a class="headerlink" href="#326-sobrecarga-de-funciones-y-procedimientos" title="Permanent link">¶</a></h3>
+<p>La <strong>sobrecarga</strong> permite definir múltiples funciones o procedimientos con el mismo nombre, pero con diferentes listas de parámetros (diferente número o tipos de parámetros). El compilador determina cuál función llamar en función de los argumentos proporcionados.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">calcularArea</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">lado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="c1">// Calcula el área de un cuadrado</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">lado</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">lado</span><span class="p">;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">}</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kt">decimal</span><span class="w"> </span><span class="nf">calcularArea</span><span class="p">(</span><span class="kt">decimal</span><span class="w"> </span><span class="n">radio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="c1">// Calcula el área de un círculo</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">3.1416</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radio</span><span class="p">;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">}</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">areaCuadrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularArea</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Llama a la función para cuadrado</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">areaCirculo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularArea</span><span class="p">(</span><span class="mf">3.5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Llama a la función para círculo</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Área del cuadrado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">areaCuadrado</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 25</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Área del círculo: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">areaCirculo</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime aproximadamente 38.4846</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>En cualquier caso, la sobrecarga debe usarse con moderación para evitar confusiones. Asegúrate de que las funciones sobrecargadas tengan una lógica clara y distinta para que su uso sea intuitivo. Si no siempre podrás usar nombres diferentes para cada función o procedimiento o usar parámetros opcionales o por defecto y nombrados para evitar tanto su uso.</p>
+<h3 id="327-parametros-de-salida">3.2.7 Parámetros de salida<a class="headerlink" href="#327-parametros-de-salida" title="Permanent link">¶</a></h3>
+<p>Permiten que una función o procedimiento devuelva múltiples valores. Se declaran con la palabra clave <code>out</code> y deben ser asignados dentro de la función antes de que esta termine. Al llamar a la función, no es necesario inicializar las variables que se pasan como parámetros de salida.
+No es una práctica muy común, pero es útil en ciertos casos donde necesitas devolver varios valores sin usar estructuras o clases y no se recomienda salvo que sea estrictamente necesario.</p>
+<p>¿Que diferencia hay en usar <code>out</code> o <code>ref</code>? Que con <code>ref</code> la variable debe estar inicializada antes de pasarla a la función, mientras que con <code>out</code> no es necesario inicializarla, pero dentro de la función debe ser asignada antes de salir de ella.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">function</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">obtenerDatos</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="c1">// Asignamos valores a los parámetros de salida</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">}</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="n">obtenerDatos</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Nombre: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Edad: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Aquí la diferencia con <code>ref</code> es que no es necesario inicializar <code>nombre</code> y <code>edad</code> antes de pasarlas a la función, pero dentro de la función deben ser asignadas antes de que esta termine.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">function</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">obtenerDatos</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="c1">// Asignamos valores a los parámetros de referencia</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"> </span><span class="c1">// Debe estar inicializada</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Debe estar inicializada</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="n">obtenerDatos</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Nombre: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Edad: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="3291-paso-por-referencia-vs-paso-por-salida-ref-vs-out">3.2.9.1. Paso por Referencia vs. Paso por Salida (<code>ref</code> vs. <code>out</code>)<a class="headerlink" href="#3291-paso-por-referencia-vs-paso-por-salida-ref-vs-out" title="Permanent link">¶</a></h4>
+<p>Tanto <code>ref</code> como <code>out</code> son mecanismos de <strong>Paso por Referencia</strong>, lo que significa que en lugar de pasar una copia del valor, la función trabaja directamente con la <strong>variable original</strong> en la memoria, permitiendo que el módulo modifique su valor.</p>
+<p>Sin embargo, <strong>no son sinónimos</strong>. La diferencia clave está en su <strong>propósito</strong> (semántica) y, lo más importante, en el <strong>Control de Compilación</strong> que imponen para garantizar la seguridad.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Característica</th>
+<th style="text-align: left;">🔑 <strong><code>ref</code> (Referencia)</strong></th>
+<th style="text-align: left;">🔑 <strong><code>out</code> (Salida)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Flujo de Datos</strong></td>
+<td style="text-align: left;"><strong>Entrada y Salida (I/O)</strong>. Modifica un valor existente.</td>
+<td style="text-align: left;"><strong>Solo Salida (O)</strong>. Se usa para obtener un resultado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inicialización (en <code>Main</code>)</strong></td>
+<td style="text-align: left;">El argumento <strong>DEBE estar inicializado</strong> antes de la llamada.</td>
+<td style="text-align: left;">El argumento <strong>NO necesita estar inicializado</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Asignación (en Función)</strong></td>
+<td style="text-align: left;">La función <strong>puede</strong> leer y modificar el parámetro, pero <strong>no está obligada</strong> a modificarlo.</td>
+<td style="text-align: left;">La función <strong>DEBE asignar un valor</strong> antes de finalizar su ejecución. <strong>¡Es una obligación impuesta por el compilador!</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Concepto Clave</strong></td>
+<td style="text-align: left;">Modificar un valor existente.</td>
+<td style="text-align: left;">Devolver uno o varios resultados adicionales.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="1-uso-de-ref-modificar-una-entrada-existente">1. Uso de <code>ref</code>: Modificar una Entrada Existente<a class="headerlink" href="#1-uso-de-ref-modificar-una-entrada-existente" title="Permanent link">¶</a></h5>
+<p><code>ref</code> se utiliza cuando el <strong>valor inicial del argumento es importante</strong> para la función, la cual lo usará como entrada y luego, opcionalmente, lo modificará.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// 'saldo' entra valiendo 100, y sale valiendo 150.</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">procedure</span><span class="w"> </span><span class="nf">depositar</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">saldo</span><span class="p">,</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="c1">// La función LEYÓ el valor de 'saldo' (100) para calcular la suma.</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">saldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">saldo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cantidad</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">}</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">miCuenta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0m</span><span class="p">;</span><span class="w"> </span><span class="c1">// DEBE estar inicializada</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="n">depositar</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">miCuenta</span><span class="p">,</span><span class="w"> </span><span class="mf">50.0m</span><span class="p">);</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="c1">// miCuenta ahora vale 150.0m.</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Regla esencial:</strong> La variable <code>miCuenta</code> <strong>debe</strong> haber sido inicializada antes de la llamada, pues la función <code>depositar</code> necesita leer su valor inicial.</p>
+<h5 id="2-uso-de-out-garantizar-un-resultado-obligatorio">2. Uso de <code>out</code>: Garantizar un Resultado Obligatorio<a class="headerlink" href="#2-uso-de-out-garantizar-un-resultado-obligatorio" title="Permanent link">¶</a></h5>
+<p><code>out</code> se utiliza para <strong>devolver resultados adicionales</strong> y es la forma principal de devolver múltiples valores. Es superior a <code>ref</code> en este contexto porque el compilador lo supervisa:</p>
+<ul>
+<li><strong>Semántica (Intención):</strong> Al usar <code>out</code>, aclaras que esa variable solo se usará para obtener un resultado, ignorando si tenía un valor inicial en el <code>Main</code>.</li>
+<li><strong>Control de Compilación (Seguridad):</strong> La regla de <code>out</code> obliga a que <strong>todos los caminos posibles</strong> dentro de la función asignen un valor a ese parámetro. Esto previene que la función termine sin haber devuelto un resultado válido.</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// 'resultado' solo sirve como contenedor para DEVOLVER un valor.</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">function</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">intentarDividir</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">den</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">resultado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">den</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0m</span><span class="p">;</span><span class="w"> </span><span class="c1">// Asignación obligatoria 1</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">den</span><span class="p">;</span><span class="w"> </span><span class="c1">// Asignación obligatoria 2</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="p">}</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">division</span><span class="p">;</span><span class="w"> </span><span class="c1">// No es necesario inicializarla</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">exito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intentarDividir</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">division</span><span class="p">);</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="c1">// division ahora vale 5.0m.</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<h6 id="contraejemplo-la-obligacion-de-asignacion-de-out">Contraejemplo: La Obligación de Asignación de <code>out</code><a class="headerlink" href="#contraejemplo-la-obligacion-de-asignacion-de-out" title="Permanent link">¶</a></h6>
+<p>Si no asignas un valor al parámetro <code>out</code> en <strong>todos los flujos de control</strong> (por ejemplo, en un <code>if</code> pero no en el <code>else</code>), el compilador generará un error, incluso si la variable tuviera un valor inicial en el <code>Main</code> (ese valor inicial es ignorado).</p>
+<p><strong>El siguiente código produciría un ERROR DE COMPILACIÓN:</strong></p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// ¡ERROR! Si 'dato' es menor que 10, la función sale sin asignar 'mensaje'.</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">function</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">procesarDatos</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">dato</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">mensaje</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dato</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="n">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Dato procesado con éxito."</span><span class="p">;</span><span class="w"> </span><span class="c1">// Asignación OK</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="c1">// El compilador no permite salir por aquí porque 'mensaje' </span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="c1">// no ha recibido un valor garantizado.</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="3210-resumen">3.2.10 Resumen<a class="headerlink" href="#3210-resumen" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concepto Clave</th>
+<th style="text-align: left;">Palabra Clave DAW</th>
+<th style="text-align: left;">Regla / Uso Obligatorio</th>
+<th style="text-align: left;">Impacto en el Código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Declaración</strong></td>
+<td style="text-align: left;"><code>function</code> o <code>procedure</code></td>
+<td style="text-align: left;"><strong>Función:</strong> Debe devolver un valor (<code>return</code>). <strong>Procedimiento:</strong> No devuelve valor (similar a <code>void</code>).</td>
+<td style="text-align: left;">Define la estructura de tu módulo de código.</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sobrecarga</strong></td>
+<td style="text-align: left;"><em>(Misma función)</em></td>
+<td style="text-align: left;">Definir <strong>varias funciones/procedimientos</strong> con el <strong>mismo nombre</strong>, pero con <strong>diferentes parámetros</strong> (cantidad o tipo).</td>
+<td style="text-align: left;">Permite usar un nombre simple (<code>Sumar</code>) para operaciones que manejan diferentes tipos de datos (ej. <code>int</code> o <code>decimal</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parámetros Variables</strong></td>
+<td style="text-align: left;"><strong><code>params tipo nombre</code></strong></td>
+<td style="text-align: left;">Permite que el último parámetro de la función reciba un <strong>número indeterminado</strong> de argumentos del mismo tipo.</td>
+<td style="text-align: left;">Crea funciones muy flexibles que pueden aceptar 1, 5 o 100 argumentos. Recorremos con <code>foreach</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Coincidencia de Tipos</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">Los tipos de los argumentos y parámetros deben ser <strong>EXACTOS</strong>.</td>
+<td style="text-align: left;">Garantiza la máxima seguridad y control.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conversión de Tipos</strong></td>
+<td style="text-align: left;"><code>(tipo)</code></td>
+<td style="text-align: left;"><strong>Casting Explícito Obligatorio</strong> si los tipos son diferentes (ej. <code>(decimal)mi_int</code>).</td>
+<td style="text-align: left;">Te obliga a ser consciente de la transformación y pérdida de datos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tipos Anulables</strong></td>
+<td style="text-align: left;"><code>T?</code></td>
+<td style="text-align: left;"><strong>Paso Seguro:</strong> Se permite <code>int</code> a <code>int?</code> sin <em>casting</em>. <strong>Paso Prohibido:</strong> Está prohibido <code>int?</code> a <code>int</code> sin verificación.</td>
+<td style="text-align: left;">Evita errores de <code>null</code> inesperados.</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Paso por Valor</strong></td>
+<td style="text-align: left;"><em>(Por defecto)</em></td>
+<td style="text-align: left;">Pasa una <strong>COPIA</strong> del valor del argumento.</td>
+<td style="text-align: left;">Los cambios dentro de la función <strong>NO afectan</strong> a la variable original.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Paso por Referencia</strong></td>
+<td style="text-align: left;"><code>ref</code></td>
+<td style="text-align: left;">Se debe usar <code>ref</code> en la <strong>definición</strong> y en la <strong>llamada</strong>. Pasa la <strong>dirección de memoria</strong>.</td>
+<td style="text-align: left;">Los cambios dentro de la función <strong>SÍ afectan</strong> a la variable original.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Paso de Salida</strong></td>
+<td style="text-align: left;"><code>out</code></td>
+<td style="text-align: left;">Se usa <code>out</code> en la <strong>definición</strong> y en la <strong>llamada</strong>. La variable <strong>NO necesita estar inicializada</strong> antes de llamar. <strong>Se debe asegurar que se ha inicializado al salir de la función.</strong></td>
+<td style="text-align: left;">Permite a un procedimiento devolver varios valores.</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Argumentos Nombrados</strong></td>
+<td style="text-align: left;"><code>nombre_parametro: valor</code></td>
+<td style="text-align: left;">Permite especificar el argumento por su nombre.</td>
+<td style="text-align: left;">Mejora la legibilidad en llamadas con muchos parámetros.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parámetros Opcionales</strong></td>
+<td style="text-align: left;"><code>tipo nombre = valor_defecto</code></td>
+<td style="text-align: left;">El parámetro toma un valor por defecto si no se le pasa un argumento.</td>
+<td style="text-align: left;">Permite crear funciones más flexibles sin sobrecarga.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3210-reflexiones-el-contrato-de-la-funcion">3.2.10 Reflexiones: El Contrato de la Función<a class="headerlink" href="#3210-reflexiones-el-contrato-de-la-funcion" title="Permanent link">¶</a></h3>
+<p>Es vital reflexionar sobre la gestión de tipos en DAW, ya que hemos introducido una regla que parece contradecir el comportamiento simple del lenguaje que vimos en el tema anterior y que aplicamos en el bloque <code>Main</code>.</p>
+<h4 id="1-tipos-en-el-ambito-local-main-comodidad-y-seguridad-por-diseno">1. Tipos en el Ámbito Local (<code>Main</code>): Comodidad y Seguridad por Diseño<a class="headerlink" href="#1-tipos-en-el-ambito-local-main-comodidad-y-seguridad-por-diseno" title="Permanent link">¶</a></h4>
+<p>Cuando realizas una <strong>asignación de variable</strong> simple en el bloque <code>Main</code>, DAW te ofrece flexibilidad, pero solo hasta cierto punto:</p>
+<ul>
+<li><strong>Conversión por Ampliación (Segura) Permitida:</strong> Puedes asignar un valor de un tipo más pequeño a un tipo más grande (ej. <code>int</code> a <code>decimal</code>) <strong>sin <em>casting</em></strong>. El riesgo es nulo, ya que el dato cabe perfectamente sin perder información. El lenguaje te ayuda en el día a día.<ul>
+<li><strong>Lo que Enseña:</strong> Que los tipos tienen una jerarquía de tamaño y la máquina puede realizar transformaciones seguras por ti.</li>
+</ul>
+</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mi_entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">mi_decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mi_entero</span><span class="p">;</span><span class="w"> </span><span class="c1">// Conversión segura, no necesita casting</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Decimal: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mi_decimal</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime "Decimal: 5.0"</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Conversión por Estrechamiento Prohibida:</strong> Nunca puedes asignar un tipo grande a uno pequeño (ej. <code>decimal</code> a <code>int</code>) <strong>sin <em>casting</em></strong>. El compilador lo prohíbe.<ul>
+<li><strong>Lo que Enseña:</strong> Que la <strong>pérdida de datos</strong> (truncamiento) es un riesgo que solo tú, como programador/a, puedes autorizar explícitamente usando <code>(int)</code>.</li>
+</ul>
+</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">mi_decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.7</span><span class="p">;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="c1">// int mi_entero = mi_decimal; // ERROR: Conversión peligrosa, necesita casting</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mi_entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">mi_decimal</span><span class="p">;</span><span class="w"> </span><span class="c1">// Necesita casting explícito</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Entero: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mi_entero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime "Entero: 5"</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="2-tipos-en-la-interfaz-modular-el-contrato-estricto">2. Tipos en la Interfaz Modular: El Contrato Estricto<a class="headerlink" href="#2-tipos-en-la-interfaz-modular-el-contrato-estricto" title="Permanent link">¶</a></h4>
+<p>En la <strong>Programación Modular</strong>, el paso de argumentos a una función o procedimiento es diferente. Aquí, la <strong>regla de oro es la estrictez</strong> y la <strong>coincidencia exacta</strong> de tipos, incluso para las conversiones seguras (<code>int</code> a <code>decimal</code>) que antes eran válidas o parecen triviales (por conversión por ampliación).</p>
+<p>Esta decisión pedagógica, aunque pueda parecer una "inconsistencia" con el <code>Main</code>, es la base de la <strong>disciplina de programación superior</strong> que necesitas aprender. ¿Por qué? Esto nos prepara para el desarrollo profesional, donde las librerías y APIs exigen contratos claros y sin ambigüedades.</p>
+<h5 id="a-por-que-es-sagrado-el-contrato-de-una-funcion">A. ¿Por qué es Sagrado el Contrato de una Función?<a class="headerlink" href="#a-por-que-es-sagrado-el-contrato-de-una-funcion" title="Permanent link">¶</a></h5>
+<p>La llamada a una función es el <strong>contrato</strong> entre tu código y el módulo que has creado. Este contrato debe ser <strong>inviolable y explícito</strong> para evitar ambigüedades y errores.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Regla Estricta</th>
+<th style="text-align: left;">Por qué Ayuda al Programador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Evitar Ambigüedad en Sobrecarga</strong></td>
+<td style="text-align: left;">Al forzar el <em>casting</em> explícito (ej. <code>calcular((decimal)x, y)</code>), le estás diciendo al compilador <strong>exactamente</strong> qué versión de la función quieres usar si existen varias con el mismo nombre (<code>sobrecarga</code>). Esto elimina las dudas de la máquina.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fomentar la Conciencia de la Interfaz</strong></td>
+<td style="text-align: left;">Para saber si necesitas o no un <em>casting</em>, te obligas a consultar la <strong>firma</strong> (nombre y parámetros) de la función. Un buen desarrollador siempre conoce los requerimientos de los módulos que utiliza.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Preparación para el Mundo Real</strong></td>
+<td style="text-align: left;">Las librerías y APIs profesionales exigen esta <strong>estrictez de tipado</strong>. Adquirir este hábito te prepara para crear <em>software</em> sólido y mantenible, es decir código robusto, predecible yofesional</td>
+</tr>
+</tbody>
+</table>
+<h4 id="regla-de-oro-de-la-modularidad">Regla de Oro de la Modularidad<a class="headerlink" href="#regla-de-oro-de-la-modularidad" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>"Los <strong>módulos son más estrictos</strong> porque exigen el <strong>máximo control</strong>. En una función o procedimiento, no puedes dar nada por sentado.
+La <strong>disciplina y la exactitud</strong> son obligatorias en las interfaces y módulos (procedimientos y funciones) para que tu programa sea robusto y escalable.</p>
+<p><strong>Tu código solo pierde el control</strong> cuando no sabes exactamente qué valor o tipo está procesando un módulo. Al ser estricto con el <strong>contrato</strong> de la función, garantizas la <strong>fiabilidad</strong> de la interfaz y previenes que los errores de tipo se propaguen silenciosamente por tu programa.</p>
+<p>Cuando llames a una función, la <strong>interfaz es sagrada</strong>. Con ello, evitas errores en las llamadas a funciones sobrecargadas y te aseguras de que sabes <strong>exactamente</strong> qué estás pasando, con ello aprenderemos a hacer código seguro, predecible y profesional."</p>
+</blockquote>
+<h3 id="3212-early-return-para-simplificar-condicionales">3.2.12. Early Return para simplificar condicionales<a class="headerlink" href="#3212-early-return-para-simplificar-condicionales" title="Permanent link">¶</a></h3>
+<p>Este apartado, aunque conceptualmente es una técnica de diseño que se aplica dentro de la Programación Modular (ya que el <code>return</code> se utiliza para la salida de funciones), su objetivo es simplificar drásticamente las estructuras de control condicionales (<code>if-else</code> anidadas).</p>
+<p>Aquí teniendo funciones y procedimientos ya definidos, podemos usar <code>return</code> para salir anticipadamente de una función cuando se cumple una condición específica, evitando así anidar múltiples niveles de <code>if-else</code>.</p>
+<p>El Teorema Fundamental de la Programación Estructurada establece que todo programa debe tener un <strong>único punto de entrada y un único punto de salida</strong>. Si bien el uso del <code>return</code> fuera del final de una función (salida anticipada) técnicamente podría considerarse una desviación de este ideal teórico para fines de flujo de control, en la práctica moderna es aceptado para mejorar la legibilidad y evitar la complejidad del "efecto cascada" en las estructuras <code>if-else</code>.</p>
+<p>La técnica de <strong>Salida Anticipada</strong> (<em>Early Return</em>) consiste en utilizar la sentencia <code>return</code> para terminar inmediatamente la ejecución de una <strong>función</strong> o <strong>procedimiento</strong> tan pronto como se haya cumplido una condición que hace innecesaria la ejecución del código restante.</p>
+<h4 id="ventajas-del-early-return-para-condicionales">Ventajas del Early Return para Condicionales<a class="headerlink" href="#ventajas-del-early-return-para-condicionales" title="Permanent link">¶</a></h4>
+<p>Esta técnica es especialmente útil para:</p>
+<ol>
+<li><strong>Validación de Entradas (Guard Clauses):</strong> Permite verificar condiciones fallidas o datos inválidos al comienzo de una función y salir de inmediato.</li>
+<li><strong>Aplanar Estructuras Anidadas:</strong> Evita la necesidad de anidar estructuras <code>if-else if-else</code> complejas, haciendo el código más claro y reduciendo los niveles de indentación, evitar el efecto cascada o "Hadouken".</li>
+</ol>
+<p>Dado que la sentencia <code>return</code> solo es válida dentro de funciones, los ejemplos deben implementarse dentro de funciones llamadas desde <code>Main</code>.</p>
+<h4 id="ejemplo-1-evitar-anidamiento-en-la-validacion">Ejemplo 1: Evitar anidamiento en la validación<a class="headerlink" href="#ejemplo-1-evitar-anidamiento-en-la-validacion" title="Permanent link">¶</a></h4>
+<p>Supongamos que necesitamos calcular algo solo si dos números son positivos.</p>
+<p><strong>Sin Salida Anticipada (Anidamiento complejo):</strong></p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Ejemplo 1A: Sin Early Return"</span><span class="p">);</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="c1">// Llamada a la función con anidamiento</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularSiPositivos</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularSiPositivos</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="p">}</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="c1">// Función que calcula la suma solo si ambos son positivos (mucho anidamiento)</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="kt">int</span><span class="w"> </span><span class="nf">calcularSiPositivos</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">            </span><span class="c1">// Lógica principal</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Error: El segundo número no es positivo."</span><span class="p">);</span>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span>
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Error: El primer número no es positivo."</span><span class="p">);</span>
+</span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Con Salida Anticipada (Lógica aplanada):</strong></p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Ejemplo 1B: Con Early Return"</span><span class="p">);</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="c1">// Llamada a la función con salida anticipada</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularConEarlyReturn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularConEarlyReturn</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">}</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="c1">// Función que valida y usa early return</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="kt">int</span><span class="w"> </span><span class="nf">calcularConEarlyReturn</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w">    </span><span class="c1">// 1. Validación del primer error (Salida anticipada)</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Error: El primer número no es positivo."</span><span class="p">);</span>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Se sale de la función inmediatamente</span>
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="w">    </span><span class="c1">// 2. Validación del segundo error (Salida anticipada)</span>
+</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Error: El segundo número no es positivo."</span><span class="p">);</span>
+</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Se sale de la función inmediatamente</span>
+</span><span id="__span-17-26"><a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-17-27"><a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>
+</span><span id="__span-17-28"><a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a><span class="w">    </span><span class="c1">// Lógica principal: Solo se ejecuta si NINGUNA de las condiciones anteriores se cumplió</span>
+</span><span id="__span-17-29"><a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Validación exitosa. Calculando..."</span><span class="p">);</span>
+</span><span id="__span-17-30"><a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-17-31"><a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="ejemplo-2-romper-una-cadena-de-validacion-compleja">Ejemplo 2: Romper una cadena de validación compleja<a class="headerlink" href="#ejemplo-2-romper-una-cadena-de-validacion-compleja" title="Permanent link">¶</a></h4>
+<p>La salida anticipada permite gestionar los errores más comunes o condiciones triviales al principio de la función.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Ejemplo 2: Validar un PIN"</span><span class="p">);</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="c1">// Declaración de variables dentro de Main</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234</span><span class="p">;</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">esValido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">validarPinEarlyReturn</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"PIN 1234 es válido: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">esValido</span><span class="p">);</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">    </span><span class="n">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">55</span><span class="p">;</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">    </span><span class="n">esValido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">validarPinEarlyReturn</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"PIN 55 es válido: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">esValido</span><span class="p">);</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="p">}</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="c1">// Procedimiento de validación que devuelve un booleano (true/false)</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">validarPinEarlyReturn</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">    </span><span class="c1">// 1. Salida Anticipada: El PIN debe ser positivo</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pin</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"PIN no puede ser negativo o cero."</span><span class="p">);</span>
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">    </span><span class="c1">// 2. Salida Anticipada: El PIN debe tener 4 cifras (simulación)</span>
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pin</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">9999</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"El PIN debe ser de 4 cifras."</span><span class="p">);</span>
+</span><span id="__span-18-27"><a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-18-28"><a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-29"><a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a>
+</span><span id="__span-18-30"><a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="w">    </span><span class="c1">// 3.2. Lógica principal: Si llegamos aquí, el PIN cumple todas las reglas de formato, no ha salido antes</span>
+</span><span id="__span-18-31"><a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"PIN con formato correcto."</span><span class="p">);</span>
+</span><span id="__span-18-32"><a id="__codelineno-18-32" name="__codelineno-18-32" href="#__codelineno-18-32"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-18-33"><a id="__codelineno-18-33" name="__codelineno-18-33" href="#__codelineno-18-33"></a><span class="p">}</span>
+</span><span id="__span-18-34"><a id="__codelineno-18-34" name="__codelineno-18-34" href="#__codelineno-18-34"></a>
+</span><span id="__span-18-35"><a id="__codelineno-18-35" name="__codelineno-18-35" href="#__codelineno-18-35"></a><span class="c1">// Ahora mira mos cómo sería sin Early Return</span>
+</span><span id="__span-18-36"><a id="__codelineno-18-36" name="__codelineno-18-36" href="#__codelineno-18-36"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">validarPinSinEarlyReturn</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-37"><a id="__codelineno-18-37" name="__codelineno-18-37" href="#__codelineno-18-37"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pin</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-38"><a id="__codelineno-18-38" name="__codelineno-18-38" href="#__codelineno-18-38"></a><span class="w">        </span><span class="c1">// 1. Validación del primer error</span>
+</span><span id="__span-18-39"><a id="__codelineno-18-39" name="__codelineno-18-39" href="#__codelineno-18-39"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"PIN no puede ser negativo o cero."</span><span class="p">);</span>
+</span><span id="__span-18-40"><a id="__codelineno-18-40" name="__codelineno-18-40" href="#__codelineno-18-40"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-18-41"><a id="__codelineno-18-41" name="__codelineno-18-41" href="#__codelineno-18-41"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-42"><a id="__codelineno-18-42" name="__codelineno-18-42" href="#__codelineno-18-42"></a><span class="w">            </span><span class="c1">// 2. Validación del segundo error</span>
+</span><span id="__span-18-43"><a id="__codelineno-18-43" name="__codelineno-18-43" href="#__codelineno-18-43"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pin</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">pin</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">9999</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-44"><a id="__codelineno-18-44" name="__codelineno-18-44" href="#__codelineno-18-44"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"El PIN debe ser de 4 cifras."</span><span class="p">);</span>
+</span><span id="__span-18-45"><a id="__codelineno-18-45" name="__codelineno-18-45" href="#__codelineno-18-45"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-18-46"><a id="__codelineno-18-46" name="__codelineno-18-46" href="#__codelineno-18-46"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-47"><a id="__codelineno-18-47" name="__codelineno-18-47" href="#__codelineno-18-47"></a><span class="w">            </span><span class="c1">// 3.2. Lógica principal</span>
+</span><span id="__span-18-48"><a id="__codelineno-18-48" name="__codelineno-18-48" href="#__codelineno-18-48"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"PIN con formato correcto."</span><span class="p">);</span>
+</span><span id="__span-18-49"><a id="__codelineno-18-49" name="__codelineno-18-49" href="#__codelineno-18-49"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-18-50"><a id="__codelineno-18-50" name="__codelineno-18-50" href="#__codelineno-18-50"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-18-51"><a id="__codelineno-18-51" name="__codelineno-18-51" href="#__codelineno-18-51"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-52"><a id="__codelineno-18-52" name="__codelineno-18-52" href="#__codelineno-18-52"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Recuerda que el uso de <code>return</code> para salir anticipadamente solo es válido dentro de funciones y procedimientos, no en bloques de código como <code>if</code>, <code>for</code>, o <code>while</code>. Por lo tanto, esta técnica se aplica exclusivamente en el contexto de funciones y procedimientos.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/indent-hadouken.jpg" data-desc-position="bottom"><img alt="img" src="images/indent-hadouken.jpg"></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/early-return.jpeg" data-desc-position="bottom"><img alt="img" src="images/early-return.jpeg"></a></p>
+<h3 id="32132-recursividad">3.2.13.2. Recursividad<a class="headerlink" href="#32132-recursividad" title="Permanent link">¶</a></h3>
+<p>La recursividad es una técnica que consiste en llamar a una función o procedimiento dentro de sí mismo. La función o procedimiento se llama a sí misma hasta que se cumple una condición que hace que la función o procedimiento deje de llamarse a sí misma (condición de parada o salida). Es importante siempre mostrar la condición de parada.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/recursividad.gif" data-desc-position="bottom"><img alt="" src="images/recursividad.gif"></a></p>
+<p>Muchos problemas son mucho más sencillos de resolver con recursividad que con iteración. Por ejemplo, el cálculo de un factorial es mucho más sencillo de resolver con recursividad que con iteración.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">function</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="c1">// Condición de parada</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">        </span><span class="c1">// Llamada recursiva</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"El factorial de "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" es "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 120</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="images/recursividad.webp" data-desc-position="bottom"><img alt="" src="images/recursividad.webp"></a></p>
+<h3 id="3214-paquete-o-modulo">3.2.14. Paquete o módulo<a class="headerlink" href="#3214-paquete-o-modulo" title="Permanent link">¶</a></h3>
+<p>Un <strong>paquete</strong> o <strong>módulo</strong> (también conocido como librería) es un archivo o conjunto de archivos que agrupa funciones, procedimientos y tipos de datos relacionados. Sirven para organizar el código por funcionalidades y poder reutilizarlo fácilmente en distintos proyectos. Hay muchas librerías estándar que vienen con el lenguaje DAW, y también puedes crear tus propias librerías para compartir código entre diferentes programas, una de ellas es <code>Math</code> que contiene funciones matemáticas comunes como <code>sqrt</code> (raíz cuadrada) y <code>random</code> (número aleatorio) entre otras: sin(), cos(), tan(), pow(), log(), etc.</p>
+<p>Para usar las funcionalidades de un módulo en nuestro programa, primero debemos importarlo. En el lenguaje DAW, usaremos la palabra clave <code>using</code>.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">// Imaginemos que existe un módulo llamado "Math".</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c1">// Lo importamos al principio de nuestro programa con 'using'.</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">Math</span><span class="p">;</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="c1">// --- Ejemplo con la función sqrt ---</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16.0</span><span class="p">;</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="c1">// Usamos la función sqrt del módulo Math</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="kt">decimal</span><span class="w"> </span><span class="n">raiz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">numero</span><span class="p">);</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"La raíz cuadrada de "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" es "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">raiz</span><span class="p">);</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">    </span><span class="c1">// --- Ejemplo con la función random ---</span>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">    </span><span class="c1">// Generamos un número entero aleatorio entre 1 y 6 (ambos inclusive)</span>
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numeroAleatorio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Lanzamiento de un dado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numeroAleatorio</span><span class="p">);</span>
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="3215-control-de-excepciones">3.2.15. Control de excepciones<a class="headerlink" href="#3215-control-de-excepciones" title="Permanent link">¶</a></h3>
+<p>El <strong>control de excepciones</strong> es una técnica de programación esencial para manejar errores que ocurren durante la ejecución de un programa de forma inesperada. En lugar de que el programa se detenga abruptamente, las excepciones permiten capturar y gestionar estos errores de manera controlada. Esto es crucial para la robustez y seguridad de las aplicaciones.</p>
+<h4 id="32151-la-jerarquia-de-las-excepciones">3.2.15.1 La jerarquía de las excepciones<a class="headerlink" href="#32151-la-jerarquia-de-las-excepciones" title="Permanent link">¶</a></h4>
+<p>En la mayoría de los lenguajes, incluida nuestra versión de DAW, todas las excepciones se basan en una clase principal: la clase <strong><code>Exception</code></strong>. Esta es la base de la jerarquía de excepciones y todas las excepciones que creamos o utilizamos, como <code>DivideByZeroException</code>, heredan de ella. Esto significa que un bloque <code>catch</code> que capture <code>Exception</code> puede manejar cualquier tipo de excepción.</p>
+<h4 id="32152-excepciones-requeridas-vs-no-requeridas">3.2.15.2 Excepciones requeridas vs. no requeridas<a class="headerlink" href="#32152-excepciones-requeridas-vs-no-requeridas" title="Permanent link">¶</a></h4>
+<p>En el mundo de la programación, las excepciones se dividen en dos categorías principales:</p>
+<ol>
+<li><strong>Excepciones requeridas (o <code>checked exceptions</code>)</strong>: Son errores que el compilador te obliga a manejar. Se utilizan para condiciones previsibles y recuperables, como un archivo que no se encuentra o un problema de red. Si no las manejas, el código no compilará. Esto fomenta la creación de código robusto, pero puede llevar a una gran cantidad de bloques <code>try-catch</code>, lo que a veces dificulta la lectura del código.</li>
+<li><strong>Excepciones no requeridas (o <code>unchecked exceptions</code>)</strong>: Son errores de los que el compilador no te obliga a ocuparte. Se utilizan para errores de programación (como dividir por cero) o fallos inesperados del sistema. La idea es que son errores que el programa no puede recuperar y que deben ser corregidos por el desarrollador.</li>
+</ol>
+<p>En nuestro lenguaje DAW, las excepciones son <strong>no requeridas</strong>.</p>
+<ul>
+<li><strong>Ventajas</strong>: El código es más limpio, ya que no tienes que escribir bloques <code>try-catch</code> para cada posible error. Se puede centrar en la lógica del negocio y manejar las excepciones solo donde es necesario.</li>
+<li><strong>Inconvenientes</strong>: La responsabilidad de manejar las excepciones recae por completo en el desarrollador. Si no se manejan adecuadamente, el programa puede terminar abruptamente.</li>
+</ul>
+<h4 id="32153-bloques-try-catch-y-finally">3.2.15.3 Bloques <code>try</code>, <code>catch</code> y <code>finally</code><a class="headerlink" href="#32153-bloques-try-catch-y-finally" title="Permanent link">¶</a></h4>
+<p>Para manejar excepciones, se usan los siguientes bloques de código:</p>
+<ol>
+<li><strong><code>try</code></strong>: Contiene las sentencias que podrían generar una excepción. El programa "intenta" ejecutar este código.</li>
+<li><strong><code>catch</code></strong>: Si una excepción ocurre en el bloque <code>try</code>, el control salta a este bloque para "capturar" y gestionar el error.
+3.2.  <strong><code>finally</code></strong>: Un bloque opcional que se ejecuta <strong>siempre</strong>, tanto si se produce una excepción como si no. Es ideal para tareas de limpieza (cerrar archivos, conexiones). Es opcional.</li>
+</ol>
+<h4 id="32154-lanzar-excepciones-manualmente-throw">3.2.15.4 Lanzar excepciones manualmente (<code>throw</code>)<a class="headerlink" href="#32154-lanzar-excepciones-manualmente-throw" title="Permanent link">¶</a></h4>
+<p>La palabra clave <code>throw</code> te permite lanzar una excepción de forma explícita. Esto es útil para errores de lógica de negocio que tú mismo quieres definir, por ejemplo, que el divisor sea cero.</p>
+<p><strong>Ejemplo 1: Función que lanza una excepción si el divisor es cero.</strong></p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">function</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">dividirConThrow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numerador</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">divisor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">        </span><span class="c1">// Lanzamos una excepción de tipo DivideByZeroException</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">DivideByZeroException</span><span class="p">(</span><span class="s">"No se puede dividir por cero."</span><span class="p">);</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">numerador</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">divisor</span><span class="p">;</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="32155-aserciones-assert">3.2.15.5 Aserciones (<code>assert</code>)<a class="headerlink" href="#32155-aserciones-assert" title="Permanent link">¶</a></h4>
+<p>Las <strong>aserciones</strong> son una herramienta de depuración que verifica que una condición sea verdadera. Si la condición es falsa, se lanza una excepción de tipo <strong><code>AssertionException</code></strong>. Se usan para verificar supuestos sobre el estado del programa durante el desarrollo. No es recomendable dejar aserciones en el código de producción, ya que están destinadas a detectar errores lógicos durante la fase de desarrollo y prueba.</p>
+<p><strong>Sintaxis en DAW:</strong>
+<code>assert(condición, "mensaje de error opcional");</code></p>
+<p><strong>Ejemplo 2: Función que usa una aserción para verificar el divisor.</strong></p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">function</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">dividirConAssert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numerador</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">divisor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="c1">// La aserción verifica que el divisor no sea cero.</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="c1">// Si la condición es falsa, se lanza una 'AssertionException'.</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">divisor</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">"El divisor no puede ser cero."</span><span class="p">);</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">numerador</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">divisor</span><span class="p">;</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Ambas funciones pueden ser llamadas desde el bloque <code>Main</code> y sus excepciones pueden ser capturadas en los bloques <code>try-catch</code>.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="c1">// Consumimos la función con `throw`</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Intentando dividir con 'throw'..."</span><span class="p">);</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">resultadoThrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dividirConThrow</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">div</span><span class="p">);</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultadoThrow</span><span class="p">);</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">DivideByZeroException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// &lt;-- Se captura un tipo de excepción específico</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"¡Catch! Error capturado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">message</span><span class="p">);</span>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Fin del ejemplo 'throw'."</span><span class="p">);</span>
+</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>
+</span><span id="__span-23-16"><a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"---"</span><span class="p">);</span>
+</span><span id="__span-23-17"><a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>
+</span><span id="__span-23-18"><a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="w">    </span><span class="c1">// Consumimos la función con `assert`</span>
+</span><span id="__span-23-19"><a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-20"><a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Intentando dividir con 'assert'..."</span><span class="p">);</span>
+</span><span id="__span-23-21"><a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">resultadoAssert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dividirConAssert</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">div</span><span class="p">);</span>
+</span><span id="__span-23-22"><a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultadoAssert</span><span class="p">);</span>
+</span><span id="__span-23-23"><a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">AssertionException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// &lt;-- Se captura un tipo de excepción específico</span>
+</span><span id="__span-23-24"><a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"¡Catch! Error de aserción capturado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">message</span><span class="p">);</span>
+</span><span id="__span-23-25"><a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-26"><a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Fin del ejemplo 'assert'."</span><span class="p">);</span>
+</span><span id="__span-23-27"><a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-23-28"><a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>El uso de <strong>excepciones</strong> y <strong>aserciones</strong> mejora la fiabilidad del programa, haciendo que la detección y corrección de errores sea más sencilla, lo cual es vital para los procesos de <strong>depuración y prueba</strong>.</p>
+<h4 id="32156-buenas-practicas-para-el-control-de-excepciones">3.2.15.6 Buenas prácticas para el control de excepciones<a class="headerlink" href="#32156-buenas-practicas-para-el-control-de-excepciones" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Captura solo las excepciones que puedes manejar</strong>: No uses bloques <code>catch</code> genéricos que capturen todas las excepciones a menos que tengas una razón específica para hacerlo. Captura solo las excepciones que sabes cómo manejar.</li>
+<li><strong>Usa <code>finally</code> para limpieza</strong>: Si tienes recursos que deben ser liberados (como archivos o conexiones de red), usa el bloque <code>finally</code> para asegurarte de que siempre se liberen, independientemente de si ocurrió una excepción o no.
+3.2.  <strong>No abuses de las excepciones</strong>: Las excepciones deben usarse para manejar errores excepcionales, no para el flujo normal del programa. No uses excepciones para controlar la lógica del programa.</li>
+<li><strong>Proporciona información útil en las excepciones</strong>: Al lanzar excepciones, proporciona mensajes de error claros y útiles que ayuden a identificar la causa del problema. Esto facilitará la depuración y el mantenimiento del código.</li>
+</ol>
+<p><strong>IMPORTANTE</strong> Imaginamos que vas a dividir dos números, pero el divisor puede ser cero. En lugar de dejar que el programa falle, puedes manejar la excepción y mostrar un mensaje amigable al usuario. ¿Por qué es malo que el programa falle sin control o simplemente dejar que falle? Porque el usuario no sabrá qué ha pasado y el programa se cerrará abruptamente, perdiendo cualquier dato no guardado. Y aunque gestiones las excepciones, si no lo haces bien, puedes ocultar errores importantes que deberían ser corregidos, al final tu programa está fallando y puede que al levantarlo en la clausula catch no sepas qué ha pasado realmente o simplemente ignores el error y no haces nada, lo cual es peor o no lo hagas correctamente.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">Main</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">    </span><span class="c1">// aquí usamos throw para lanzar una excepción si el divisor es cero</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">    </span><span class="c1">// Es la mejor manera de hacerlo? </span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dividirConThrow</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">div</span><span class="p">);</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">DivideByZeroException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Error: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">message</span><span class="p">);</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="w">        </span><span class="c1">// Aquí podrías manejar el error, por ejemplo, pedir otro divisor</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Fin del intento de división."</span><span class="p">);</span>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a><span class="w">    </span><span class="c1">// aquí el if es la manera recomendada de hacerlo</span>
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a><span class="w">    </span><span class="c1">// Para qe dejar que el programe falle y se reobre si se puede evitar?</span>
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">div</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">div</span><span class="p">;</span>
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Resultado: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultado</span><span class="p">);</span>
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="k">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"No se puede dividir por cero."</span><span class="p">);</span>
+</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a><span class="w">        </span><span class="c1">// Aquí podrías manejar el error, por ejemplo, pedir otro divisor</span>
+</span><span id="__span-24-25"><a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-24-26"><a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>
+</span><span id="__span-24-27"><a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a>
+</span><span id="__span-24-28"><a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="32157-resumen-del-control-de-excepciones">3.2.15.7. Resumen del control de excepciones<a class="headerlink" href="#32157-resumen-del-control-de-excepciones" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concepto Clave</th>
+<th style="text-align: left;">Palabra Clave DAW</th>
+<th style="text-align: left;">Regla / Uso / Propósito</th>
+<th style="text-align: left;">Diferencia Clave / Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bloque de Prueba</strong></td>
+<td style="text-align: left;"><strong><code>try</code></strong></td>
+<td style="text-align: left;">Contiene el código que <strong>podría generar una excepción</strong> (el código "arriesgado").</td>
+<td style="text-align: left;">El flujo normal del programa comienza aquí. Si falla, salta a <code>catch</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bloque de Captura</strong></td>
+<td style="text-align: left;"><strong><code>catch (Exception e)</code></strong></td>
+<td style="text-align: left;">Captura y <strong>gestiona el error</strong> (<code>e</code>). Permite recuperar el programa en lugar de que se detenga.</td>
+<td style="text-align: left;">Permite capturar la clase base <code>Exception</code> o tipos específicos (ej. <code>DivideByZeroException</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bloque de Limpieza</strong></td>
+<td style="text-align: left;"><strong><code>finally</code></strong></td>
+<td style="text-align: left;">Bloque <strong>opcional</strong> que se ejecuta <strong>SIEMPRE</strong>, haya o no excepción.</td>
+<td style="text-align: left;">Ideal para tareas de limpieza (cerrar archivos, liberar recursos).</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lanzar Excepción</strong></td>
+<td style="text-align: left;"><strong><code>throw</code></strong></td>
+<td style="text-align: left;">Lanza una excepción <strong>manualmente</strong> (generalmente, una nueva) si se detecta una condición de error en la lógica de negocio (ej. <code>if (divisor == 0) { throw ... }</code>).</td>
+<td style="text-align: left;">Se usa para indicar errores de lógica que deben ser manejados por el código llamante.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Comprobación Lógica</strong></td>
+<td style="text-align: left;"><strong><code>assert(condición)</code></strong></td>
+<td style="text-align: left;">Herramienta de <strong>depuración</strong>. Verifica que una condición sea verdadera; si no lo es, lanza una <code>AssertionException</code>.</td>
+<td style="text-align: left;"><strong>No debe usarse en código final (producción)</strong>. Sirve para detectar errores lógicos durante la fase de prueba.</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Jerarquía Base</strong></td>
+<td style="text-align: left;"><strong><code>Exception</code></strong></td>
+<td style="text-align: left;">Clase padre de la que heredan todas las excepciones.</td>
+<td style="text-align: left;">Un <code>catch (Exception e)</code> captura <strong>cualquier</strong> error.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tipos de Excepción</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;">En DAW, las excepciones son <strong>NO REQUERIDAS</strong> (<code>unchecked</code>).</td>
+<td style="text-align: left;">El compilador <strong>no te obliga</strong> a usar <code>try-catch</code>. La responsabilidad de manejar el error recae en el desarrollador.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mejor Práctica</strong></td>
+<td style="text-align: left;"><strong><code>if</code> antes de <code>try-catch</code></strong></td>
+<td style="text-align: left;">Es mejor <strong>prevenir el error</strong> con un <code>if</code> (ej. <code>if (divisor != 0)</code>) antes que dejar que falle y usar <code>try-catch</code>.</td>
+<td style="text-align: left;">Las excepciones son para errores <strong>inesperados</strong>, no para validar el flujo normal del programa.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Jesús García - Licencia CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<jssgarcia.docente@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.13c-.15.01-.29.06-.39.17l-1 1 2.05 2 1-1c.22-.21.22-.56 0-.77l-1.24-1.23a.56.56 0 0 0-.38-.17m-2 1.75L13 19.94V22h2.06l6.06-6.07M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v-.89l8.24-8.22c.47-.49 1.12-.76 1.8-.76.34 0 .68.06 1 .19V6c0-1.12-.92-2-2.04-2m0 4-8 5-8-5V6l8 5 8-5"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.tabs.link", "content.code.copy", "content.code.select", "navigation.top", "navigation.expand", "navigation.path", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
