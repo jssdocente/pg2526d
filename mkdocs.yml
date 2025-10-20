@@ -8,7 +8,7 @@ nav:
   - "02 - Elementos básicos": temas/02/index.md
   - "03 - Programación Estructurada y modular": 
     - "3.1 - Prog. estructurada": temas/03/3.1-prog-estructurada.md
-    # - "3.2 - Prog. Modular": temas/03/3.2-prog-modular.md
+    - "3.2 - Prog. Modular": temas/03/3.2-prog-modular.md
   #   - "1. Instalar Laravel": "temas/07/01.instalar-laravel.md"
   #   - "2. Configurar Tailwind": "temas/07/02.configurar-tailwind.md"
   #   - "3. Layouts con Blade": "temas/07/03.layouts-con-blade.md"
