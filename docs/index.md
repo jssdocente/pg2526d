@@ -2,9 +2,6 @@
 
 En este repositorio vamos a agrupar los materiales realizadas en el módulo 0485 de **_Programación_** del CFGS de _Desarrollo de Aplicaciones Web/Multiplataforma_ (DAM), cuyo curriculum viene fijado por el [Real Decreto 686/2010](https://www.boe.es/boe/dias/2010/06/12/pdfs/BOE-A-2010-9269.pdf) actualizado por el [Real Decreto 405/2023](https://www.boe.es/boe/dias/2023/06/03/pdfs/BOE-A-2023-13221.pdf) de 29 de mayo de 2023.
 
-
-//TODO: Actualizar enlace al RD cuando esté disponible
-
 <!-- La _competencia_ que se trabaja en este curso es:
 
 - d) Gestionar bases de datos, interpretando su diseño lógico y verificando integridad, consistencia, seguridad y accesibilidad de los datos.
@@ -28,14 +25,17 @@ Los diferentes resultados de aprendizaje (RA) trabajados junto con su peso aprox
 
 | Código | Descripción | Peso (%) |
 | --- | --- | --- |
-| RA1 | Reconoce la estructura de un programa informático. |  |
-| RA2 | Escribe y prueba programas sencillos. |  |
-| RA3 | Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje. |  |
-| RA4 | Desarrolla programas organizados en clases | |
-| RA5 | Realiza operaciones de entrada y salida de información. |  |
-| RA6 | Escribe programas que manipulen información. |  |
-| RA7 | Utiliza bases de datos orientadas a objetos. |  |
-| RA7 | Gestiona información almacenada en bases de datos relacionales.. |  |
+| RA1 | Reconoce la estructura de un programa informático. | 5% |
+| RA2 | Escribe y prueba programas sencillos. | 5% |
+| RA3 | Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje. | 10% |
+| RA4 | Desarrolla programas organizados en clases | 15% |
+| RA5 | Realiza operaciones de entrada y salida de información. | 20%  |
+| RA6 | Escribe programas que manipulen información. | 20% |
+| RA7 | Desarrolla   programas   aplicando   características   avanzadas   de   los lenguajes orientados a objetos y del entorno de programación | 15% |
+| RA8 | Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información. | 5% |
+| RA9 | Gestiona  información  almacenada  en  bases  de  datos  manteniendo  la integridad y consistencia de los datos | 5% | 
+
+
 
 
 <!-- ## Unidades de Trabajo
