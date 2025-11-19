@@ -24,7 +24,7 @@
         - **CE6b**: Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
         - **CE6e**: Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles (aplicado a arrays).
 
-     === "Planificación de Aula"
+     === "Programación de Aula"
 
         Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **10 sesiones lectivas**, aproximadamente entre la **2ª semana de noviembre y la 1ª semana de diciembre de 2025**.
 

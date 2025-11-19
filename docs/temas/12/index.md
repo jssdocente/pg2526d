@@ -26,7 +26,7 @@
         - **CE9f**: Se han creado aplicaciones que muestren la información almacenada en bases de datos.
         - **CE9g**: Se han creado aplicaciones para gestionar la información presente en bases de datos.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se cubre durante el período de **prácticas en la empresa**, con una duración de **28 sesiones lectivas**, aproximadamente desde el **11 de mayo hasta el 5 de junio de 2026**. Durante este periodo, los alumnos aplicarán y consolidarán estos conocimientos en un entorno real.
 

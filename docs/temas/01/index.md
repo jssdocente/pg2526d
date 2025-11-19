@@ -34,7 +34,7 @@
         - **CE1h**: Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.
         - **CE1i**: Se han introducido comentarios en el código.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
       Esta unidad es la primera, con lo que se imparte en la **primera evaluación**, con una duración estimada de **9 sesiones lectivas**, aproximadamente entre la **3ª semana de septiembre y la 1ª semana de octubre de 2025**.
 

@@ -22,7 +22,7 @@
         - **CE5g**: Se han programado controladores de eventos.
         - **CE5h**: Se han escrito programas que utilicen interfaces gráficos para la entrada y salida de información.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **tercera evaluación**, con una duración estimada de **22 sesiones lectivas**, aproximadamente entre la **4ª semana de marzo y la 3ª semana de abril de 2026**
 

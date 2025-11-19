@@ -24,7 +24,7 @@
         - **CE3f**: Se han probado y depurado los programas (especialmente funciones).
         - **CE3g**: Se ha comentado y documentado el código (documentación de funciones).
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **5 sesiones lectivas**, aproximadamente entre la **1ª y 2ª semana de noviembre de 2025**.
 

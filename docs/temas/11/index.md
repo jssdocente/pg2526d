@@ -32,7 +32,7 @@
         - **CE8g**: Se han realizado programas para recuperar, actualizar y eliminar objetos de las bases de datos.
         - **CE8h**: Se han realizado programas para almacenar y gestionar tipos de datos estructurados, compuestos y relacionados.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **tercera evaluación**, con una duración estimada de **10 sesiones lectivas**, aproximadamente entre la **4ª semana de abril y la 1ª semana de mayo de 2026**
 

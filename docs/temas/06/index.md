@@ -34,7 +34,7 @@
         - **CE4f**: Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.
         - **CE4i**: Se han creado y utilizado conjuntos y librerías de clases.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **segunda evaluación**, con una duración estimada de **12 sesiones lectivas**, aproximadamente entre la **1ª semana de diciembre de 2025 y la 2ª semana de enero de 2026** (considerando el parón navideño).
 

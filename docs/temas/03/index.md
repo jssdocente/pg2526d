@@ -43,7 +43,7 @@
         - **CE3h**: Se han creado excepciones.
         - **CE3i**: Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **11 sesiones lectivas**, aproximadamente entre la **2ª semana de octubre y la 1ª semana de noviembre de 2025**.
 

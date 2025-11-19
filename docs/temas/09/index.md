@@ -29,7 +29,7 @@
         - **CE5e**: Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros.
 
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **segunda/tercera evaluación**, con una duración estimada de **15 sesiones lectivas**, aproximadamente entre la **1ª semana de marzo y la 3ª semana de marzo de 2026**. (Se impartirían a razón de 5-6 sesiones por semana).
 

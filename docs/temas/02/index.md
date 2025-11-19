@@ -31,7 +31,7 @@
         - **CE2h**: Se han utilizado constructores.
         - **CE2i**: Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **6 sesiones lectivas**, aproximadamente entre la **1ª y 2ª semana de octubre de 2025**.
 

@@ -40,7 +40,7 @@
         - **CE7j**: Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.
 
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **segunda evaluación**, con una duración estimada de **8 sesiones lectivas**, aproximadamente entre la **2ª semana de enero y la 1ª semana de febrero de 2026**.
 

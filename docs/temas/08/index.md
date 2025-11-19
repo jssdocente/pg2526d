@@ -32,7 +32,7 @@
         - **CE6i**: Se han realizado programas que realicen manipulaciones sobre documentos escritos en diferentes lenguajes de intercambio de datos.
         - **CE6j**: Se han utilizado operaciones agregadas para el manejo de información almacenada en colecciones.
 
-    === "Planificación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **segunda evaluación**, con una duración estimada de **15 sesiones lectivas**, aproximadamente entre la **2ª semana de febrero y la 1ª semana de marzo de 2026**. (Se impartirían a razón de 5-6 sesiones por semana).
 
