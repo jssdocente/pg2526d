@@ -1,5 +1,36 @@
 # **UT2. Elementos Básicos de Java**
 
+!!! tip "Información de la unidad"
+
+    === "Contenidos"
+
+        Fundamentos de la Programación Orientada a Objetos (POO):
+
+        - Conceptos básicos: objeto, clase, encapsulamiento, herencia (introducción).
+        - Instanciación de objetos a partir de clases predefinidas.
+        - Uso de métodos y propiedades de objetos.
+        - Llamadas a métodos estáticos.
+        - Manejo de parámetros en métodos.
+        - Incorporación y uso de librerías de objetos.
+        - Uso de constructores.
+        - Creación y compilación de programas simples en el IDE.
+
+    === "Propuesta didáctica"
+
+        En esta unidad vamos a comenzar a trabajar el **RA2: Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.**
+
+        Criterios de evaluación clave que abordaremos:
+
+        - **CE2a**: Se han identificado los fundamentos de la programación orientada a objetos.
+        - **CE2b**: Se han escrito programas simples.
+        - **CE2c**: Se han instanciado objetos a partir de clases predefinidas.
+        - **CE2d**: Se han utilizado métodos y propiedades de los objetos.
+        - **CE2e**: Se han escrito llamadas a métodos estáticos.
+        - **CE2f**: Se han utilizado parámetros en la llamada a métodos.
+        - **CE2g**: Se han incorporado y utilizado librerías de objetos.
+        - **CE2h**: Se han utilizado constructores.
+        - **CE2i**: Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.
+
 En esta sección se abordan los conceptos fundamentales para comenzar a programar en Java, desde la estructura básica de un programa hasta el uso de variables, constantes y operaciones.
 
 ## **2.1. Del Código Fuente a la Ejecución**
@@ -18,6 +49,7 @@ Durante la programación, se manejan valores básicos como los booleanos `true` 
 Los comentarios son textos dentro del código fuente que **el compilador ignora por completo** [1]. Su función es puramente informativa, permitiendo al programador dejar notas, explicaciones sobre algoritmos complejos o recordatorios para sí mismo o para otros desarrolladores que trabajen en el mismo código [1].
 
 **Ejemplos de comentarios:**
+
 ```java
 // Esto es un comentario de una sola línea.
 
@@ -41,7 +73,7 @@ Una variable es una **porción de memoria a la que se le asigna un nombre (ident
 
 Los identificadores de las variables en Java deben seguir unas reglas específicas:
 
-- Deben comenzar por una **letra (preferiblemente minúscula), el carácter de guion bajo (****_****) o el símbolo de dólar (****$****)**.
+- Deben comenzar por una **letra (preferiblemente minúscula), el carácter de guion bajo (\*\***\_\***\*) o el símbolo de dólar (\*\***$\***\*)**.
 
 - Después del primer carácter, pueden contener una combinación de **letras, dígitos, guiones bajos o símbolos de dólar**.
 
@@ -57,7 +89,7 @@ Los identificadores de las variables en Java deben seguir unas reglas específic
 
 ### 2.3.3. Tipos de Datos y Declaración
 
-Para usar una variable, primero se debe declarar, indicando su tipo de dato seguido de su nombre. Java ofrece diversos tipos de datos para distintos propósitos, y un mismo valor podría ser válido para varios tipos. Es importante destacar que `String`  **no es un tipo de dato primitivo** como los numéricos.
+Para usar una variable, primero se debe declarar, indicando su tipo de dato seguido de su nombre. Java ofrece diversos tipos de datos para distintos propósitos, y un mismo valor podría ser válido para varios tipos. Es importante destacar que `String` **no es un tipo de dato primitivo** como los numéricos.
 
 **Ejemplo de declaración:**
 
@@ -75,9 +107,9 @@ String nombreUsuario;
 
 Los valores literales son valores fijos escritos directamente en el código. Java los interpreta de la siguiente manera:
 
-- Un valor entre **comillas dobles (****"****)** es un `String`. Ejemplo: `"Hola Mundo"`.
+- Un valor entre **comillas dobles (\*\***"\***\*)** es un `String`. Ejemplo: `"Hola Mundo"`.
 
-- Un valor entre **comillas simples (****'****)** es un `char`. Ejemplo: `'A'`.
+- Un valor entre **comillas simples (\*\***'\***\*)** es un `char`. Ejemplo: `'A'`.
 
 - Un valor sin comillas es interpretado como **numérico**.
 
@@ -165,7 +197,6 @@ Java utiliza la convención **CamelCase** para nombrar identificadores:
 
 ◦ **Variables**: `radio`, `resultadoSuma`.
 
-
 ## **2.7. Operaciones Básicas**
 
 Java soporta varios tipos de operadores para realizar cálculos y comparaciones:
@@ -182,7 +213,7 @@ Java soporta varios tipos de operadores para realizar cálculos y comparaciones:
 
 La API de Java proporciona clases útiles para tareas comunes.
 
-### 2.8.1. Clase** **Scanner
+### 2.8.1. Clase\*\* \*\*Scanner
 
 Permite **leer datos introducidos por el usuario** a través de la consola, por ejemplo, para almacenarlos en una variable.
 
@@ -203,7 +234,7 @@ public class LeerEntrada {
 
 ```
 
-###  2.8.2. Clase **Random**
+### 2.8.2. Clase **Random**
 
 Facilita la **generación de números pseudoaleatorios** de forma más versátil que `Math.random()`, permitiendo crear enteros, booleanos o números dentro de un rango.
 

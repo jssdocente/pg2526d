@@ -1,5 +1,47 @@
-
 # **UT3. Estructuras de control**
+
+!!! tip "Información de la unidad"
+
+    === "Contenidos"
+
+        Estructuras de selección:
+
+        - Sentencias `if-else`, `if-else if-else`.
+        - Sentencia `switch` (o similar).
+        - Operador condicional (ternario).
+
+        Estructuras de repetición (bucles):
+
+        - Bucles `for`.
+        - Bucles `while`, `do-while`.
+        - Sentencias de salto: `break`, `continue`, `return`.
+
+        Control de excepciones:
+
+        - Bloques `try-catch`, `finally`.
+        - Creación y lanzamiento de excepciones personalizadas.
+        - Uso de aserciones para depuración.
+
+        Depuración y buenas prácticas:
+
+        - Herramientas de depuración del IDE.
+        - Documentación y comentarios de código.
+
+    === "Propuesta didáctica"
+
+        En esta unidad vamos a comenzar a trabajar el **RA3: Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
+
+        Criterios de evaluación clave que abordaremos:
+
+        - **CE3a**: Se ha escrito y probado código que haga uso de estructuras de selección.
+        - **CE3b**: Se han utilizado estructuras de repetición.
+        - **CE3c**: Se han reconocido las posibilidades de las sentencias de salto.
+        - **CE3d**: Se ha escrito código utilizando control de excepciones.
+        - **CE3e**: Se han creado programas ejecutables utilizando diferentes estructuras de control.
+        - **CE3f**: Se han probado y depurado los programas.
+        - **CE3g**: Se ha comentado y documentado el código.
+        - **CE3h**: Se han creado excepciones.
+        - **CE3i**: Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo.
 
 En este tema vamos a ver los conceptos básicos de la programación estructurada y modular. Estos conceptos son fundamentales para entender cómo se programan los ordenadores y cómo se pueden resolver problemas de forma eficiente y clara.
 
@@ -14,7 +56,6 @@ La **programación estructurada** es un paradigma que busca crear programas más
 3.  **Bucle (o Iteración)**: Un bloque de código se repite mientras se cumpla una determinada condición.
 
 ![secuencia](./images/estructuras.jpg)
-
 
 ### **3.1. Secuencias**
 
@@ -40,8 +81,7 @@ Main {
 Permiten que nuestro programa tome decisiones y se comporte de manera diferente según las circunstancias.
 
 !!! danger "Importante"
-    Las estructuras de selección **permiten tomar decisiones** sobre qué conjunto de instrucciones a ejecutar en un punto del programa. O sea, seleccionar qué código se ejecuta en un momento determinado **entre caminos alternativos**.
-
+Las estructuras de selección **permiten tomar decisiones** sobre qué conjunto de instrucciones a ejecutar en un punto del programa. O sea, seleccionar qué código se ejecuta en un momento determinado **entre caminos alternativos**.
 
 <figure>
     <img src="images/estructura-seleccion.png" alt="Estructura de selección" width="100%" align="center"/>
@@ -53,7 +93,7 @@ Permiten que nuestro programa tome decisiones y se comporte de manera diferente 
 <img src="./images/seleccion-simple.png" alt="Selección simple" align="right" width="30%" />
 
 La estructura de selección simple permite controlar el hecho de que se ejecute un conjunto de instrucciones si y sólo si se cumple la condición lógica (es decir, el resultado de evaluar la condición lógica es igual a true). En caso contrario, no se ejecutan.
-  
+
 ```csharp
 Main {
     // Condicional simple
@@ -83,17 +123,16 @@ Main {
     }
 }
 ```
+
 <br/>
 <br/>
 <br/>
   
 **Condicionales múltiples (`if-else if-else`)**
 
-
 <img src="./images/seleccion-multiple.png" alt="Selección multiple" align="right" width="50%" />
 
 Permiten encadenar varias condiciones. El programa evalúa las condiciones en orden y ejecuta el bloque de la primera que sea verdadera. Si ninguna lo es, se ejecuta el bloque `else` final (si existe).
-
 
 ```csharp
 Main {
@@ -111,12 +150,10 @@ Main {
 
 <br/>
 
-
 <figure>
     <img src="images/seleccion-multiple2.png" alt="Selección múltiple Ejemplo" width="100%" align="center"/>
     <figcaption align="center">Ejemplo de Selección múltiple</figcaption>
 </figure>
-
 
 **Estructura `switch`**
 
@@ -172,6 +209,7 @@ Main {
     }
 }
 ```
+
 <br/>
 
 ### **3.3. Estructuras de repetición o Bucles**
@@ -185,13 +223,14 @@ Los **bucles nos permiten repetir un bloque de código varias veces**, ahorránd
     <figcaption align="center">Estructuras de repetición</figcaption>
 </figure>
 
-
 **3.3.1 Bucles indefinidos (`while` y `do-while`)**:
 
 Se ejecutan mientras se cumpla una condición. Son útiles cuando no sabemos cuántas iteraciones se necesitarán. `while` evalúa la condición antes de cada iteración, mientras que `do-while` la evalúa después, garantizando al menos una ejecución. Esto es muy útil para menús o entradas de usuario.
 
 ---
+
 #### **Bucle While**
+
 ---
 
 La sentencia **while** permite repetir la ejecución del bucle mientras se verifique la condición lógica. Esta verificación se produce antes de entrar, al principio de cada iteración. Si la primera vez, justo cuando se ejecuta la sentencia por primera vez, ya no se cumple, no se ejecuta ninguna iteración.
@@ -227,25 +266,22 @@ Un bucle infinito es una secuencia de instrucciones dentro de un programa que it
 
     Forzosamente dentro de todo bucle debe haber instrucciones que manipulen el valor de lagunas variables que nos permitan controlar la repetición o el final del cuble. Estas variables se conocen como **variables de control**.
 
-
 <img src="./images/bucle-while-control.png" alt="Bucle while" width="90%"/>
-
 
 Ejemplos de cada tipo:
 
 <div class="grid cards" markdown>
 
--   ![Relación 1:1 (0,1)-(0,1)](images/bucle-while-control-contador.png)
-    <p class="text-center">Contador</p>
+- ![Relación 1:1 (0,1)-(0,1)](images/bucle-while-control-contador.png)
+  <p class="text-center">Contador</p>
 
--   ![Relación 1:1 (1,1)-(0,1)](images/bucle-while-control-acumulador.png)
-    <p class="text-center">Acumulador</p>
+- ![Relación 1:1 (1,1)-(0,1)](images/bucle-while-control-acumulador.png)
+  <p class="text-center">Acumulador</p>
 
--   ![Relación 1:1 (0,1)-(1,1)](images/bucle-while-control-semaforo.png)
-    <p class="text-center">Semáforo</p>
+- ![Relación 1:1 (0,1)-(1,1)](images/bucle-while-control-semaforo.png)
+  <p class="text-center">Semáforo</p>
 
 </div>
-
 
 <br/>
 <br/>
@@ -277,10 +313,12 @@ Main {
         writeLine("Has seleccionado la opción: " + opcion);
     } while (opcion != "3");
 }
-```    
+```
 
 ---
+
 #### **Bucle definidos FOR**
+
 ---
 
 Los bucles definidos se utilizan cuando sabemos de antemano cuántas veces queremos repetir un bloque de código. La estructura `for` incluye la inicialización, la condición y el incremento/decremento en una sola línea, lo que facilita su lectura y escritura. A continuación se muestran varios ejemplos para dominar su funcionamiento.
@@ -315,139 +353,134 @@ Main {
 }
 ```
 
-
 ### **3.4. Mecanismos de Control de Bucles**
 
-Existen **tres formas típicas** de controlar cuándo se ejecuta un bucle: bucles con contador, bucles controlados por indicadores (banderas o *flags*), y bucles controlados por centinela.
+Existen **tres formas típicas** de controlar cuándo se ejecuta un bucle: bucles con contador, bucles controlados por indicadores (banderas o _flags_), y bucles controlados por centinela.
 
 - **A. Bucles controlados por Indicadores (Banderas o Flags)** 📬
 
-    Las **banderas** (*flags*) son variables que suelen ser de tipo lógico (`bool`) y se utilizan para controlar la ejecución de un bucle. Se inicializan antes del bucle y cambian de valor dentro del mismo cuando se cumple la condición de parada.
+  Las **banderas** (_flags_) son variables que suelen ser de tipo lógico (`bool`) y se utilizan para controlar la ejecución de un bucle. Se inicializan antes del bucle y cambian de valor dentro del mismo cuando se cumple la condición de parada.
 
-    *Ejemplo 1: Estructura básica de una bandera dentro de `Main`*
+  _Ejemplo 1: Estructura básica de una bandera dentro de `Main`_
 
-    ```csharp
-    Main {
-        // Declaración de variables dentro del ámbito local de Main
-        bool continuar = true; 
-        
-        // Mientras la bandera 'continuar' sea verdadera
-        while (continuar) 
-        {     
-            // Simulamos instrucciones
-            // ...
-            
-            // Si se cumple una condición (ej. leer ‘N’ del usuario), cambiamos el indicador
-            if (condicionParaAcabar) 
-            {         
-                continuar = false;     
-            }     
-            // ... 
-        }
-    }
-    ```
+  ```csharp
+  Main {
+      // Declaración de variables dentro del ámbito local de Main
+      bool continuar = true;
 
-    *Ejemplo 2: Determinar si un número contiene solo cifras menores que cinco*
+      // Mientras la bandera 'continuar' sea verdadera
+      while (continuar)
+      {
+          // Simulamos instrucciones
+          // ...
 
-    ```csharp
-    Main {
-        // Declaración de variables
-        bool menor; 
-        int num;
-        
-        writeLine("Introduce un número:"); // Salida
-        num = (int)readLine(); // Entrada que requiere casting
-        
-        menor = true; // Inicializacion del indicador
-        
-        // El bucle se mantiene mientras el indicador sea true Y el número tenga cifras
-        while (menor && (num > 0)) 
-        {     
-            // Utilizamos el operador módulo (%) para revisar la última cifra
-            if (num % 10 >= 5) 
-            {         
-                menor = false; // Cambiamos la bandera a false
-            }     
-            num = num / 10; // Eliminamos la última cifra (división entera)
-        } 
-        
-        if (menor) 
-        {
-            writeLine("Todas las cifras son menores que 5");
-        } 
-        else 
-        {
-            writeLine("Hay alguna cifra mayor o igual que 5");
-        }
-    }
-    ```
+          // Si se cumple una condición (ej. leer ‘N’ del usuario), cambiamos el indicador
+          if (condicionParaAcabar)
+          {
+              continuar = false;
+          }
+          // ...
+      }
+  }
+  ```
+
+  _Ejemplo 2: Determinar si un número contiene solo cifras menores que cinco_
+
+  ```csharp
+  Main {
+      // Declaración de variables
+      bool menor;
+      int num;
+
+      writeLine("Introduce un número:"); // Salida
+      num = (int)readLine(); // Entrada que requiere casting
+
+      menor = true; // Inicializacion del indicador
+
+      // El bucle se mantiene mientras el indicador sea true Y el número tenga cifras
+      while (menor && (num > 0))
+      {
+          // Utilizamos el operador módulo (%) para revisar la última cifra
+          if (num % 10 >= 5)
+          {
+              menor = false; // Cambiamos la bandera a false
+          }
+          num = num / 10; // Eliminamos la última cifra (división entera)
+      }
+
+      if (menor)
+      {
+          writeLine("Todas las cifras son menores que 5");
+      }
+      else
+      {
+          writeLine("Hay alguna cifra mayor o igual que 5");
+      }
+  }
+  ```
 
 - **B. Bucles controlados por Centinela**
 
-    Los bucles controlados por centinela utilizan un **valor especial** (el centinela) que indica la parada de la iteración.
+  Los bucles controlados por centinela utilizan un **valor especial** (el centinela) que indica la parada de la iteración.
 
-    *Ejemplo: Sumar números hasta que se introduce 0 (centinela)*
+  _Ejemplo: Sumar números hasta que se introduce 0 (centinela)_
 
-    ```csharp
-    Main {
-        // Declaración de variables
-        int suma = 0; 
-        int num;
+  ```csharp
+  Main {
+      // Declaración de variables
+      int suma = 0;
+      int num;
 
-        writeLine("Introduce números a sumar, 0 para acabar"); // Salida
-        num = (int)readLine(); // Entrada que requiere casting
+      writeLine("Introduce números a sumar, 0 para acabar"); // Salida
+      num = (int)readLine(); // Entrada que requiere casting
 
-        // El bucle while continúa mientras el número introducido no sea el centinela (0)
-        while (num != 0) 
-        {     
-            suma = suma + num; // Acumulación
-            
-            writeLine("Introduce números a sumar, 0 para acabar"); 
-            num = (int)readLine(); // Nueva entrada
-        } 
+      // El bucle while continúa mientras el número introducido no sea el centinela (0)
+      while (num != 0)
+      {
+          suma = suma + num; // Acumulación
 
-        writeLine(suma); // Salida del resultado final
-    }
-    ```
+          writeLine("Introduce números a sumar, 0 para acabar");
+          num = (int)readLine(); // Nueva entrada
+      }
+
+      writeLine(suma); // Salida del resultado final
+  }
+  ```
 
 - **C. Bucles Anidados**
 
-    Los bucles se pueden **anidar** (un bucle dentro de otro). Esta técnica es especialmente útil para el manejo de matrices.
+  Los bucles se pueden **anidar** (un bucle dentro de otro). Esta técnica es especialmente útil para el manejo de matrices.
 
-    *Ejemplo: Generar una tabla de multiplicar (1 a 10) usando bucles `for` anidados*
+  _Ejemplo: Generar una tabla de multiplicar (1 a 10) usando bucles `for` anidados_
 
-    ```csharp
-    Main {
-        // Declaración de variables de control del bucle (i, j)
-        int i, j; 
+  ```csharp
+  Main {
+      // Declaración de variables de control del bucle (i, j)
+      int i, j;
 
-        // Bucle externo
-        for (i = 1; i <= 10; i++) 
-        {     
-            // Bucle interno
-            for (j = 1; j <= 10; j++) 
-            {         
-                // Usamos concatenación (+) para mostrar el resultado
-                writeLine(i + "*" + j + "=" + (i * j)); 
-            } 
-        }
-    }
-    ```
-
+      // Bucle externo
+      for (i = 1; i <= 10; i++)
+      {
+          // Bucle interno
+          for (j = 1; j <= 10; j++)
+          {
+              // Usamos concatenación (+) para mostrar el resultado
+              writeLine(i + "*" + j + "=" + (i * j));
+          }
+      }
+  }
+  ```
 
 ## ⏬ **4. Estructuras de Salto**
 
 Las sentencias de salto son herramientas del lenguaje que proporcionan un control más preciso sobre el comportamiento de nuestros bucles, permitiéndonos alterar su ejecución normal bajo ciertas condiciones.
-
 
 <figure>
     <img src="images/bucles-estructuras-salto.png" alt="Estructuras de salto" width="100%" align="center"/>
     <figcaption align="center">Estructuras de salto</figcaption>
 </figure>
 
-
 <!-- <img src="./images/estruc.png" alt="Bucle while" width="40%" align="right"/> -->
-
 
 ### **4.1 Break: Interrupción Inmediata del Bucle** 🏁
 
@@ -526,10 +559,9 @@ Es una herramienta poderosa para detener un proceso iterativo cuando **se ha cum
 
 <br>
 
-
 ### **4.2 Continue: Omitir y Seguir Adelante** ↖️
 
-A diferencia de break, la sentencia continue **no detiene el bucle**. Lo que hace es *detener la iteración actual y saltar directamente al inicio de la siguiente*. Es como decir: "No me interesa lo que queda por hacer en esta vuelta, pasemos a la siguiente".
+A diferencia de break, la sentencia continue **no detiene el bucle**. Lo que hace es _detener la iteración actual y saltar directamente al inicio de la siguiente_. Es como decir: "No me interesa lo que queda por hacer en esta vuelta, pasemos a la siguiente".
 
 Esto es muy útil para filtrar u omitir ciertos casos dentro de una secuencia sin necesidad de detener todo el proceso.
 
@@ -564,10 +596,9 @@ Esto es muy útil para filtrar u omitir ciertos casos dentro de una secuencia si
 
     Aquí, cada vez que i era un número par, la sentencia continue se activaba, evitando que se ejecutara la línea System.out.println(i) y forzando al bucle a comenzar la siguiente iteración.
 
-
 ### **4.3 return: Salida Definitiva del Método** ⬅️
 
-La sentencia return es la **más drástica de las tres**. No solo detiene el bucle, sino que **termina la ejecución de todo el método** en el que se encuentra. 
+La sentencia return es la **más drástica de las tres**. No solo detiene el bucle, sino que **termina la ejecución de todo el método** en el que se encuentra.
 
 Cualquier código que venga después de la instrucción return, tanto dentro como fuera del bucle, **no se ejecutará**.
 Generalmente se usa para devolver un valor desde un método, pero también puede usarse en métodos void (que no devuelven nada) para provocar una salida temprana.
@@ -604,5 +635,3 @@ Generalmente se usa para devolver un valor desde un método, pero también puede
     ¡Alerta! Código de error 44 encontrado. Terminando ejecución.
     Programa principal continúa...
     ```
-
-

@@ -1,38 +1,40 @@
 # 01 - Introducción a la Programación Software
 
+!!! tip "Información de la unidad"
+
+    === "Contenidos"
+
+        Introducción a la programación:
+
+        - Concepto de programa y lenguaje de programación.
+        - Paradigmas de programación (introducción a la POO).
+        - Entornos integrados de desarrollo (IDE): interfaz, creación de proyectos, compilación y ejecución.
+
+        Elementos básicos del lenguaje:
+
+        - Tipos de datos primitivos y su utilidad.
+        - Declaración y uso de variables, constantes y literales.
+        - Operadores (aritméticos, relacionales, lógicos, asignación) y expresiones.
+        - Conversiones de tipo (explícitas e implícitas).
+        - Comentarios en el código.
+
+    === "Propuesta didáctica"
+
+        En esta unidad vamos a comenzar a trabajar el **RA1: Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.**
+
+        Criterios de evaluación clave que abordaremos:
+
+        - **CE1a**: Se han identificado los bloques que componen la estructura de un programa informático.
+        - **CE1b**: Se han creado proyectos de desarrollo de aplicaciones.
+        - **CE1c**: Se han utilizado entornos integrados de desarrollo.
+        - **CE1d**: Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.
+        - **CE1e**: Se ha modificado el código de un programa para crear y utilizar variables.
+        - **CE1f**: Se han creado y utilizado constantes y literales.
+        - **CE1g**: Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.
+        - **CE1h**: Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.
+        - **CE1i**: Se han introducido comentarios en el código.
+
 <iframe width="780" height="440"  src="https://www.youtube.com/embed/4h7z0VSSMas?list=PLGIH-7eZDbVw6q2AdcAUe2r6YxJYBkfCi" title="(PROG) Programación (1º DAW). UD01. Introducción a la Programación de Software. Ejemplo de Java" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-=== "Contenidos"
-
-    Introducción a la programación:
-    - Concepto de programa y lenguaje de programación.
-    - Paradigmas de programación (introducción a la POO).
-    - Entornos integrados de desarrollo (IDE): interfaz, creación de proyectos, compilación y ejecución.
-
-    Elementos básicos del lenguaje:
-    - Tipos de datos primitivos y su utilidad.
-    - Declaración y uso de variables, constantes y literales.
-    - Operadores (aritméticos, relacionales, lógicos, asignación) y expresiones.
-    - Conversiones de tipo (explícitas e implícitas).
-    - Comentarios en el código.
-
-=== "Propuesta didáctica"
-
-    En esta unidad vamos a comenzar a trabajar el **RA1: Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.**
-
-    Criterios de evaluación clave que abordaremos:
-
-    - **CE1a**: Se han identificado los bloques que componen la estructura de un programa informático.
-    - **CE1b**: Se han creado proyectos de desarrollo de aplicaciones.
-    - **CE1c**: Se han utilizado entornos integrados de desarrollo.
-    - **CE1d**: Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.
-    - **CE1e**: Se ha modificado el código de un programa para crear y utilizar variables.
-    - **CE1f**: Se han creado y utilizado constantes y literales.
-    - **CE1g**: Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.
-    - **CE1h**: Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.
-    - **CE1i**: Se han introducido comentarios en el código.
-
-sasa
 
 ## 1. Fundamentos de la Programación
 
