@@ -31,3 +31,15 @@
         - **CE8f**: Se han programado aplicaciones que almacenen objetos en las bases de datos creadas.
         - **CE8g**: Se han realizado programas para recuperar, actualizar y eliminar objetos de las bases de datos.
         - **CE8h**: Se han realizado programas para almacenar y gestionar tipos de datos estructurados, compuestos y relacionados.
+
+    === "Planificación de Aula"
+
+        Esta unidad se imparte en la **tercera evaluación**, con una duración estimada de **10 sesiones lectivas**, aproximadamente entre la **4ª semana de abril y la 1ª semana de mayo de 2026**
+
+        | Sesión | Contenidos                                                                                      | Criterios trabajados    |
+        | ------ | ----------------------------------------------------------------------------------------------- | ----------------------- |
+        | 1-2    | Características y aplicación de las BDOO en desarrollo OO. Instalación SGBDOO.                  | CE8a, CE8b, CE8c        |
+        | 3-4    | Métodos soportados por SGBDOO para gestión de información. Creación de BBDD y estructuras.      | CE8d, CE8e              |
+        | 5-6    | Programación de aplicaciones para almacenar y recuperar objetos en BDOO.                        | CE8f, CE8g              |
+        | 7-8    | Programación para actualizar y eliminar objetos de BDOO.                                        | CE8g                    |
+        | 9-10   | Gestión de tipos de datos estructurados, compuestos y relacionados. Práctica final integradora. | CE8h, CE8e-h (Refuerzo) |

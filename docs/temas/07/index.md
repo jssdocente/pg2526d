@@ -38,3 +38,19 @@
         - **CE7h**: Se ha comentado y documentado el código.
         - **CE7i**: Se han identificado y evaluado los escenarios de uso de interfaces.
         - **CE7j**: Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.
+
+
+    === "Planificación de Aula"
+
+        Esta unidad se imparte en la **segunda evaluación**, con una duración estimada de **8 sesiones lectivas**, aproximadamente entre la **2ª semana de enero y la 1ª semana de febrero de 2026**.
+
+        | Sesión | Contenidos                                                                             | Criterios trabajados |
+        | ------ | -------------------------------------------------------------------------------------- | -------------------- |
+        | 1      | Conceptos de herencia: superclase y subclase.                                          | CE7a                 |
+        | 2      | Modificadores para controlar la herencia (final, abstract, etc.).                      | CE7b                 |
+        | 3      | Incidencia de los constructores en la herencia.                                        | CE7c                 |
+        | 4      | Sobrescritura de métodos (`override`). Polimorfismo.                                   | CE7d                 |
+        | 5      | Diseño y aplicación de jerarquías de clases. Depuración.                               | CE7e, CE7f, CE7g     |
+        | 6      | Interfaces: escenarios de uso e implementación.                                        | CE7i                 |
+        | 7      | Composición vs. Herencia: análisis de escenarios.                                      | CE7j                 |
+        | 8      | Práctica final: desarrollo de una aplicación con herencia e interfaces. Documentación. | CE7g, CE7h           |

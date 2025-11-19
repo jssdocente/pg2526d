@@ -31,6 +31,19 @@
         - **CE2h**: Se han utilizado constructores.
         - **CE2i**: Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.
 
+    === "Planificación de Aula"
+
+        Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **6 sesiones lectivas**, aproximadamente entre la **1ª y 2ª semana de octubre de 2025**.
+
+        | Sesión | Contenidos                                                                    | Criterios trabajados   |
+        | ------ | ----------------------------------------------------------------------------- | ---------------------- |
+        | 1      | Fundamentos de POO: objeto, clase, encapsulamiento. Instanciación de objetos. | CE2a, CE2c             |
+        | 2      | Uso de métodos y propiedades de objetos predefinidos.                         | CE2d                   |
+        | 3      | Llamadas a métodos estáticos. Uso de parámetros en métodos.                   | CE2e, CE2f             |
+        | 4      | Incorporación y uso de librerías de objetos.                                  | CE2g                   |
+        | 5      | Uso de constructores. Creación y compilación de programas simples.            | CE2h, CE2i             |
+        | 6      | Práctica guiada y autónoma: manipulación de objetos simples y librerías.      | CE2b, CE2c, CE2d, CE2g |
+
 En esta sección se abordan los conceptos fundamentales para comenzar a programar en Java, desde la estructura básica de un programa hasta el uso de variables, constantes y operaciones.
 
 ## **2.1. Del Código Fuente a la Ejecución**

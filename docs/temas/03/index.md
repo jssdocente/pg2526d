@@ -43,6 +43,24 @@
         - **CE3h**: Se han creado excepciones.
         - **CE3i**: Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo.
 
+    === "Planificación de Aula"
+
+        Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **11 sesiones lectivas**, aproximadamente entre la **2ª semana de octubre y la 1ª semana de noviembre de 2025**.
+
+        | Sesión | Contenidos                                                                    | Criterios trabajados |
+        | ------ | ----------------------------------------------------------------------------- | -------------------- |
+        | 1      | Estructuras de selección: `if-else`, `if-else if-else`.                       | CE3a                 |
+        | 2      | Estructuras de selección: `switch`, operador ternario.                        | CE3a                 |
+        | 3      | Práctica con estructuras de selección.                                        | CE3a, CE3f           |
+        | 4      | Estructuras de repetición: bucles `for`.                                      | CE3b                 |
+        | 5      | Estructuras de repetición: bucles `while`, `do-while`.                        | CE3b                 |
+        | 6      | Sentencias de salto: `break`, `continue`, `return`.                           | CE3c                 |
+        | 7      | Práctica con estructuras de repetición y sentencias de salto.                 | CE3b, CE3c, CE3e     |
+        | 8      | Control de excepciones: bloques `try-catch`, `finally`.                       | CE3d                 |
+        | 9      | Creación y lanzamiento de excepciones personalizadas.                         | CE3h                 |
+        | 10     | Uso de aserciones para depuración. Documentación de código.                   | CE3i, CE3g           |
+        | 11     | Práctica general: creación de programas ejecutables con diversas estructuras. | CE3e, CE3f, CE3g     |
+
 En este tema vamos a ver los conceptos básicos de la programación estructurada y modular. Estos conceptos son fundamentales para entender cómo se programan los ordenadores y cómo se pueden resolver problemas de forma eficiente y clara.
 
 Son los primeros paradigmas de programación que debemos aprender y dominar, ya que son la base para entender otros paradigmas más avanzados como la programación orientada a objetos o la programación funcional. Con ello vamos a dotar de comportamiento imperativo, es decir, vamos a indicarle al ordenador qué hacer y cómo hacerlo, paso a paso y darle vida a nuestros algoritmos.

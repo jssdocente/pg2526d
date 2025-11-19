@@ -34,6 +34,22 @@
         - **CE1h**: Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.
         - **CE1i**: Se han introducido comentarios en el código.
 
+    === "Planificación de Aula"
+
+      Esta unidad es la primera, con lo que se imparte en la **primera evaluación**, con una duración estimada de **9 sesiones lectivas**, aproximadamente entre la **3ª semana de septiembre y la 1ª semana de octubre de 2025**.
+
+      | Sesión | Contenidos | Criterios trabajados |
+      |---|---|---|
+      | 1 | Introducción a la programación: concepto de programa, lenguajes, paradigmas (introducción POO). | CE1a, CE1c |
+      | 2 | Entornos de desarrollo (IDE): interfaz, creación de proyectos, compilación y ejecución. | CE1b, CE1c, CE1i |
+      | 3 | Tipos de datos primitivos. Declaración y uso de variables. | CE1d, CE1e |
+      | 4 | Constantes y literales. Introducción de comentarios en el código. | CE1f, CE1i |
+      | 5 | Operadores (aritméticos, relacionales, lógicos, asignación) y expresiones. | CE1g |
+      | 6 | Conversiones de tipo explícitas e implícitas. | CE1h |
+      | 7 | Práctica guiada: creación de un programa simple con variables, constantes y operadores. | CE1b, CE1e, CE1f, CE1g |
+      | 8 | Práctica autónoma: resolución de ejercicios con expresiones y tipos de datos. | CE1d, CE1e, CE1g, CE1h |
+      | 9 | Revisión y resolución de dudas. Preparación para la siguiente unidad. | CE1a-i (Refuerzo) |
+
 <iframe width="780" height="440"  src="https://www.youtube.com/embed/4h7z0VSSMas?list=PLGIH-7eZDbVw6q2AdcAUe2r6YxJYBkfCi" title="(PROG) Programación (1º DAW). UD01. Introducción a la Programación de Software. Ejemplo de Java" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 1. Fundamentos de la Programación

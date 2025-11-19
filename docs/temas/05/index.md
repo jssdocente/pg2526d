@@ -24,6 +24,23 @@
         - **CE6b**: Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
         - **CE6e**: Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles (aplicado a arrays).
 
+     === "Planificación de Aula"
+
+        Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **10 sesiones lectivas**, aproximadamente entre la **2ª semana de noviembre y la 1ª semana de diciembre de 2025**.
+
+        | Sesión | Contenidos                                                                    | Criterios trabajados |
+        | ------ | ----------------------------------------------------------------------------- | -------------------- |
+        | 1      | Concepto de array (matriz) unidimensional. Declaración y acceso.              | CE6a                 |
+        | 2      | Inicialización y recorrido de arrays unidimensionales con bucles.             | CE6a                 |
+        | 3      | Arrays multidimensionales (matrices y cubos).                                 | CE6a                 |
+        | 4      | Operaciones básicas con arrays multidimensionales.                            | CE6a                 |
+        | 5      | Práctica: creación y manipulación de arrays.                                  | CE6a                 |
+        | 6      | Introducción a librerías de clases relacionadas con tipos de datos avanzados. | CE6b                 |
+        | 7      | Concepto y utilidad de la programación genérica (introducción).               | CE6e                 |
+        | 8      | Práctica guiada: resolución de problemas con arrays y alguna librería básica. | CE6a, CE6b           |
+        | 9      | Revisión y ejercicios avanzados con estructuras estáticas.                    | CE6a, CE6b, CE6e     |
+        | 10     | Evaluación práctica de la unidad.                                             | CE6a, CE6b, CE6e     |
+
 ### **1. Variables Escalares Vs. Vectores**
 
 Un **vector**, también conocido como array, es un tipo de dato estructurado que permite almacenar un conjunto de datos **homogéneo**, es decir, todos ellos del mismo tipo y relacionados entre sí. Cada uno de los elementos que componen un vector puede ser de tipo simple (como caracteres, enteros o reales) o de tipo compuesto (como otros vectores, estructuras, listas, etc.).

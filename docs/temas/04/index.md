@@ -24,6 +24,18 @@
         - **CE3f**: Se han probado y depurado los programas (especialmente funciones).
         - **CE3g**: Se ha comentado y documentado el código (documentación de funciones).
 
+    === "Planificación de Aula"
+
+        Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **5 sesiones lectivas**, aproximadamente entre la **1ª y 2ª semana de noviembre de 2025**.
+
+        | Sesión | Contenidos                                                    | Criterios trabajados |
+        | ------ | ------------------------------------------------------------- | -------------------- |
+        | 1      | Concepto de función/método, parámetros y valor de retorno.    | CE3e                 |
+        | 2      | Declaración y llamada a funciones/métodos. Sobrecarga.        | CE3e                 |
+        | 3      | Ámbito de variables. Paso de argumentos por valor/referencia. | CE3e                 |
+        | 4      | Depuración y testeo de funciones. Documentación de funciones. | CE3f, CE3g           |
+        | 5      | Práctica: modularización de programas usando funciones.       | CE3e, CE3f, CE3g     |
+
 La **programación modular** es un paradigma que consiste en dividir un programa grande y complejo en partes más pequeñas, manejables e independientes, llamadas **módulos**. Cada módulo se encarga de una tarea específica. En un lenguaje de programación, estos módulos se implementan como **funciones** y **procedimientos**.
 
 Las ventajas que ofrece la programación modular son:
