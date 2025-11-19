@@ -23,48 +23,44 @@ Las líneas de actuación en el proceso de enseñanza-aprendizaje que permiten a
 
 Los diferentes resultados de aprendizaje (RA) trabajados junto con su peso aproximado, tal cual se indica en la programación didáctica, son:
 
-| Código | Descripción | Peso (%) |
-| --- | --- | --- |
-| RA1 | Reconoce la estructura de un programa informático. | 5% |
-| RA2 | Escribe y prueba programas sencillos. | 5% |
-| RA3 | Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje. | 10% |
-| RA4 | Desarrolla programas organizados en clases | 15% |
-| RA5 | Realiza operaciones de entrada y salida de información. | 20%  |
-| RA6 | Escribe programas que manipulen información. | 20% |
-| RA7 | Desarrolla   programas   aplicando   características   avanzadas   de   los lenguajes orientados a objetos y del entorno de programación | 15% |
-| RA8 | Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información. | 5% |
-| RA9 | Gestiona  información  almacenada  en  bases  de  datos  manteniendo  la integridad y consistencia de los datos | 5% | 
+| Código | Descripción                                                                                                                                       | Peso (%) |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| RA1    | Reconoce la estructura de un programa informático.                                                                                                | 5%       |
+| RA2    | Escribe y prueba programas sencillos.                                                                                                             | 5%       |
+| RA3    | Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.                                                         | 10%      |
+| RA4    | Desarrolla programas organizados en clases                                                                                                        | 15%      |
+| RA5    | Realiza operaciones de entrada y salida de información.                                                                                           | 20%      |
+| RA6    | Escribe programas que manipulen información.                                                                                                      | 20%      |
+| RA7    | Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación                      | 15%      |
+| RA8    | Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información. | 5%       |
+| RA9    | Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos                                           | 5%       |
 
+## Unidades de Trabajo
 
+A partir de los RA, hemos definido 12 unidades de trabajo (UT).
 
+El módulo de _Programación_ viene fijado con una carga lectiva de **220h**, repartidas en **7 sesiones semanales**, a lo largo de 32 semanas.
 
-<!-- ## Unidades de Trabajo
+Este curso se ha planificado sobre un total de 28 semanas, dejando las últimas 4 semanas para el desarrollo, por parte del alumnado, del programa formativo dual en la empresa. Estas 28 semanas hacen un total de 192h lectivas.
 
-A partir de los RA, hemos definido 13 unidades de trabajo (UT).
+A continuación, en la siguiente tabla y a modo de mapa general, se muestran las diferentes UT y los RA que cubren, indicando la carga horaria empleada durante el presente curso en cada una de ellas:
 
-El módulo de _Base de Datos_ viene fijado con una carga lectiva de **190h**, repartidas en **6 sesiones semanales**, a lo largo de 32 semanas. 
-
-<!-- Este curso se ha planificado sobre un total de 28 semanas, dejando las últimas 4 semanas para el desarrollo, por parte del alumnado, del programa formativo dual en la empresa. Estas 28 semanas hacen un total de 140h lectivas. -->
-
-<!-- A continuación, en la siguiente tabla y a modo de mapa general, se muestran las diferentes UT y los RA que cubren, indicando la carga horaria empleada durante el presente curso en cada una de ellas: 
-
-| Unidades de Trabajo | RA1 | RA2 | RA3 | RA4 | RA5 | RA6 | RA7 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| [1\. Introducción a las bases de datos](https://jssdocente.github.io/bd2526d/01intro.html) | 9 |  |  |  |  |  |  |
-| [2\. Diseño conceptual. Modelo Entidad/Relación](https://jssdocente.github.io/bd2526d/02er.html) |  |  |  |  |  | 12 |  |
-| [3\. Diseño lógico: Modelo relacional](https://jssdocente.github.io/bd2526d/03mr.html) |  |  |  |  |  | 9 |  |
-| [4\. Diseño lógico: Transformación de modelos](https://jssdocente.github.io/bd2526d/04mr-eer.html) |  |  |  |  |  | 13 |  |
-| [5\. Modelo físico - SQL - DDL y DML](https://jssdocente.github.io/bd2526d/05ddl.html) |  | 6 |  | 5 |  |  |  |
-| [6\. SQL: Selección de datos](https://jssdocente.github.io/bd2526d/06sql.html) |  |  | 11 |  |  |  |  |
-| [7\. SQL: Agregaciones](https://jssdocente.github.io/bd2526d/07sql-group.html) |  | 2 | 8 |  |  |  |  |
-| [8\. SQL: Subconsultas. Optimización](https://jssdocente.github.io/bd2526d/08sql-subquerys.html) |  | 1 | 11 | 1 |  |  |  |
-| [9\. SQL: DCL y TCL](https://jssdocente.github.io/bd2526d/09dcl-tcl.html) |  | 2 |  | 5 |  |  |  |
-| [10\. Programación en bases de datos](https://jssdocente.github.io/bd2526d/10plsql.html) |  |  |  |  | 10 |  |  |
-| [11\. PL/SQL Avanzado](https://jssdocente.github.io/bd2526d/11triggers.html) |  |  |  |  | 14 |  |  |
-| [12\. Bases de datos NoSQL](https://jssdocente.github.io/bd2526d/12nosql.html) / [_Redis_](https://jssdocente.github.io/bd2526d/12redis.html) | 2 |  |  |  |  |  | 8 |
-| [13\. Bases de datos documentales. _MongoDB_](https://jssdocente.github.io/bd2526d/13mongodb.html) |  |  |  |  |  |  | 11 |
-| **Total - 140h** <br/> **Porcentaje** | 11 <br/> 8% | 11 <br/> 8% | 30 <br/> 21% | 11 <br/> 8% | 24 <br/> 18% | 34 <br/> 24% | 19 <br/> 13% | -->
-
+| Unidades de Trabajo                            | RA1    | RA2    | RA3     | RA4     | RA5     | RA6     | RA7     | RA8    | RA9 (Dual) |
+| ---------------------------------------------- | ------ | ------ | ------- | ------- | ------- | ------- | ------- | ------ | ---------- |
+| UT1: Fundamentos de programación               | 10     |        |         |         |         |         |         |        |            |
+| UT2: Elementos y sintaxis de programación      |        | 10     |         |         |         |         |         |        |            |
+| UT3: Estructuras de control                    |        |        | 30      |         |         |         |         |        |            |
+| UT4: Modularidad: funciones                    |        |        | 15      |         |         |         |         |        |            |
+| UT5: Estructuras de datos estáticas            |        |        |         |         |         | 15      |         |        |            |
+| UT6: Programación orientada a objetos          |        |        |         | 30      |         |         |         |        |            |
+| UT7: Programación orientada a objetos avanzada |        |        |         |         |         |         | 15      |        |            |
+| UT8: Estructuras de datos dinámicas            |        |        |         |         |         | 15      |         |        |            |
+| UT9: Ficheros                                  |        |        |         |         | 15      |         |         |        |            |
+| UT10: Interfaces gráficas                      |        |        |         |         | 22      |         |         |        |            |
+| UT11: Acceso a BBDD orientadas a objetos       |        |        |         |         |         |         |         | 10     |            |
+| UT12: Acceso a BBDD relacionales               |        |        |         |         |         |         |         |        | 28         |
+| **TOTAL Horas**                                | **10** | **10** | **45**  | **30**  | **37**  | **30**  | **15**  | **10** | **28**     |
+| **%Peso RA calificación**                      | **5%** | **5%** | **10%** | **15%** | **20%** | **20%** | **15%** | **5%** | **5%**     |
 
 <!-- ## Evaluación
 
