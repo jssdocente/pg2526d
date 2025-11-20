@@ -24,7 +24,7 @@
         - **CE6b**: Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
         - **CE6e**: Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles (aplicado a arrays).
 
-     === "Programación de Aula"
+    === "Programación de Aula"
 
         Esta unidad se imparte en la **primera evaluación**, con una duración estimada de **10 sesiones lectivas**, aproximadamente entre la **2ª semana de noviembre y la 1ª semana de diciembre de 2025**.
 
@@ -46,7 +46,8 @@
 Un **vector**, también conocido como array, es un tipo de dato estructurado que permite almacenar un conjunto de datos **homogéneo**, es decir, todos ellos del mismo tipo y relacionados entre sí. Cada uno de los elementos que componen un vector puede ser de tipo simple (como caracteres, enteros o reales) o de tipo compuesto (como otros vectores, estructuras, listas, etc.).
 
 <figure>
-    <img src="img/01.png" alt="" width="100%" align="center"/>
+    <img src="img/001.1.png" alt="" width="100%" align="center"/>
+    <figcaption align="center">Variable escalares vs Vectores.</figcaption>
 </figure>
 
 A los datos almacenados en un vector se les denomina **elementos**. Al número total de elementos de un vector se le denomina **tamaño** o **rango** del vector.
@@ -63,7 +64,10 @@ Distinguimos cada elemento almacenado en un vector por la **posición** que ocup
 
 Es fundamental recordar que en Java, y en muchos otros lenguajes, la indexación empieza en 0. Por tanto, el primer elemento tendrá el índice 0, el segundo elemento el 1, y así sucesivamente.
 
-[IMAGEN: Un diagrama del vector "edad" con los valores {85, 3, 19, 23, 7}. Debajo, se muestran los índices correspondientes {0, 1, 2, 3, 4}. Una flecha señala que `edad[3]` almacena el valor 23.]
+<figure>
+    <img src="img/002.png" alt="" width="100%" align="center"/>
+    <figcaption align="center">Indices de un vector.</figcaption>
+</figure>
 
 La forma de utilizar un elemento concreto de un vector es por medio del nombre de la variable seguido del índice entre corchetes `[]` que identifica al elemento.
 
@@ -75,7 +79,9 @@ System.out.println(edad[0]);
 edad[4] = 8;
 ```
 
-> **¡Atención!** Si empleamos un índice que no se corresponde al rango del vector (por ejemplo, un índice negativo o uno mayor o igual a su longitud), se generará un error en tiempo de ejecución (`ArrayIndexOutOfBoundsException`) y nuestro programa terminará. Por ejemplo: `edad[-1]` o `edad[5]` (en un vector de 5 elementos).
+!!! warning "Atención"
+
+    Si empleamos **un índice que no se corresponde al rango del vector** (por ejemplo, un índice negativo o uno mayor o igual a su longitud), **se generará un error en tiempo de ejecución** (`ArrayIndexOutOfBoundsException`) y nuestro programa terminará. Por ejemplo: `edad[-1]` o `edad[5]` (en un vector de 5 elementos).
 
 ---
 
@@ -120,7 +126,8 @@ int datos[] = {2, -3, 0, 7}; // Crea un vector de rango 4 con esos valores.
 ```
 
 <figure>
-    <img src="img/03.png" alt="" width="100%" align="center"/>
+    <img src="img/003.png" alt="" width="100%" align="center"/>
+    <figcaption align="center">Forma alternativa de declaración e inicialización</figcaption>
 </figure>
 
 ---
@@ -129,7 +136,10 @@ int datos[] = {2, -3, 0, 7}; // Crea un vector de rango 4 con esos valores.
 
 En el caso de los vectores, las variables no contienen directamente los valores de los elementos. En su lugar, almacenan una **dirección de memoria** donde se guardan dichos elementos. A esto lo denominamos **referencia**.
 
-[IMAGEN: Un esquema que muestra una variable "edad" que contiene una flecha (referencia) apuntando a una estructura de tabla que contiene los elementos del array.]
+<figure>
+    <img src="img/004.1.png" alt="" width="100%" align="center"/>
+    <figcaption align="center">Variable y referencia.</figcaption>
+</figure>
 
 Si imprimimos una variable de tipo vector directamente, veremos su referencia en memoria, no su contenido.
 
@@ -147,7 +157,11 @@ e = d; // Ahora la variable 'e' referencia LA MISMA tabla que 'd'.
        // Ambas guardan la misma dirección de memoria.
 ```
 
-[IMAGEN: Un diagrama que muestra dos variables, `d` y `e`, apuntando a la misma tabla (array) en memoria.]
+<figure>
+    <img src="img/004.2.png" alt="" width="100%" align="center"/>
+    <figcaption align="center">Variable y referencia.</figcaption>
+</figure>
+
 
 ---
 
@@ -216,10 +230,12 @@ La clase `Arrays` proporciona dos métodos para crear copias de vectores:
 
   ```java
   int t[] = {1, 2, 1, 6, 23};
+  int a[], b[];
+
   // Copia los primeros 3 elementos
-  int a[] = Arrays.copyOf(t, 3); // a será [1, 2, 1]
+  a[] = Arrays.copyOf(t, 3); // a será [1, 2, 1]
   // Copia todo y añade ceros hasta completar 10
-  int b[] = Arrays.copyOf(t, 10); // b será [1, 2, 1, 6, 23, 0, 0, 0, 0, 0]
+  b[] = Arrays.copyOf(t, 10); // b será [1, 2, 1, 6, 23, 0, 0, 0, 0, 0]
   ```
 
 - `Arrays.copyOfRange(origen, desde, hasta)`: Construye y devuelve un nuevo vector donde se han copiado los elementos del array `origen` desde el índice `desde` (incluido) hasta el índice `hasta` (excluido).
@@ -234,7 +250,11 @@ La clase `System` también proporciona un método para copiar elementos entre ve
 
 - `System.arraycopy(fuente, posFuente, destino, posDestino, longitud)`: Este método es más rápido pero más complejo. No crea un vector nuevo; los vectores `fuente` y `destino` ya deben existir. Los elementos se copian desde `fuente` a `destino`, sobrescribiendo lo que hubiera.
 
-[IMAGEN: Un diagrama que ilustra cómo `System.arraycopy` copia un segmento de un array "fuente" a un array "destino".]
+<figure>
+    <img src="img/005.png" alt="" width="100%" align="center"/>
+    <figcaption align="center">Copia a través de System.arraycopy.</figcaption>
+</figure>
+
 
 #### **Comparar el contenido de dos vectores**
 
@@ -254,11 +274,11 @@ System.out.println(Arrays.equals(t1, t2)); // Muestra TRUE
 
 ---
 
-### **Ejemplo: Array con zona útil**
+#### **Ejemplo: Array con zona útil**
+
+![](img/006.png){ align=right }
 
 A veces, un array puede tener una parte "útil" (con datos válidos) y otra parte sin usar. Podemos usar un valor especial (llamado "centinela", como el 0 en este caso) para marcar el final de la zona útil y recorrer solo esa parte.
-
-[IMAGEN: Una tabla que representa el array `array` con los valores {2, 4, 8, 12, 16, 0, 20, 10, 9}. Los valores 20, 10 y 9 están resaltados en rojo, indicando que no son procesados por el bucle.]
 
 ```java
 int[] array = {2, 4, 8, 12, 16, 18, 20, 10, 9};
@@ -280,19 +300,19 @@ while (array[i] != 0 && i < array.length) {
 // 16
 ```
 
+
 ---
 
 ### **6. Vectores n-dimensionales (Matrices)**
 
 Hasta ahora hemos visto vectores de una dimensión (con una longitud). Pero podemos necesitar estructuras con más de una dimensión, como tablas o matrices.
 
-[IMAGEN: Tres diagramas. Uno muestra un array de 1 dimensión (una fila). Otro muestra un array de 2 dimensiones (una tabla con filas y columnas). El tercero muestra un array de 3 dimensiones (un cubo).]
-
 En el caso de los vectores n-dimensionales, los declararemos del mismo modo que los de una dimensión, pero añadiendo un par de corchetes `[]` por cada dimensión extra.
+
+![](img/007.png){ align=center }
 
 #### **Matrices (Arrays de 2 dimensiones)**
 
-[IMAGEN: Una matriz de 5x5 con valores numéricos.]
 
 **Declaración y Creación:**
 
@@ -304,6 +324,7 @@ matriz = new int[5][5]; // 5 filas y 5 columnas
 
 - El primer corchete `[5]` indica el número de **filas**.
 - El segundo corchete `[5]` indica el número de **columnas**.
+
 
 **Inicialización con valores:**
 
@@ -319,6 +340,9 @@ int matriz[][] = {
 ```
 
 **Recorrer una matriz:**
+
+![](img/007.2.png){ align=right }
+
 Para recorrer una matriz bidimensional necesitaremos dos bucles `for` anidados, uno para las filas (índice `i`) y otro para las columnas (índice `j`).
 
 ```java
@@ -338,23 +362,27 @@ System.out.println(Arrays.deepToString(matriz));
 
 ---
 
-### **Tamaño de la matriz**
+#### **Tamaño de la matriz**
 
 En una matriz, la variable es una referencia a una serie de arrays. Es decir, una matriz es un "array de arrays".
 
-[IMAGEN: Un esquema que muestra cómo la variable de una matriz 2x3 apunta a un array de 2 elementos. Cada uno de esos elementos es una referencia que apunta a otro array de 3 elementos numéricos.]
+referencia que apunta a otro array de 3 elementos numéricos.
 
 - `matriz.length`: Mide el número de arrays que contiene la matriz, es decir, el **número de filas**.
 - `matriz[i].length`: Mide el número de elementos del array en la fila `i`, es decir, el **número de columnas** de esa fila.
 
-#### **Recorrer una fila**
+![](img/007.4.png){ align=center }
+
+
+##### **Recorrer una fila**
 
 Para recorrer solo los elementos de una fila específica (por ejemplo, la primera, con índice 0), fijamos el índice de la fila y movemos el de la columna.
 
-[IMAGEN: Una matriz de 2x3 con los valores {{115,12,3},{65,23,9}}.]
-
 ```java
-int[][] matriz = {{115, 12, 3}, {65, 23, 9}};
+
+int[][] matriz = {
+    {115, 12, 3}, {65, 23, 9}
+    };
 
 // Recorremos la primera fila (índice 0)
 for (int i = 0; i < matriz[0].length; i++) {
@@ -362,17 +390,22 @@ for (int i = 0; i < matriz[0].length; i++) {
 }
 ```
 
-#### **Recorrer una columna**
+![](img/007.5.png){ align=center }
+
+##### **Recorrer una columna**
 
 Para recorrer una columna específica (por ejemplo, la primera), fijamos el índice de la columna y movemos el de la fila.
 
-[IMAGEN: La misma matriz 2x3, pero ahora con los elementos de la primera columna (115 y 65) resaltados.]
-
 ```java
-int[][] matriz = {{115, 12, 3}, {65, 23, 9}};
+int[][] matriz = {
+    {115, 12, 3}, {65, 23, 9}
+    };
 
 // Recorremos la primera columna (índice 0)
 for (int i = 0; i < matriz.length; i++) {
     System.out.println(matriz[i][0]); // Imprime 115, 65
 }
 ```
+
+![](img/007.6.png){ align=center }
+
