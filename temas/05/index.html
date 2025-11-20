@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#ut5-vectores-arrays-y-matrices" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -391,6 +391,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 - Estructuras de datos estáticas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="index.html" class="md-nav__link md-nav__link--active">
         
   
@@ -407,6 +425,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-escalares-vs-vectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Variables Escalares Vs. Vectores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-indices-de-un-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Índices de un vector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-construccion-de-vectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Construcción de vectores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Referencia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-operaciones-con-vectores-clase-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Operaciones con vectores (Clase Arrays)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-vectores-n-dimensionales-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Vectores n-dimensionales (Matrices)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -621,6 +724,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-escalares-vs-vectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Variables Escalares Vs. Vectores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-indices-de-un-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Índices de un vector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-construccion-de-vectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Construcción de vectores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Referencia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-operaciones-con-vectores-clase-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Operaciones con vectores (Clase Arrays)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-vectores-n-dimensionales-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Vectores n-dimensionales (Matrices)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -644,11 +821,359 @@
 
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">¶</a></h1>
-<p><em>File</em>: <code>temas/05/index.md</code></p>
-<p><em>Line 354 in Markdown file:</em> <strong>unexpected '}'</strong>
-</p><div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[IMAGEN: Una matriz de 2x3 con los valores {{115,12,3},{65,23,9}}.]
-</span></code></pre></div><p></p>
+<h1 id="ut5-vectores-arrays-y-matrices"><strong>UT5. Vectores (Arrays y Matrices)</strong><a class="headerlink" href="#ut5-vectores-arrays-y-matrices" title="Permanent link">¶</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Información de la unidad</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Contenidos</label><label for="__tabbed_1_2">Propuesta didáctica</label><label for="__tabbed_1_3">Programación de Aula</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Manejo de colecciones de datos:</p>
+<ul>
+<li>Concepto de array (matriz) unidimensional y multidimensional.</li>
+<li>Declaración, inicialización y acceso a elementos de arrays.</li>
+<li>Recorrido de arrays con bucles.</li>
+<li>Librerías de clases para tipos de datos avanzados (introducción).</li>
+</ul>
+<p>Tipos genéricos (introducción):
+- Concepto y utilidad de la programación genérica.</p>
+</div>
+<div class="tabbed-block">
+<p>En esta unidad vamos a comenzar a trabajar el <strong>RA6: Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.</strong></p>
+<p>Criterios de evaluación clave que abordaremos:</p>
+<ul>
+<li><strong>CE6a</strong>: Se han escrito programas que utilicen matrices (arrays).</li>
+<li><strong>CE6b</strong>: Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.</li>
+<li><strong>CE6e</strong>: Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles (aplicado a arrays).</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Esta unidad se imparte en la <strong>primera evaluación</strong>, con una duración estimada de <strong>10 sesiones lectivas</strong>, aproximadamente entre la <strong>2ª semana de noviembre y la 1ª semana de diciembre de 2025</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Sesión</th>
+<th>Contenidos</th>
+<th>Criterios trabajados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Concepto de array (matriz) unidimensional. Declaración y acceso.</td>
+<td>CE6a</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Inicialización y recorrido de arrays unidimensionales con bucles.</td>
+<td>CE6a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Arrays multidimensionales (matrices y cubos).</td>
+<td>CE6a</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Operaciones básicas con arrays multidimensionales.</td>
+<td>CE6a</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Práctica: creación y manipulación de arrays.</td>
+<td>CE6a</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Introducción a librerías de clases relacionadas con tipos de datos avanzados.</td>
+<td>CE6b</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Concepto y utilidad de la programación genérica (introducción).</td>
+<td>CE6e</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Práctica guiada: resolución de problemas con arrays y alguna librería básica.</td>
+<td>CE6a, CE6b</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Revisión y ejercicios avanzados con estructuras estáticas.</td>
+<td>CE6a, CE6b, CE6e</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Evaluación práctica de la unidad.</td>
+<td>CE6a, CE6b, CE6e</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<h3 id="1-variables-escalares-vs-vectores"><strong>1. Variables Escalares Vs. Vectores</strong><a class="headerlink" href="#1-variables-escalares-vs-vectores" title="Permanent link">¶</a></h3>
+<p>Un <strong>vector</strong>, también conocido como array, es un tipo de dato estructurado que permite almacenar un conjunto de datos <strong>homogéneo</strong>, es decir, todos ellos del mismo tipo y relacionados entre sí. Cada uno de los elementos que componen un vector puede ser de tipo simple (como caracteres, enteros o reales) o de tipo compuesto (como otros vectores, estructuras, listas, etc.).</p>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/001.1.png" data-desc-position="bottom"><img src="img/001.1.png" alt="" width="100%" align="center"></a>
+    <figcaption align="center">Variable escalares vs Vectores.</figcaption>
+</figure>
+
+<p>A los datos almacenados en un vector se les denomina <strong>elementos</strong>. Al número total de elementos de un vector se le denomina <strong>tamaño</strong> o <strong>rango</strong> del vector.</p>
+<p>Por norma general, emplearemos un vector cuando necesitemos usar un conjunto de datos del mismo tipo que estén relacionados entre sí.</p>
+<p>A estas estructuras de datos también se las denomina Tablas, Arrays o Arreglos (este último término se desaconseja).</p>
+<hr>
+<h3 id="2-indices-de-un-vector"><strong>2. Índices de un vector</strong><a class="headerlink" href="#2-indices-de-un-vector" title="Permanent link">¶</a></h3>
+<p>Distinguimos cada elemento almacenado en un vector por la <strong>posición</strong> que ocupa en el mismo. A esta posición se le denomina <strong>índice</strong>.</p>
+<p>Es fundamental recordar que en Java, y en muchos otros lenguajes, la indexación empieza en 0. Por tanto, el primer elemento tendrá el índice 0, el segundo elemento el 1, y así sucesivamente.</p>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/002.png" data-desc-position="bottom"><img src="img/002.png" alt="" width="100%" align="center"></a>
+    <figcaption align="center">Indices de un vector.</figcaption>
+</figure>
+
+<p>La forma de utilizar un elemento concreto de un vector es por medio del nombre de la variable seguido del índice entre corchetes <code>[]</code> que identifica al elemento.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Muestra el primer elemento: 85</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// Asigna un nuevo valor al quinto elemento (índice 4)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">edad</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Atención</p>
+<p>Si empleamos <strong>un índice que no se corresponde al rango del vector</strong> (por ejemplo, un índice negativo o uno mayor o igual a su longitud), <strong>se generará un error en tiempo de ejecución</strong> (<code>ArrayIndexOutOfBoundsException</code>) y nuestro programa terminará. Por ejemplo: <code>edad[-1]</code> o <code>edad[5]</code> (en un vector de 5 elementos).</p>
+</div>
+<hr>
+<h3 id="3-construccion-de-vectores"><strong>3. Construcción de vectores</strong><a class="headerlink" href="#3-construccion-de-vectores" title="Permanent link">¶</a></h3>
+<p>En el momento de crear un vector deberemos tener en cuenta lo siguiente:</p>
+<ol>
+<li><strong>Decidir qué tipo de datos</strong> vamos a almacenar (<code>int</code>, <code>double</code>, <code>String</code>, etc.).</li>
+<li><strong>Declarar un nombre</strong> para el vector.</li>
+<li><strong>Crear la tabla</strong> especificando su tamaño.</li>
+</ol>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/03.png" data-desc-position="bottom"><img src="img/03.png" alt="" width="100%" align="center"></a>
+</figure>
+
+<p><strong>Declaración:</strong>
+Existen dos sintaxis equivalentes para declarar un vector.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Sintaxis 1: corchetes junto al tipo</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Sintaxis 2: corchetes junto al nombre (heredada de C/C++)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="o">[]</span><span class="p">;</span>
+</span></code></pre></div>
+<p><em>Recomendación: Es preferible usar la primera sintaxis (<code>int[] edad;</code>) ya que deja más claro que el tipo de la variable es "array de enteros".</em></p>
+<p><strong>Creación (Instanciación):</strong>
+Para crear el vector y reservar su espacio en memoria, usamos la palabra clave <code>new</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// variable = new tipo[longitud];</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Creamos un vector de 5 enteros.</span>
+</span></code></pre></div>
+<p><strong>Alternativa: Declaración e Inicialización en un paso</strong>
+Podemos crear e inicializar el vector con valores directamente en una sola línea. En este caso, el compilador deduce el tamaño automáticamente.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">datos</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">};</span><span class="w"> </span><span class="c1">// Crea un vector de rango 4 con esos valores.</span>
+</span></code></pre></div>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/003.png" data-desc-position="bottom"><img src="img/003.png" alt="" width="100%" align="center"></a>
+    <figcaption align="center">Forma alternativa de declaración e inicialización</figcaption>
+</figure>
+
+<hr>
+<h3 id="4-referencia"><strong>4. Referencia</strong><a class="headerlink" href="#4-referencia" title="Permanent link">¶</a></h3>
+<p>En el caso de los vectores, las variables no contienen directamente los valores de los elementos. En su lugar, almacenan una <strong>dirección de memoria</strong> donde se guardan dichos elementos. A esto lo denominamos <strong>referencia</strong>.</p>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/004.1.png" data-desc-position="bottom"><img src="img/004.1.png" alt="" width="100%" align="center"></a>
+    <figcaption align="center">Variable y referencia.</figcaption>
+</figure>
+
+<p>Si imprimimos una variable de tipo vector directamente, veremos su referencia en memoria, no su contenido.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">vector</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">vector</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida similar a: [I@4617c264</span>
+</span></code></pre></div>
+<p>Esto tiene una implicación importante: si asignamos un vector a otro, ambas variables apuntarán al <strong>mismo espacio de memoria</strong>. No se está creando una copia.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="o">[]</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="o">[]</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Construimos una tabla referenciada por d</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="c1">// Ahora la variable 'e' referencia LA MISMA tabla que 'd'.</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">       </span><span class="c1">// Ambas guardan la misma dirección de memoria.</span>
+</span></code></pre></div>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/004.2.png" data-desc-position="bottom"><img src="img/004.2.png" alt="" width="100%" align="center"></a>
+    <figcaption align="center">Variable y referencia.</figcaption>
+</figure>
+
+<hr>
+<h3 id="5-operaciones-con-vectores-clase-arrays"><strong>5. Operaciones con vectores (Clase <code>Arrays</code>)</strong><a class="headerlink" href="#5-operaciones-con-vectores-clase-arrays" title="Permanent link">¶</a></h3>
+<p>La API de Java nos proporciona la clase <code>java.util.Arrays</code>, que contiene funciones estáticas muy útiles para trabajar con vectores.</p>
+<h4 id="obtencion-del-numero-de-elementos-de-un-vector"><strong>Obtención del número de elementos de un vector</strong><a class="headerlink" href="#obtencion-del-numero-de-elementos-de-un-vector" title="Permanent link">¶</a></h4>
+<p>Todo vector tiene una propiedad pública llamada <code>length</code> que nos devuelve su tamaño.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">notas</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notas</span><span class="p">.</span><span class="na">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muestra 10</span>
+</span></code></pre></div>
+<h4 id="inicializacion-de-valores-de-un-vector-2-metodos"><strong>Inicialización de valores de un vector (2 métodos)</strong><a class="headerlink" href="#inicializacion-de-valores-de-un-vector-2-metodos" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>Creación y asignación posterior:</strong> Se crea el array con <code>new</code> y luego se asignan los valores, normalmente con un bucle.</li>
+<li><strong>Inicialización directa:</strong> Se usan las llaves <code>{}</code> para proveer los valores iniciales en la misma línea de la declaración.</li>
+</ol>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Método 1</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">floats</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">chars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">char</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">// Método 2</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">cars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Volvo"</span><span class="p">,</span><span class="w"> </span><span class="s">"BMW"</span><span class="p">,</span><span class="w"> </span><span class="s">"Ford"</span><span class="p">,</span><span class="w"> </span><span class="s">"Mazda"</span><span class="p">};</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">myNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">};</span>
+</span></code></pre></div>
+<h4 id="recorrer-un-vector"><strong>Recorrer un vector</strong><a class="headerlink" href="#recorrer-un-vector" title="Permanent link">¶</a></h4>
+<p>Por lo general, para recorrer todos los elementos de un vector emplearemos un bucle <code>for</code>. Existen dos formas principales:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">alturas</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">134</span><span class="p">,</span><span class="w"> </span><span class="mi">156</span><span class="p">,</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">};</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">// 1. El for clásico (usando un índice)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">alturas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">alturas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1">// 2. El for-each (o for mejorado)</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">medida</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">alturas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">medida</span><span class="p">);</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="mostrar-el-contenido-de-un-vector"><strong>Mostrar el contenido de un vector</strong><a class="headerlink" href="#mostrar-el-contenido-de-un-vector" title="Permanent link">¶</a></h4>
+<p>Aunque podemos mostrar el contenido recorriéndolo con un bucle, la clase <code>Arrays</code> nos proporciona el método <code>Arrays.toString()</code> para hacerlo de una forma más sencilla y directa.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">alturas</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">134</span><span class="p">,</span><span class="w"> </span><span class="mi">156</span><span class="p">,</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">};</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">alturas</span><span class="p">));</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1">// Salida: [134, 156, 190, 176, 167]</span>
+</span></code></pre></div>
+<h4 id="copia-de-un-vector"><strong>Copia de un vector</strong><a class="headerlink" href="#copia-de-un-vector" title="Permanent link">¶</a></h4>
+<p>La clase <code>Arrays</code> proporciona dos métodos para crear copias de vectores:</p>
+<ul>
+<li><code>Arrays.copyOf(origen, longitud)</code>: Construye y devuelve una copia del array <code>origen</code> con la <code>longitud</code> especificada. Si la nueva longitud es mayor, los elementos extra se rellenan con el valor por defecto (0, null, false...).</li>
+</ul>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">};</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">[]</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="o">[]</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1">// Copia los primeros 3 elementos</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">a</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">copyOf</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// a será [1, 2, 1]</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1">// Copia todo y añade ceros hasta completar 10</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">b</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">copyOf</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// b será [1, 2, 1, 6, 23, 0, 0, 0, 0, 0]</span>
+</span></code></pre></div>
+<ul>
+<li><code>Arrays.copyOfRange(origen, desde, hasta)</code>: Construye y devuelve un nuevo vector donde se han copiado los elementos del array <code>origen</code> desde el índice <code>desde</code> (incluido) hasta el índice <code>hasta</code> (excluido).</li>
+</ul>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">};</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1">// Copia desde el índice 1 hasta el 3 (el 4 no se incluye)</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">copyOfRange</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// a será [5, 3, 1]</span>
+</span></code></pre></div>
+<p>La clase <code>System</code> también proporciona un método para copiar elementos entre vectores ya existentes:</p>
+<ul>
+<li><code>System.arraycopy(fuente, posFuente, destino, posDestino, longitud)</code>: Este método es más rápido pero más complejo. No crea un vector nuevo; los vectores <code>fuente</code> y <code>destino</code> ya deben existir. Los elementos se copian desde <code>fuente</code> a <code>destino</code>, sobrescribiendo lo que hubiera.</li>
+</ul>
+<figure>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/005.png" data-desc-position="bottom"><img src="img/005.png" alt="" width="100%" align="center"></a>
+    <figcaption align="center">Copia a través de System.arraycopy.</figcaption>
+</figure>
+
+<h4 id="comparar-el-contenido-de-dos-vectores"><strong>Comparar el contenido de dos vectores</strong><a class="headerlink" href="#comparar-el-contenido-de-dos-vectores" title="Permanent link">¶</a></h4>
+<p>No podemos comparar el contenido de dos vectores mediante el operador <code>==</code>, ya que este solo compara si las referencias son idénticas (es decir, si apuntan al mismo objeto en memoria).</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">t1</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">t2</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">t1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">t2</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muestra FALSE, porque son dos objetos distintos.</span>
+</span></code></pre></div>
+<p>Para comparar si dos vectores tienen los mismos elementos en el mismo orden, empleamos el método <code>Arrays.equals(vector1, vector2)</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span><span class="p">));</span><span class="w"> </span><span class="c1">// Muestra TRUE</span>
+</span></code></pre></div>
+<hr>
+<h4 id="ejemplo-array-con-zona-util"><strong>Ejemplo: Array con zona útil</strong><a class="headerlink" href="#ejemplo-array-con-zona-util" title="Permanent link">¶</a></h4>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/006.png" data-desc-position="bottom"><img align="right" alt="" src="img/006.png"></a></p>
+<p>A veces, un array puede tener una parte "útil" (con datos válidos) y otra parte sin usar. Podemos usar un valor especial (llamado "centinela", como el 0 en este caso) para marcar el final de la zona útil y recorrer solo esa parte.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1">// Usamos el valor 0 como marca para el final de la zona útil</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">array</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1">// Recorremos mientras no encontremos el 0 Y no nos salgamos del array</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="p">}</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="c1">// Salida:</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1">// 2</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="c1">// 4</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="c1">// 8</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="c1">// 12</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="c1">// 16</span>
+</span></code></pre></div>
+<hr>
+<h3 id="6-vectores-n-dimensionales-matrices"><strong>6. Vectores n-dimensionales (Matrices)</strong><a class="headerlink" href="#6-vectores-n-dimensionales-matrices" title="Permanent link">¶</a></h3>
+<p>Hasta ahora hemos visto vectores de una dimensión (con una longitud). Pero podemos necesitar estructuras con más de una dimensión, como tablas o matrices.</p>
+<p>En el caso de los vectores n-dimensionales, los declararemos del mismo modo que los de una dimensión, pero añadiendo un par de corchetes <code>[]</code> por cada dimensión extra.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/007.png" data-desc-position="bottom"><img align="center" alt="" src="img/007.png"></a></p>
+<h4 id="matrices-arrays-de-2-dimensiones"><strong>Matrices (Arrays de 2 dimensiones)</strong><a class="headerlink" href="#matrices-arrays-de-2-dimensiones" title="Permanent link">¶</a></h4>
+<p><strong>Declaración y Creación:</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// Declaración de una matriz 5x5</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">matriz</span><span class="o">[][]</span><span class="p">;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">matriz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 5 filas y 5 columnas</span>
+</span></code></pre></div>
+<ul>
+<li>El primer corchete <code>[5]</code> indica el número de <strong>filas</strong>.</li>
+<li>El segundo corchete <code>[5]</code> indica el número de <strong>columnas</strong>.</li>
+</ul>
+<p><strong>Inicialización con valores:</strong></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">// Declaración de matriz 5x5 con valores</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">matriz</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">86</span><span class="p">},</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="p">{</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">}</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="p">};</span>
+</span></code></pre></div>
+<p><strong>Recorrer una matriz:</strong></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/007.2.png" data-desc-position="bottom"><img align="right" alt="" src="img/007.2.png"></a></p>
+<p>Para recorrer una matriz bidimensional necesitaremos dos bucles <code>for</code> anidados, uno para las filas (índice <code>i</code>) y otro para las columnas (índice <code>j</code>).</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">matriz</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">);</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Mostrar una matriz:</strong>
+Para mostrar una matriz de forma sencilla, usamos el método <code>Arrays.deepToString()</code>, que funciona con arrays anidados.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">deepToString</span><span class="p">(</span><span class="n">matriz</span><span class="p">));</span>
+</span></code></pre></div>
+<hr>
+<h4 id="tamano-de-la-matriz"><strong>Tamaño de la matriz</strong><a class="headerlink" href="#tamano-de-la-matriz" title="Permanent link">¶</a></h4>
+<p>En una matriz, la variable es una referencia a una serie de arrays. Es decir, una matriz es un "array de arrays".</p>
+<p>referencia que apunta a otro array de 3 elementos numéricos.</p>
+<ul>
+<li><code>matriz.length</code>: Mide el número de arrays que contiene la matriz, es decir, el <strong>número de filas</strong>.</li>
+<li><code>matriz[i].length</code>: Mide el número de elementos del array en la fila <code>i</code>, es decir, el <strong>número de columnas</strong> de esa fila.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/007.4.png" data-desc-position="bottom"><img align="center" alt="" src="img/007.4.png"></a></p>
+<h5 id="recorrer-una-fila"><strong>Recorrer una fila</strong><a class="headerlink" href="#recorrer-una-fila" title="Permanent link">¶</a></h5>
+<p>Para recorrer solo los elementos de una fila específica (por ejemplo, la primera, con índice 0), fijamos el índice de la fila y movemos el de la columna.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">matriz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="p">{</span><span class="mi">115</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="c1">// Recorremos la primera fila (índice 0)</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">matriz</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">matriz</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="n">i</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 115, 12, 3</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/007.5.png" data-desc-position="bottom"><img align="center" alt="" src="img/007.5.png"></a></p>
+<h5 id="recorrer-una-columna"><strong>Recorrer una columna</strong><a class="headerlink" href="#recorrer-una-columna" title="Permanent link">¶</a></h5>
+<p>Para recorrer una columna específica (por ejemplo, la primera), fijamos el índice de la columna y movemos el de la fila.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">matriz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="p">{</span><span class="mi">115</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="c1">// Recorremos la primera columna (índice 0)</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">matriz</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">matriz</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime 115, 65</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="img/007.6.png" data-desc-position="bottom"><img align="center" alt="" src="img/007.6.png"></a></p>
 
 
 
