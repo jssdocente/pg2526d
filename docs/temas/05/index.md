@@ -21,6 +21,7 @@
         Criterios de evaluación clave que abordaremos:
 
         - **CE6a**: Se han escrito programas que utilicen matrices (arrays).
+        - **CE6b**: Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.        
         - **CE6c**: Se han utilizado listas para almacenar y procesar información.
         - **CE6d**: Se han utilizado iteradores para recorrer los elementos de las listas.
         - **CE6e**: Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles
@@ -32,10 +33,10 @@
         | Sesión | Contenidos                                                                    | Criterios trabajados |
         | ------ | ----------------------------------------------------------------------------- | -------------------- |
         | 1      | Concepto de array (matriz) unidimensional. Declaración y acceso.              | CE6a                 |
-        | 2      | Inicialización y recorrido de arrays unidimensionales con bucles.             | CE6a                 |
-        | 3      | Arrays multidimensionales (matrices y cubos).                                 | CE6a                 |
-        | 4      | Operaciones básicas con arrays multidimensionales.                            | CE6a                 |
-        | 5      | Práctica: creación y manipulación de arrays.                                  | CE6a                 |
+        | 2      | Inicialización y recorrido de arrays unidimensionales con bucles.             | CE6a, CE6d           |
+        | 3      | Arrays multidimensionales (matrices y cubos).                                 | CE6a, CE6d           |
+        | 4      | Operaciones básicas con arrays multidimensionales.                            | CE6a, CE6d           |
+        | 5      | Práctica: creación y manipulación de arrays.                                  | CE6a, CE6d           |
         | 6      | Introducción a librerías de clases relacionadas con tipos de datos avanzados. | CE6b                 |
         | 7      | Concepto y utilidad de la programación genérica (introducción).               | CE6e                 |
         | 8      | Práctica guiada: resolución de problemas con arrays y alguna librería básica. | CE6a, CE6b           |
