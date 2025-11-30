@@ -20,9 +20,15 @@
 
         Criterios de evaluación clave que abordaremos (con énfasis en la modularidad):
 
-        - **CE3e**: Se han creado programas ejecutables utilizando diferentes estructuras de control (aplicado a funciones).
-        - **CE3f**: Se han probado y depurado los programas (especialmente funciones).
-        - **CE3g**: Se ha comentado y documentado el código (documentación de funciones).
+        - **CE3a**: Se ha escrito y probado código que haga uso de estructuras de selección.
+        - **CE3b**: Se han utilizado estructuras de repetición.
+        - **CE3c**: Se han reconocido las posibilidades de las sentencias de salto.
+        - **CE3d**: Se ha escrito código utilizando control de excepciones.
+        - **CE3e**: Se han creado programas ejecutables utilizando diferentes estructuras de control.
+        - **CE3f**: Se han probado y depurado los programas.
+        - **CE3g**: Se ha comentado y documentado el código.
+        - **CE3h**: Se han creado excepciones.
+        - **CE3i**: Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo.
 
     === "Programación de Aula"
 
