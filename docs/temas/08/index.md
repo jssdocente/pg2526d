@@ -23,6 +23,7 @@
 
         Criterios de evaluación clave que abordaremos:
 
+        - **CE6b**: Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
         - **CE6f**: Se han creado clases y métodos genéricos.
         - **CE6g**: Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.
         - **CE6h**: Se han identificado las clases relacionadas con el tratamiento de documentos escritos en diferentes lenguajes de intercambio de datos.

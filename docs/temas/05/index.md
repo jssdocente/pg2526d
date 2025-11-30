@@ -21,7 +21,6 @@
         Criterios de evaluación clave que abordaremos:
 
         - **CE6a**: Se han escrito programas que utilicen matrices (arrays).
-        - **CE6b**: Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
         - **CE6c**: Se han utilizado listas para almacenar y procesar información.
         - **CE6d**: Se han utilizado iteradores para recorrer los elementos de las listas.
         - **CE6e**: Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles
