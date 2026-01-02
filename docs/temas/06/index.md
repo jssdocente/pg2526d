@@ -51,12 +51,7 @@
         | 9      | Creación y utilización de conjuntos y librerías de clases propias.                | CE4i                   |
         | 10     | Práctica autónoma: desarrollo de un programa con varias clases interrelacionadas. | CE4e, CE4i             |
         | 11     | Debugging y testing de clases y objetos.                                          | CE4e                   |
-        | 12     | Revisión y evaluación práctica de la unidad.                                      | CE4a-i (Refuerzo)      |
-
-<figcaption>
-    <img src="./images/001.png" width="100%" align="center"/>
-    <figcaption align="center">Portada del Tema 5: Programación Orientada a Objetos</figcaption>
-</figcaption>
+        | 12     | Revisión y evaluación práctica de la unidad.                                      | CE4a-i (Refuerzo)   
 
 ## 1 - Conceptos básicos POO
 
@@ -92,7 +87,7 @@ Una clase describe un grupo de objetos que contienen una información similar (a
     <figcaption align="center">Clase y objetos, con atributos y métodos de un coche</figcaption>
 </figcaption>
 
-## 2.1 - Clases (sintaxis)
+### 2.1 - Clases (sintaxis)
 
 <figcaption>
     <img src="./images/004.png" width="80%" align="center"/>
@@ -114,7 +109,7 @@ Los elementos pertenecientes a una clase se denominan instancias u objetos. Cada
     <figcaption align="center">Representación de clases, atributos y objetos</figcaption>
 </figcaption>
 
-## 3.1 – Objetos (Instanciación)
+### 3.1 – Objetos (Instanciación)
 
 Antes de construir un objeto necesitamos declarar una variable cuyo tipo sea su clase. La forma de crear los objetos es mediante el operador `new`.
 
@@ -123,7 +118,7 @@ Antes de construir un objeto necesitamos declarar una variable cuyo tipo sea su 
     <figcaption align="center">Ejemplo de instanciación de un objeto Persona</figcaption>
 </figcaption>
 
-## 3.2 - Objetos (referencias a null)
+### 3.2 - Objetos (referencias a null)
 
 El valor literal `null` es una referencia nula. Cuando declaramos una variable de referencia se inicializa por defecto a `null`. Debemos tener la precaución de no acceder a los miembros de una referencia nula ya que esto lanzará una excepción "NullPointerException".
 
