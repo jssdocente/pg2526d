@@ -87,6 +87,11 @@ Una clase describe un grupo de objetos que contienen una información similar (a
     <figcaption align="center">Clase y objetos, con atributos y métodos de un coche</figcaption>
 </figcaption>
 
+<figcaption>
+    <img src="./images/010.png" width="100%" align="center"/>
+    <figcaption align="center">Ejemplo de métodos en una clase Persona</figcaption>
+</figcaption>
+
 ### 2.1 - Clases (sintaxis)
 
 <figcaption>
@@ -147,23 +152,23 @@ Las clases, además de atributos, también tienen un comportamiento que viene de
     <figcaption align="center">Ejemplo de métodos en una clase Persona</figcaption>
 </figcaption>
 
-## 5.1 - Métodos (Constructores)
+### 5.1 - Métodos (Constructores)
 
 En programación orientada a objetos (POO), un **constructor** es un método especial dentro de una clase que se utiliza para inicializar los objetos de esa clase. En Java, los constructores tienen el mismo nombre que la clase y no tienen un tipo de retorno explícito.
 
 <figcaption>
-    <img src="./images/010.png" width="100%" align="center"/>
+    <img src="./images/011.png" width="100%" align="center"/>
     <figcaption align="center">Constructores en una clase Java</figcaption>
 </figcaption>
 
 El propósito principal de un constructor es asignar valores iniciales a los miembros de la clase o realizar cualquier otra inicialización necesaria cuando se crea un objeto. Los constructores son llamados automáticamente cuando se instancia un objeto de la clase. Este tipo de métodos permiten **sobrecarga**. Dependiendo de los parámetros que use el constructor, éste puede ser por defecto o parametrizado.
 
-## 5.2 – Métodos (Getter y Setter)
+### 5.2 – Métodos (Getter y Setter)
 
 Puesto que lo más habitual es hacer que los atributos permanezcan lo más ocultos posible, se hace necesario de algún mecanismo que permita mostrarlos fuera de la implementación de la clase en el caso de que quieran ser leídos o escritos desde nuestro proyecto. Para eso existen lo que se conoce como `setters` y `getters`. Los primeros permiten acceder a los atributos de una clase para modificarlos, mientras que los segundos permiten acceder a los mismos para leerlos.
 
 <figcaption>
-    <img src="./images/011.png" width="100%" align="center"/>
+    <img src="./images/012.png" width="100%" align="center"/>
     <figcaption align="center">Ejemplo de métodos Getter y Setter</figcaption>
 </figcaption>
 
@@ -173,27 +178,126 @@ Siempre será posible permitir que se pueda acceder a un atributo (`getter`) per
 
 ## 6 - Atributos y Métodos estáticos
 
-Los atributos y métodos estáticos que se definen en una clase como tal permiten que se puedan utilizar sin la necesidad de instanciar objetos de dicha clase. Se declaran con la palabra clave `static`.
+### 6.1 Concepto de "Miembro de Clase"
 
-<figcaption>
-    <img src="./images/012.png" width="100%" align="center"/>
-    <figcaption align="center">Ejemplo de atributos y métodos estáticos</figcaption>
-</figcaption>
+La palabra clave `static` indica que un miembro (método o atributo) **pertenece a la clase misma**, no a ninguna instancia (objeto) particular.
 
-**Comparten datos comunes**: Los atributos estáticos son útiles cuando deseamos que todas las instancias de una clase compartan un mismo valor.
+*   No necesitas crear un objeto con `new` para usarlo.
+*   Es **compartido** por todos los objetos de esa clase.
 
-**Operaciones independientes**: Los métodos estáticos son convenientes para operaciones que no dependen del estado específico de una instancia.
+!!! tip "Analogía Mental"
+    *   **Atributo de instancia (No static):** Como el "Nombre" de un alumno. Cada alumno tiene el suyo propio.
+    *   **Atributo de clase (Static):** Como la "Pizarra" del aula. Hay una sola compartida por todos los alumnos.
+
+### 6.2 Usos Comunes
+
+=== "Métodos de Utilidad (Math)"
+    Métodos que solo procesan datos de entrada y no dependen de ningún estado de objeto.
+    
+    ```java
+    public class Calculadora {
+        // No necesito 'new Calculadora()' para sumar
+        public static int sumar(int a, int b) {
+            return a + b;
+        }
+    }
+    
+    // Uso
+    int resultado = Calculadora.sumar(5, 3);
+    ```
+
+=== "Contadores Compartidos (State)"
+    Variables que mantienen un valor común para todas las instancias.
+    
+    ```java
+    public class Jugador {
+        // static: hay UNO solo para todos
+        public static int totalJugadores = 0;
+        
+        public Jugador() {
+            totalJugadores++; // Incrementa la variable compartida
+        }
+    }
+    
+    new Jugador(); new Jugador(); new Jugador();
+    System.out.println(Jugador.totalJugadores); // Imprime 3
+    ```
+
+=== "Constantes Globales"
+    Valores fijos y universales (`public static final`).
+    
+    ```java
+    public class Fisicas {
+        public static final double GRAVEDAD = 9.81;
+    }
+    ```
+
+### 6.3 Error Frecuente ⚠️
+
+Un método `static` **NO PUEDE acceder** directamente a miembros que no sean estáticos (de instancia), porque "no tiene `this`".
+
+```java
+public class Ejemplo {
+    int valor = 10; // Instancia
+
+    public static void metodoStatic() {
+        // ❌ Error de compilación: 
+        // No puedo acceder a 'valor' porque no sé de QÚE objeto es.
+        System.out.println(valor); 
+    }
+}
+```
 
 ## 7 – Tipos Enumerados
 
-Los tipos enumerados (`enum`) son una forma de definir un conjunto fijo de constantes con nombre. Los `enums` se introdujeron en Java para proporcionar una manera más robusta y legible de representar conjuntos de valores fijos. Puedes declarar un tipo enumerado mediante la palabra clave `enum`.
+**Características Principales**
 
-<figcaption>
-    <img src="./images/013.png" width="100%" align="center"/>
-    <figcaption align="center">Declaración y uso de tipos enumerados en Java</figcaption>
-</figcaption>
+Los **Enums** son mucho más que simples listas de constantes. En Java, son **clases completas** que heredan de `java.lang.Enum`.
+Permiten restringir una variable a un conjunto de valores predefinidos y pueden tener **campos, constructores y métodos**.
 
-Los `enums` proporcionan una manera clara y segura de representar conjuntos de constantes relacionadas. Pueden mejorar la legibilidad y mantenimiento del código, y son especialmente útiles cuando necesitas representar un conjunto fijo de valores relacionados.
+=== "Básico"
+    ```java
+    public enum Nivel {
+        BAJO, MEDIO, ALTO
+    }
+    ```
+
+=== "Avanzado (Con Propiedades)"
+    ```java
+    public enum Planeta {
+        MERCURIO(3.303e+23, 2.4397e6),
+        TIERRA(5.976e+24, 6.37814e6);
+
+        private final double masa;   // kg
+        private final double radio;  // m
+
+        // Constructor (siempre privado / package-private)
+        Planeta(double masa, double radio) {
+            this.masa = masa;
+            this.radio = radio;
+        }
+
+        public double gravedad() { return 6.67300E-11 * masa / (radio * radio); }
+    }
+    ```
+
+**Métodos Comunes y Uso**
+
+| Método | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| **`values()`** | Devuelve un array con todas las constantes. | `for (Nivel n : Nivel.values())` |
+| **`valueOf(String)`** | Busca una constante por su nombre. | `Nivel.valueOf("ALTO")` |
+| **`ordinal()`** | Devuelve la posición (índice 0-based). | `Nivel.MEDIO.ordinal()` // 1 |
+
+```java
+// Uso en control de flujo
+Nivel nivel = Nivel.MEDIO;
+
+switch (nivel) {
+    case BAJO -> System.out.println("Nivel seguro");
+    case MEDIO, ALTO -> System.out.println("Precaución");
+}
+```
 
 ## 8 – Arrays de Objetos
 
@@ -203,3 +307,211 @@ En Java, los arrays de objetos permiten almacenar múltiples instancias de una c
     <img src="./images/014.png" width="100%" align="center"/>
     <figcaption align="center">Declaración y uso de arrays de objetos Persona</figcaption>
 </figcaption>
+
+## 9 - Paquetes e Importaciones
+
+Organización lógica del código para evitar conflictos y facilitar el uso de librerías.
+
+| Concepto | Sintaxis / Uso | Descripción |
+| :--- | :--- | :--- |
+| **Package** | `package com.miempresa.app;` | Agrupa clases relacionadas. **Debe ser la 1ª línea**. Convención: minúsculas y dominio invertido. |
+| **Import** | `import java.util.List;` | Permite usar clases de otros paquetes sin escribir su nombre completo. `java.lang` se importa solo. |
+
+## 10 - Referencia `this`
+
+Referencia a la **instancia actual**. Se usa para:
+
+1.  **Desambiguar:** Cuando un parámetro se llama igual que un campo (`this.nombre = nombre`).
+2.  **Encadenar Constructores:** Llamar a otro constructor de la misma clase (`this(a, b)`). *Debe ser la 1ª línea*.
+
+## 11 - Igualdad e Identidad
+
+!!! failure "Error Común"
+    Usar `==` para comparar contenido de objetos es incorrecto. `==` compara referencias (identidad).
+
+### 11.1 Comparación de Objetos
+
+Distinguimos entre **Identidad** (referencia) e **Igualdad** (contenido).
+
+| Operador / Método | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| **`==`** (Identidad) | Compara si dos referencias apuntan al **mismo objeto** en memoria. | `a == b` (false si son `new` distintos) |
+| **`.equals()`** (Igualdad) | Método para comparar **contenido semántico**. Por defecto usa `==`, se debe sobrescribir. | `a.equals(b)` (true si tienen mismos datos) |
+
+```java
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof Libro)) return false;
+    Libro l = (Libro) o;
+    return Objects.equals(isbn, l.isbn);
+}
+```
+
+## 12 - Representación como Cadena
+
+### 12.1 Métodos de Cadena
+
+*   **`toString()`:** Devuelve la representación textual del objeto. Útil para logs/debug.
+*   **Formateo:** Uso de `String.format` o `.formatted()` para crear cadenas complejas.
+
+```java
+@Override
+public String toString() { return "Persona[nombre=" + nombre + "]"; }
+
+// Uso
+String s = "Hola %s".formatted(nombre); // Java 15+
+```
+
+## 13 - Records
+
+Introducidos en Java 14, definen clases inmutables de datos ("Data Carriers") de forma concisa.
+
+```java
+public record Persona(String nombre, int edad) {}
+```
+
+!!! check "Ventajas Automáticas"
+    *   ✅ **Constructor** canónico explícito.
+    *   ✅ Métodos **`equals`, `hashCode`, `toString`**.
+    *   ✅ Accessors (ej: `nombre()`, `edad()`).
+
+## 14 - Clases Anidadas
+
+Permiten definir una clase dentro de otra para agrupar lógicamente clases que solo se usan en un lugar, aumentando la encapsulación.
+
+| Tipo | Sintaxis | Descripción | Acceso a Externa |
+| :--- | :--- | :--- | :--- |
+| **Static Nested** | `static class B` | Asocia con la CLASE externa. | No accede a `this` externo (solo `static`). |
+| **Inner Class** | `class B` | Asocia con la INSTANCIA externa. | Accede a miembros `private` de la instancia externa. |
+
+**Ejemplos y Diferencias**
+
+=== "Static Nested Class"
+    Útil para clases de utilidad o builders que no dependen de la instancia particular del objeto padre.
+    
+    ```java
+    public class Externa {
+        private static int datoStatic = 1;
+
+        // Se comporta como una clase normal, pero dentro del namespace de Externa
+        public static class Anidada { 
+            void print() { System.out.println(datoStatic); }
+        }
+    }
+    
+    // Instanciación (Directa)
+    Externa.Anidada obj = new Externa.Anidada();
+    ```
+
+=== "Inner Class"
+    Útil para crear objetos dependientes, como un Iterador o un Motor de un Coche específico.
+    
+    ```java
+    public class Coche {
+        private String modelo = "Tesla";
+        
+        // Vive SOLO asociada a un objeto Coche concreto
+        public class Motor { 
+            void encender() { 
+                // Accede al campo privado 'modelo' de SU coche contenedor
+                System.out.println("Arrancando " + modelo); 
+            }
+        }
+    }
+    
+    // Instanciación (Requiere objeto externo)
+    Coche miCoche = new Coche();
+    Coche.Motor motor = miCoche.new Motor();
+    ```
+
+## 15 - Excepciones
+
+Las excepciones son eventos que interrumpen el flujo normal del programa. En Java, todas heredan de la clase `Throwable`.
+
+### 15.1 Jerarquía de Excepciones
+
+```mermaid
+classDiagram
+    class Throwable
+    class Error {
+        <<Irrecuperable>>
+    }
+    class Exception {
+        <<Checked>>
+    }
+    class RuntimeException {
+        <<Unchecked>>
+    }
+
+    Throwable <|-- Error
+    Throwable <|-- Exception
+    Exception <|-- RuntimeException
+```
+
+1.  **Error:** Problemas graves de la JVM (ej: `OutOfMemoryError`). No se suelen capturar.
+2.  **Exception (Checked):** Problemas anticipables (Ficheros, Red). El compilador obliga a tratarlas.
+3.  **RuntimeException (Unchecked):** Errores de lógica del programador. No es obligatorio tratarlas.
+
+### 15.2 Tipos Principales y Uso
+
+=== "Checked Exceptions 🔴"
+    **Obligatorio** `try-catch` o `throws`.
+
+    | Excepción | Causa Común |
+    | :--- | :--- |
+    | **`IOException`** | Error en entrada/salida (ficheros, sockets). |
+    | **`FileNotFoundException`** | Fichero no encontrado al intentar abrirlo. |
+    | **`SQLException`** | Error interactuando con base de datos. |
+    | **`ClassNotFoundException`** | Intentas cargar una clase que no existe en el classpath. |
+
+=== "Unchecked Exceptions 🟠"
+    **Opcional**. Errores que se deberían arreglar en el código.
+
+    | Excepción | Causa Común |
+    | :--- | :--- |
+    | **`NullPointerException`** | Acceso a miembro de una referencia `null`. |
+    | **`IndexOutOfBoundsException`** | Acceso a índice inválido en Array/Lista. |
+    | **`IllegalArgumentException`** | Argumento inválido pasado a un método. |
+    | **`ArithmeticException`** | División por cero lógica. |
+    | **`NumberFormatException`** | Error al convertir String a número (`"hola"` a int). |
+
+### 15.3 Estrategias de Manejo
+
+Es vital entender cuándo usar `try-catch` y cuándo arreglar el código.
+
+=== "Manejo de Checked Exception (IOException)"
+    El compilador **obliga** a capturarla o declararla. Se usa para fallos externos recuperables.
+    
+    ```java
+    // Opción A: Capturar (try-catch) -> El programa se recupera
+    public void leerArchivo() {
+        try {
+            var reader = new FileReader("data.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo no encontrado, crea uno nuevo.");
+        }
+    }
+    
+    // Opción B: Propagar (throws) -> Pasa el problema al llamador
+    public void leerConfig() throws IOException {
+        var reader = new FileReader("config.txt"); // Si falla, explota arriba
+    }
+    ```
+
+=== "Manejo de Unchecked Exception (NullPointer)"
+    NO se suelen capturar. Indican un **bug**. La solución es corregir el código, no usar try-catch.
+    
+    ```java
+    // ❌ MAL: Capturar un error de lógica
+    try {
+        System.out.println(usuario.nombre.toUpperCase());
+    } catch (NullPointerException e) {
+        // Esto oculta el bug real
+    }
+    
+    // ✅ BIEN: Programación defensiva (evitar el error)
+    if (usuario != null && usuario.nombre != null) {
+        System.out.println(usuario.nombre.toUpperCase());
+    }
+    ```

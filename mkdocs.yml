@@ -9,9 +9,7 @@ nav:
   - "03 - Programación Estructurada": temas/03/index.md
   - "04 - Programación Modular": temas/04/index.md
   - "05 - Estructuras de datos estáticas": temas/05/index.md
-  - "06 - Programación Orientada a Objetos":
-    - "Inicio": temas/06/index.md
-    - "En profundidad": temas/06/poo_java.md
+  - "06 - Programación Orientada a Objetos": temas/06/index.md
   - "07 - Programación orientada a objetos avanzada": temas/07/index.md
   - "08 - Estructuras de datos dinámicas": temas/08/index.md
   - "09 - Ficheros": temas/09/index.md
