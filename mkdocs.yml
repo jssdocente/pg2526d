@@ -10,7 +10,15 @@ nav:
   - "04 - Programación Modular": temas/04/index.md
   - "05 - Estructuras de datos estáticas": temas/05/index.md
   - "06 - Programación Orientada a Objetos": temas/06/index.md
-  - "07 - Programación orientada a objetos avanzada": temas/07/index.md
+  - "07 - Programación orientada a objetos avanzada":
+    - "Introducción": temas/07/index.md
+    - "Herencia": temas/07/01-fundamentos-herencia.md
+    - "Jerarquias": temas/07/02-modelado-jerarquias.md
+    - "Tipado de datos": temas/07/03-tipado-datos.md
+    - "Interfaces": temas/07/04-interfaces.md
+    - "Polimorfismo": temas/07/05-polimorfismo.md
+    - "Arquitectura y Diseño": temas/07/06-arquitectura-diseno.md
+    - "Otros aspectos": temas/07/07-otros-aspectos.md
   - "08 - Estructuras de datos dinámicas": temas/08/index.md
   - "09 - Ficheros": temas/09/index.md
   - "10 - Interfaces gráficas": temas/10/index.md
