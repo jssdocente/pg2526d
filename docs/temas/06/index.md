@@ -367,153 +367,144 @@ String s = "Hola %s".formatted(nombre); // Java 15+
 
 ## 13 - Records
 
-Introducidos en Java 14, definen clases inmutables de datos ("Data Carriers") de forma concisa.
+### 13.1 Motivación: El problema de la "verborrea"
+
+En Java, crear una clase simple para almacenar datos (conocida como POJO o DTO) tradicionalmente requería escribir mucho código repetitivo (*boilerplate*): campos privados, constructores, getters, setters, y sobrescribir `equals()`, `hashCode()` y `toString()`.
+
+**Comparativa:** Para guardar simplemente un nombre y una edad:
+
+=== "Clase Tradicional (POJO)"
+    ```java
+    public class Persona {
+        private final String nombre;
+        private final int edad;
+    
+        public Persona(String nombre, int edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+    
+        public String getNombre() { return nombre; }
+        public int getEdad() { return edad; }
+    
+        @Override
+        public boolean equals(Object o) { ... } // +10 líneas
+        @Override
+        public int hashCode() { ... } // +5 líneas
+        @Override
+        public String toString() { ... } // +3 líneas
+    }
+    ```
+
+=== "Record (Java 14+)"
+    ```java
+    public record Persona(String nombre, int edad) {}
+    ```
+
+### 13.2 ¿Qué es un Record?
+
+Un `record` es un tipo especial de clase pensado para actuar exclusivamente como **transportador de datos inmutables**.
+Al definirlo, el compilador genera automáticamente:
+
+*   Un **constructor** con todos los argumentos.
+*   Métodos de acceso (sin prefijo `get`, ej: `persona.nombre()`).
+*   Implementaciones correctas de `equals()`, `hashCode()` y `toString()`.
+
+!!! warning "Limitaciones importantes"
+    *   Son **inmutables**: No tienen `setters`. Una vez creados, sus datos no cambian.
+    *   Son **finales**: No se puede heredar de un record ni un record puede heredar de otra clase (aunque sí implementar interfaces).
+
+## 14 - Clases Internas (Inner Classes)
+
+Una **Clase Interna** es una clase definida dentro de otra clase. A diferencia de las clases normales, una clase interna está vinculada a una **instancia concreta** de la clase externa.
+
+### 14.1 ¿Para qué sirven?
+Se utilizan cuando una clase **solo tiene sentido en el contexto de otra** y necesita acceder a sus datos privados para funcionar. Ayudan a mantener el código organizado y mejoran la encapsulación (la clase interna puede ser privada, ocultándola del resto del mundo).
+
+### 14.2 Ejemplo de Uso
+
+Imagina un `Ordenador`. Tiene una `CPU` y una `RAM`. La CPU necesita acceder directamente a la memoria RAM de ese ordenador específico.
 
 ```java
-public record Persona(String nombre, int edad) {}
+public class Ordenador {
+    private int memoriaRamGb = 16; // Propiedad privada del Ordenador
+    private String marca = "Dell";
+
+    // Clase Interna: La CPU pertenece a ESTE ordenador
+    public class Procesador {
+        
+        public void procesarDatos() {
+            // ✅ Acceso directo a variables privadas de la clase externa
+            // La CPU "ve" la RAM del ordenador donde está instalada
+            System.out.println("Procesando en " + marca + " usando " + memoriaRamGb + "GB de RAM");
+        }
+    }
+
+    // Método del Ordenador para iniciar sus componentes
+    public void encender() {
+        Procesador cpu = new Procesador();
+        cpu.procesarDatos();
+    }
+}
 ```
 
-!!! check "Ventajas Automáticas"
-    *   ✅ **Constructor** canónico explícito.
-    *   ✅ Métodos **`equals`, `hashCode`, `toString`**.
-    *   ✅ Accessors (ej: `nombre()`, `edad()`).
-
-## 14 - Clases Anidadas
-
-Permiten definir una clase dentro de otra para agrupar lógicamente clases que solo se usan en un lugar, aumentando la encapsulación.
-
-| Tipo | Sintaxis | Descripción | Acceso a Externa |
-| :--- | :--- | :--- | :--- |
-| **Static Nested** | `static class B` | Asocia con la CLASE externa. | No accede a `this` externo (solo `static`). |
-| **Inner Class** | `class B` | Asocia con la INSTANCIA externa. | Accede a miembros `private` de la instancia externa. |
-
-**Ejemplos y Diferencias**
-
-=== "Static Nested Class"
-    Útil para clases de utilidad o builders que no dependen de la instancia particular del objeto padre.
-    
-    ```java
-    public class Externa {
-        private static int datoStatic = 1;
-
-        // Se comporta como una clase normal, pero dentro del namespace de Externa
-        public static class Anidada { 
-            void print() { System.out.println(datoStatic); }
-        }
-    }
-    
-    // Instanciación (Directa)
-    Externa.Anidada obj = new Externa.Anidada();
-    ```
-
-=== "Inner Class"
-    Útil para crear objetos dependientes, como un Iterador o un Motor de un Coche específico.
-    
-    ```java
-    public class Coche {
-        private String modelo = "Tesla";
-        
-        // Vive SOLO asociada a un objeto Coche concreto
-        public class Motor { 
-            void encender() { 
-                // Accede al campo privado 'modelo' de SU coche contenedor
-                System.out.println("Arrancando " + modelo); 
-            }
-        }
-    }
-    
-    // Instanciación (Requiere objeto externo)
-    Coche miCoche = new Coche();
-    Coche.Motor motor = miCoche.new Motor();
-    ```
+!!! note "Clave del concepto"
+    No puedes crear un objeto `Procesador` si no existe primero un objeto `Ordenador`. El procesador vive "dentro" del ordenador.
 
 ## 15 - Excepciones
 
-Las excepciones son eventos que interrumpen el flujo normal del programa. En Java, todas heredan de la clase `Throwable`.
+Las excepciones son el mecanismo de Java para gestionar errores y situaciones anómalas en tiempo de ejecución.
 
-### 15.1 Jerarquía de Excepciones
+### 15.1 La gran división: Checked vs Unchecked
 
-```mermaid
-classDiagram
-    class Throwable
-    class Error {
-        <<Irrecuperable>>
-    }
-    class Exception {
-        <<Checked>>
-    }
-    class RuntimeException {
-        <<Unchecked>>
-    }
+Java distingue dos tipos de errores filosóficamente distintos. Entender esto es la clave para programar bien.
 
-    Throwable <|-- Error
-    Throwable <|-- Exception
-    Exception <|-- RuntimeException
+| Tipo | Clase Base | ¿Qué representa? | ¿Qué debes hacer? |
+| :--- | :--- | :--- | :--- |
+| **Unchecked** (No verificadas) | `RuntimeException` | **Errores del Programador (Bugs)**. Lógica incorrecta, precondiciones no cumplirda. Ej: Acceder a un array fuera de rango, dividir por cero, llamar método en null. | **CORREGIR EL CÓDIGO**. No se deben capturar con try-catch. Se evitan con `if`. |
+| **Checked** (Verificadas) | `Exception` | **Fallos del Entorno (Fuerza Mayor)**. Situaciones externas que escapan a tu control pero que *podrían* pasar. Ej: Fichero no existe, servidor caído, formato de fecha extraño. | **GESTIONARLAS**. Java te obliga a usar `try-catch` o `throws`. Debes tener un "Plan B". |
+
+### 15.2 Estrategias de Manejo
+
+Cuando te enfrentas a una excepción *Checked* (obligatoria), tienes dos opciones principales:
+
+#### A) Capturar y Recuperarse (`try-catch`)
+Asumes la responsabilidad del error y lo solucionas o informas, evitando que el programa se cierre. Úsalo cuando **sepas qué hacer** con el error.
+
+```java
+public void esperarUnSegundo() {
+    System.out.println("Iniciando espera...");
+    try {
+        // Thread.sleep lanza InterruptedException (Checked)
+        // Obliga a gestionar: "¿Qué pasa si alguien interrumpe la espera?"
+        Thread.sleep(1000); 
+    } catch (InterruptedException e) {
+        // Plan B: Informar y quizás detener la operación actual limpiamente
+        System.out.println("¡La espera fue interrumpida!");
+    }
+    System.out.println("Fin"); // El programa continúa
+}
 ```
 
-1.  **Error:** Problemas graves de la JVM (ej: `OutOfMemoryError`). No se suelen capturar.
-2.  **Exception (Checked):** Problemas anticipables (Ficheros, Red). El compilador obliga a tratarlas.
-3.  **RuntimeException (Unchecked):** Errores de lógica del programador. No es obligatorio tratarlas.
+#### B) Propagar (`throws`)
+Decides que este método no es el lugar adecuado para solucionar el problema. "Pasas la patata caliente" a quien llamó a este método.
 
-### 15.2 Tipos Principales y Uso
+```java
+// Aviso en la firma: "Oye, quien me use debe saber que esto puede fallar"
+public void conectarServidor() throws Exception {
+    // Si falla aquí, la excepción salta fuera del método
+    // y debe ser gestionada por quien llamó a conectarServidor()
+    realizarConexionCompleja(); 
+}
+```
 
-=== "Checked Exceptions 🔴"
-    **Obligatorio** `try-catch` o `throws`.
+### 15.3 Buenas Prácticas (Clean Code)
 
-    | Excepción | Causa Común |
-    | :--- | :--- |
-    | **`IOException`** | Error en entrada/salida (ficheros, sockets). |
-    | **`FileNotFoundException`** | Fichero no encontrado al intentar abrirlo. |
-    | **`SQLException`** | Error interactuando con base de datos. |
-    | **`ClassNotFoundException`** | Intentas cargar una clase que no existe en el classpath. |
-
-=== "Unchecked Exceptions 🟠"
-    **Opcional**. Errores que se deberían arreglar en el código.
-
-    | Excepción | Causa Común |
-    | :--- | :--- |
-    | **`NullPointerException`** | Acceso a miembro de una referencia `null`. |
-    | **`IndexOutOfBoundsException`** | Acceso a índice inválido en Array/Lista. |
-    | **`IllegalArgumentException`** | Argumento inválido pasado a un método. |
-    | **`ArithmeticException`** | División por cero lógica. |
-    | **`NumberFormatException`** | Error al convertir String a número (`"hola"` a int). |
-
-### 15.3 Estrategias de Manejo
-
-Es vital entender cuándo usar `try-catch` y cuándo arreglar el código.
-
-=== "Manejo de Checked Exception (IOException)"
-    El compilador **obliga** a capturarla o declararla. Se usa para fallos externos recuperables.
-    
+1.  **Nunca te "tragues" una excepción**:
     ```java
-    // Opción A: Capturar (try-catch) -> El programa se recupera
-    public void leerArchivo() {
-        try {
-            var reader = new FileReader("data.txt");
-        } catch (FileNotFoundException e) {
-            System.out.println("Archivo no encontrado, crea uno nuevo.");
-        }
-    }
-    
-    // Opción B: Propagar (throws) -> Pasa el problema al llamador
-    public void leerConfig() throws IOException {
-        var reader = new FileReader("config.txt"); // Si falla, explota arriba
-    }
+    catch (Exception e) { } // ❌ MAL: El error ocurre en silencio y el programa sigue en estado inestable.
     ```
-
-=== "Manejo de Unchecked Exception (NullPointer)"
-    NO se suelen capturar. Indican un **bug**. La solución es corregir el código, no usar try-catch.
-    
-    ```java
-    // ❌ MAL: Capturar un error de lógica
-    try {
-        System.out.println(usuario.nombre.toUpperCase());
-    } catch (NullPointerException e) {
-        // Esto oculta el bug real
-    }
-    
-    // ✅ BIEN: Programación defensiva (evitar el error)
-    if (usuario != null && usuario.nombre != null) {
-        System.out.println(usuario.nombre.toUpperCase());
-    }
-    ```
+2.  **No captures `NullPointerException`**:
+    Si tienes un `NullPointerException`, tu código está mal. No pongas un `try-catch`, pon un `if (x != null)`.
+3.  **Captura lo específico**:
+    Es mejor capturar `InterruptedException` que capturar `Exception` (que capturaría todo, ocultando otros bugs).
