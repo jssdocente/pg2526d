@@ -19,7 +19,16 @@ nav:
     - "Polimorfismo": temas/07/05-polimorfismo.md
     - "Arquitectura y Diseño": temas/07/06-arquitectura-diseno.md
     - "Otros aspectos": temas/07/07-otros-aspectos.md
-  - "08 - Estructuras de datos dinámicas": temas/08/index.md
+  - "08 - Estructuras de datos dinámicas": 
+    - "Introducción": temas/08/01_index.md
+    - "Apuntes": 
+      - "Genéricos": temas/08/02-genericos.md
+      - "Ordenación": temas/08/03-ordenacion-comparacion.md
+      - "Colecciones": temas/08/04-colecciones.md
+      - "Anexo: Programación Funcional": temas/08/99-anexo_programacion-funcional.md
+    - "Actividades":
+      - "Actividad 1": temas/08/actividades/01-ejercicios-colecciones.md
+
   - "09 - Ficheros": temas/09/index.md
   - "10 - Interfaces gráficas": temas/10/index.md
   - "11 - Acceso a BBDD orientadas a objetos": temas/11/index.md
@@ -87,7 +96,7 @@ theme:
     - content.code.copy
     - content.code.select
     - navigation.top
-    - navigation.expand
+    # - navigation.expand
     - navigation.path
     - content.code.annotate
     - content.tooltips
