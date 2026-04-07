@@ -1225,6 +1225,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="actividades/02-ejercicios-genericos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1678,13 +1706,15 @@
 </span></code></pre></div>
 <p>La letra <code>T</code> es un <strong>parámetro de tipo</strong> (type parameter). Es como una variable, pero para tipos en lugar de valores. Por convención, se suele usar <code>T</code> (de "Type"), aunque puedes usar cualquier identificador válido.</p>
 <p><strong>🧠 Analogía:</strong> El Molde de Galletas</p>
-<p>Imagina que tienes un molde de galletas en forma de estrella:
-- Si usas masa de chocolate → Obtienes galletas de chocolate con forma de estrella
-- Si usas masa de vainilla → Obtienes galletas de vainilla con forma de estrella
-- Si usas masa de avena → Obtienes galletas de avena con forma de estrella</p>
+<p>Imagina que tienes un molde de galletas en forma de estrella:</p>
+<ul>
+<li>Si usas masa de chocolate → Obtienes galletas de chocolate con forma de estrella</li>
+<li>Si usas masa de vainilla → Obtienes galletas de vainilla con forma de estrella</li>
+<li>Si usas masa de avena → Obtienes galletas de avena con forma de estrella</li>
+</ul>
 <p>El molde es como la clase genérica <code>Caja&lt;T&gt;</code>. La masa es el tipo que le pasas (<code>int</code>, <code>string</code>, <code>Persona</code>). El resultado es una caja específica para ese tipo.</p>
 <blockquote>
-<p>💡 <strong>Tip del Examinador</strong>: En examen, siempre preguntan qué es <code>T</code>. Respuesta: "Es un parámetro de tipo genérico que representa el tipo con el que trabajará la clase o método. Es una especie de 'placeholder' que se sustituye por un tipo concreto al usar la clase."</p>
+<p>💡 <strong>Tip para el Alumno</strong>: ¿Qué es <code>T</code>?. Respuesta: "Es un parámetro de tipo genérico que representa el tipo con el que trabajará la clase o método. Es una especie de 'placeholder' que se sustituye por un tipo concreto al usar la clase."</p>
 </blockquote>
 <h3 id="212-ventajas-reutilizacion-type-safety-rendimiento">2.1.2. Ventajas: reutilización, type-safety, rendimiento<a class="headerlink" href="#212-ventajas-reutilizacion-type-safety-rendimiento" title="Permanent link">¶</a></h3>
 <p>Los genéricos proporcionan tres ventajas fundamentales:</p>
@@ -1812,52 +1842,71 @@ La invarianza nos protege de estos errores en tiempo de compilación para garant
 <h3 id="242-covarianza-extends-t">2.4.2. Covarianza (<code>? extends T</code>)<a class="headerlink" href="#242-covarianza-extends-t" title="Permanent link">¶</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definición de Covarianza (Lectura)</p>
-<p>La covarianza permite que un genérico acepte <strong>cualquier tipo que herede de T</strong>. Se expresa con el comodín <code>? extends T</code> y se utiliza para <strong>PRODUCIR</strong> o leer datos de la estructura. 
-Equivale a la palabra clave <code>out</code> en C#.</p>
+<p>La covarianza permite que un genérico acepte <strong>cualquier tipo que herede de T</strong>. Se expresa con el comodín <code>? extends T</code> y se utiliza para <strong>PRODUCIR</strong> o leer datos de la estructura.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Ejemplo de Covarianza</p>
-<p>Al usar <code>? extends Animal</code>, podemos aceptar una lista de <code>Animal</code> o de cualquier clase que herede de ella (como <code>Perro</code> o <code>Gato</code>).
-</p><div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">procesarAnimales</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">animales</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="c1">// ✅ OK: Podemos leer porque estamos seguros de que, sea cual sea el </span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="c1">// tipo de la lista original, todos sus elementos serán al menos "Animal".</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">animales</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="c1">// ❌ ERROR: El compilador no sabe de qué tipo es exactamente la lista. </span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="c1">// Podría ser una List&lt;Gato&gt;, ¡no podemos meterle un Perro!</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="c1">// animales.add(new Perro()); </span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="p">}</span>
+<p class="admonition-title">Ejemplo: ¿Por qué NO permite añadir elementos?</p>
+<p>Imagina que tenemos la siguiente jerarquía: <code>Animal</code> &lt;- <code>Perro</code> y <code>Animal</code> &lt;- <code>Gato</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">Perro</span><span class="o">&gt;</span><span class="w"> </span><span class="n">misPerros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listaAnimales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">misPerros</span><span class="p">;</span><span class="w"> </span><span class="c1">// ✅ Válido por covarianza</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1">// ❌ ERROR DE COMPILACIÓN:</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1">// listaAnimales.add(new Gato()); </span>
+</span></code></pre></div>
+<p><strong>El Razonamiento:</strong> Si el compilador permitiera la línea anterior, ¡estaríamos metiendo un <code>Gato</code> en una lista que originalmente era de <code>Perro</code>! Para evitar este desastre de tipos, Java prohíbe añadir elementos (excepto <code>null</code>) a colecciones con <code>? extends</code>.</p>
+<p><strong>Lo que SÍ podemos hacer:</strong> Leer.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// ✅ OK: Sabemos que lo que salga será, como mínimo, un Animal.</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listaAnimales</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div><p></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">¿Cuándo usar Covarianza?</p>
+<p>Úsala cuando tu método necesite recorrer una colección para <strong>consultar</strong> sus datos, independientemente de si le pasan una lista de subtipos específicos.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hacerRuidoA</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">animales</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">animales</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="na">hacerSonido</span><span class="p">();</span><span class="w"> </span><span class="c1">// Solo leemos, no modificamos la lista</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">}</span>
 </span></code></pre></div><p></p>
 </div>
 <h3 id="243-contravarianza-super-t">2.4.3. Contravarianza (<code>? super T</code>)<a class="headerlink" href="#243-contravarianza-super-t" title="Permanent link">¶</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definición de Contravarianza (Escritura)</p>
-<p>La contravarianza permite que un genérico acepte <strong>el tipo T o cualquiera de sus clases padre o superclases</strong>. Se expresa con el comodín <code>? super T</code> y se utiliza para <strong>CONSUMIR</strong> o escribir datos en la estructura.
-Equivale a la palabra clave <code>in</code> en C#.</p>
+<p>La contravarianza permite que un genérico acepte <strong>el tipo T o cualquiera de sus clases padre o superclases</strong>. Se expresa con el comodín <code>? super T</code> y se utiliza para <strong>CONSUMIR</strong> o escribir datos en la estructura.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Ejemplo de Contravarianza</p>
-<p>Al usar <code>? super Perro</code>, podemos aceptar una lista de <code>Perro</code> o de cualquier de sus superclases (<code>Animal</code>, <code>Object</code>).
-</p><div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">agregarPerros</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">Perro</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="c1">// ✅ OK: Podemos guardar Perros porque la lista destino tiene garantizado</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="c1">// poder almacenar Perros (ya que será List&lt;Perro&gt;, List&lt;Animal&gt; o List&lt;Object&gt;).</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">());</span><span class="w"> </span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="c1">// ❌ ERROR: Al leer, el compilador solo nos puede garantizar que obtendremos</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="c1">// un Object, ya que no sabemos de qué clase superior es la lista en realidad.</span>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span><span class="c1">// Perro p = lista.get(0); // Requiere un casting explícito</span>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="p">}</span>
+<p class="admonition-title">Ejemplo: ¿Por qué SÍ permite añadir pero NO leer (como T)?</p>
+<p>Siguiendo con <code>Animal</code> &lt;- <code>Perro</code>.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">// Esta lista puede ser de Perro, de Animal o de Object</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">Perro</span><span class="o">&gt;</span><span class="w"> </span><span class="n">destino</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span><span class="p">();</span><span class="w"> </span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1">// ✅ OK: Es seguro añadir un Perro. </span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1">// Si la lista es de Animales, un Perro es un Animal.</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="c1">// Si la lista es de Object, un Perro es un Object.</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">destino</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Perro</span><span class="p">());</span><span class="w"> </span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="c1">// ❌ ERROR DE COMPILACIÓN:</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="c1">// Perro p = destino.get(0); </span>
+</span></code></pre></div>
+<p><strong>El Razonamiento:</strong> Como <code>destino</code> podría ser una <code>List&lt;Object&gt;</code>, el compilador no puede garantizarte que lo que saques sea un <code>Perro</code> (podría haber guardado un <code>String</code> antes). Por eso, al leer de un <code>? super T</code>, solo obtienes un <code>Object</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">¿Cuándo usar Contravarianza?</p>
+<p>Úsala cuando tu método necesite <strong>insertar</strong> elementos en una colección que le pasan como parámetro.
+</p><div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">salvarPerro</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">Perro</span><span class="o">&gt;</span><span class="w"> </span><span class="n">protectora</span><span class="p">,</span><span class="w"> </span><span class="n">Perro</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">protectora</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"> </span><span class="c1">// Estamos "consumiendo" el perro y metiéndolo en la lista</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">}</span>
 </span></code></pre></div><p></p>
 </div>
 <h2 id="25-restricciones-de-tipos-bounds">2.5. Restricciones de Tipos (Bounds)<a class="headerlink" href="#25-restricciones-de-tipos-bounds" title="Permanent link">¶</a></h2>
 <p>Java permite limitar los tipos que puede aceptar un genérico mediante la palabra clave <code>extends</code> (sirve tanto para clases como para interfaces).</p>
-<p></p><div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">// T debe heredar de Animal e implementar IIdentificable</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Veterinaria</span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">IIdentificable</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">revisar</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">paciente</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">        </span><span class="n">paciente</span><span class="p">.</span><span class="na">hacerSonido</span><span class="p">();</span><span class="w"> </span><span class="c1">// Método de Animal</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paciente</span><span class="p">.</span><span class="na">getId</span><span class="p">();</span><span class="w"> </span><span class="c1">// Método de IIdentificable</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">}</span>
+<p></p><div class="language-java highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// T debe heredar de Animal e implementar IIdentificable</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Veterinaria</span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">IIdentificable</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">revisar</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">paciente</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">        </span><span class="n">paciente</span><span class="p">.</span><span class="na">hacerSonido</span><span class="p">();</span><span class="w"> </span><span class="c1">// Método de Animal</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paciente</span><span class="p">.</span><span class="na">getId</span><span class="p">();</span><span class="w"> </span><span class="c1">// Método de IIdentificable</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="p">}</span>
 </span></code></pre></div>
 <em>Nota: Solo se puede especificar como máximo UNA clase, y debe ir primero, seguida de cualquier número de interfaces.</em><p></p>
 
