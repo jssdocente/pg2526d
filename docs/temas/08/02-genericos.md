@@ -93,13 +93,14 @@ La letra `T` es un **parámetro de tipo** (type parameter). Es como una variable
 **🧠 Analogía:** El Molde de Galletas
 
 Imagina que tienes un molde de galletas en forma de estrella:
+
 - Si usas masa de chocolate → Obtienes galletas de chocolate con forma de estrella
 - Si usas masa de vainilla → Obtienes galletas de vainilla con forma de estrella
 - Si usas masa de avena → Obtienes galletas de avena con forma de estrella
 
 El molde es como la clase genérica `Caja<T>`. La masa es el tipo que le pasas (`int`, `string`, `Persona`). El resultado es una caja específica para ese tipo.
 
-> 💡 **Tip del Examinador**: En examen, siempre preguntan qué es `T`. Respuesta: "Es un parámetro de tipo genérico que representa el tipo con el que trabajará la clase o método. Es una especie de 'placeholder' que se sustituye por un tipo concreto al usar la clase."
+> 💡 **Tip para el Alumno**: ¿Qué es `T`?. Respuesta: "Es un parámetro de tipo genérico que representa el tipo con el que trabajará la clase o método. Es una especie de 'placeholder' que se sustituye por un tipo concreto al usar la clase."
 
 ### 2.1.2. Ventajas: reutilización, type-safety, rendimiento
 
@@ -260,20 +261,34 @@ Por ejemplo, aunque `String` hereda de `Object`, una `List<String>` **no** es un
 ### 2.4.2. Covarianza (`? extends T`)
 
 !!! info "Definición de Covarianza (Lectura)"
-    La covarianza permite que un genérico acepte **cualquier tipo que herede de T**. Se expresa con el comodín `? extends T` y se utiliza para **PRODUCIR** o leer datos de la estructura. 
-    Equivale a la palabra clave `out` en C#.
+    La covarianza permite que un genérico acepte **cualquier tipo que herede de T**. Se expresa con el comodín `? extends T` y se utiliza para **PRODUCIR** o leer datos de la estructura.
 
-!!! example "Ejemplo de Covarianza"
-    Al usar `? extends Animal`, podemos aceptar una lista de `Animal` o de cualquier clase que herede de ella (como `Perro` o `Gato`).
+!!! example "Ejemplo: ¿Por qué NO permite añadir elementos?"
+    Imagina que tenemos la siguiente jerarquía: `Animal` <- `Perro` y `Animal` <- `Gato`.
+    
     ```java
-    public void procesarAnimales(List<? extends Animal> animales) {
-        // ✅ OK: Podemos leer porque estamos seguros de que, sea cual sea el 
-        // tipo de la lista original, todos sus elementos serán al menos "Animal".
-        Animal a = animales.get(0); 
-        
-        // ❌ ERROR: El compilador no sabe de qué tipo es exactamente la lista. 
-        // Podría ser una List<Gato>, ¡no podemos meterle un Perro!
-        // animales.add(new Perro()); 
+    List<Perro> misPerros = new ArrayList<>();
+    List<? extends Animal> listaAnimales = misPerros; // ✅ Válido por covarianza
+    
+    // ❌ ERROR DE COMPILACIÓN:
+    // listaAnimales.add(new Gato()); 
+    ```
+    
+    **El Razonamiento:** Si el compilador permitiera la línea anterior, ¡estaríamos metiendo un `Gato` en una lista que originalmente era de `Perro`! Para evitar este desastre de tipos, Java prohíbe añadir elementos (excepto `null`) a colecciones con `? extends`.
+    
+    **Lo que SÍ podemos hacer:** Leer.
+    ```java
+    // ✅ OK: Sabemos que lo que salga será, como mínimo, un Animal.
+    Animal a = listaAnimales.get(0); 
+    ```
+
+!!! example "¿Cuándo usar Covarianza?"
+    Úsala cuando tu método necesite recorrer una colección para **consultar** sus datos, independientemente de si le pasan una lista de subtipos específicos.
+    ```java
+    public void hacerRuidoA(List<? extends Animal> animales) {
+        for (Animal a : animales) {
+            a.hacerSonido(); // Solo leemos, no modificamos la lista
+        }
     }
     ```
 
@@ -281,19 +296,30 @@ Por ejemplo, aunque `String` hereda de `Object`, una `List<String>` **no** es un
 
 !!! info "Definición de Contravarianza (Escritura)"
     La contravarianza permite que un genérico acepte **el tipo T o cualquiera de sus clases padre o superclases**. Se expresa con el comodín `? super T` y se utiliza para **CONSUMIR** o escribir datos en la estructura.
-    Equivale a la palabra clave `in` en C#.
 
-!!! example "Ejemplo de Contravarianza"
-    Al usar `? super Perro`, podemos aceptar una lista de `Perro` o de cualquier de sus superclases (`Animal`, `Object`).
+!!! example "Ejemplo: ¿Por qué SÍ permite añadir pero NO leer (como T)?"
+    Siguiendo con `Animal` <- `Perro`.
+    
     ```java
-    public void agregarPerros(List<? super Perro> lista) {
-        // ✅ OK: Podemos guardar Perros porque la lista destino tiene garantizado
-        // poder almacenar Perros (ya que será List<Perro>, List<Animal> o List<Object>).
-        lista.add(new Perro()); 
-        
-        // ❌ ERROR: Al leer, el compilador solo nos puede garantizar que obtendremos
-        // un Object, ya que no sabemos de qué clase superior es la lista en realidad.
-        // Perro p = lista.get(0); // Requiere un casting explícito
+    // Esta lista puede ser de Perro, de Animal o de Object
+    List<? super Perro> destino = new ArrayList<Animal>(); 
+    
+    // ✅ OK: Es seguro añadir un Perro. 
+    // Si la lista es de Animales, un Perro es un Animal.
+    // Si la lista es de Object, un Perro es un Object.
+    destino.add(new Perro()); 
+    
+    // ❌ ERROR DE COMPILACIÓN:
+    // Perro p = destino.get(0); 
+    ```
+    
+    **El Razonamiento:** Como `destino` podría ser una `List<Object>`, el compilador no puede garantizarte que lo que saques sea un `Perro` (podría haber guardado un `String` antes). Por eso, al leer de un `? super T`, solo obtienes un `Object`.
+
+!!! example "¿Cuándo usar Contravarianza?"
+    Úsala cuando tu método necesite **insertar** elementos en una colección que le pasan como parámetro.
+    ```java
+    public void salvarPerro(List<? super Perro> protectora, Perro p) {
+        protectora.add(p); // Estamos "consumiendo" el perro y metiéndolo en la lista
     }
     ```
 
