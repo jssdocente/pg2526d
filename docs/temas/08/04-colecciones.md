@@ -240,86 +240,193 @@ diferencia.removeAll(conjuntoB); // {1, 2}
 
 ## 5.5. Colas y Pilas (`Queue` y `Deque`)
 
-En Java moderno, se recomienda usar **ArrayDeque** tanto para colas como para pilas por su alto rendimiento.
+En Java, aunque existen interfaces específicas, la implementación más eficiente para ambas estructuras suele ser **ArrayDeque**. También se puede usar `LinkedList`, ya que implementa tanto `List` como `Deque`.
 
-### 5.5.1. Cola (Queue - FIFO)
+### 5.5.1. Cola (Queue - FIFO: First In, First Out)
 
-```java
-Queue<String> cola = new LinkedList<>(); // También puede ser ArrayDeque
+Una **Cola** funciona como una fila de supermercado: el primero en llegar es el primero en ser atendido. Se inserta por un extremo (final) y se extrae por el otro (frente).
 
-// add / offer: agregar al final
-cola.add("Primer cliente");
-cola.offer("Segundo cliente");
-
-// peek: ver el primero sin quitarlo
-String primero = cola.peek();
-
-// poll / remove: extraer y quitar el primero
-String atendido = cola.poll();
+```mermaid
+graph LR
+    subgraph Queue ["Cola (FIFO)"]
+    direction LR
+    E[Entrada] -- add / addLast --> C[Elemento 3]
+    C --> B[Elemento 2]
+    B --> A[Elemento 1]
+    A -- poll / removeFirst --> S[Salida]
+    end
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style S fill:#dfd,stroke:#333
+    style E fill:#fdd,stroke:#333
 ```
 
-### 5.5.2. Pila (Deque como Stack - LIFO)
+**Métodos principales:**
 
-```java
-Deque<String> pila = new ArrayDeque<>();
+- `add(e)` / `addLast(e)`: Añade un elemento al final de la cola.
+- `poll()` / `removeFirst()`: Recupera y elimina el primer elemento. Devuelve `null` si está vacía.
+- `peek()` / `getFirst()`: Recupera el primer elemento sin eliminarlo.
 
-// push: agregar arriba
-pila.push("Plato 1");
-pila.push("Plato 2");
+!!! example "Ejemplo de uso: Fila de Impresión"
+    Imagina una impresora que recibe documentos de varios usuarios. Los documentos deben imprimirse en el orden en que llegaron.
+    ```java
+    Queue<String> filaImpresion = new ArrayDeque<>();
 
-// peek: ver el de arriba
-String arriba = pila.peek();
+    // Llegan documentos
+    filaImpresion.add("Examen_Final.pdf");
+    filaImpresion.add("Lista_Clase.docx");
+    filaImpresion.addLast("Horario.pdf");
 
-// pop: quitar el de arriba
-String quitado = pila.pop();
+    // Procesamos la cola
+    while (!filaImpresion.isEmpty()) {
+        System.out.println("Imprimiendo: " + filaImpresion.poll());
+    }
+    ```
+
+### 5.5.2. Pila (Stack - LIFO: Last In, First Out)
+
+Una **Pila** funciona como una pila de platos: el último que pones encima es el primero que quitas. Solo se tiene acceso al elemento superior (cima).
+
+```mermaid
+graph TD
+    subgraph Stack ["Pila (LIFO)"]
+    direction BT
+    A[Elemento 1] --- B[Elemento 2]
+    B --- C["Elemento 3 (Cima)"]
+    C -- "push (addFirst) / pop (removeFirst)" --- IO[Entrada / Salida]
+    end
+    
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style IO fill:#dfd,stroke:#333
 ```
+
+**Métodos principales:**
+
+- `push(e)` / `addFirst(e)`: Añade un elemento en la parte superior.
+- `pop()` / `removeFirst()`: Elimina y devuelve el elemento superior.
+- `peek()` / `getFirst()`: Devuelve el elemento superior sin eliminarlo.
+
+!!! example "Ejemplo de uso: Historial del Navegador"
+    Cuando navegas por internet, cada nueva página se añade al historial. Al pulsar "Atrás", vuelves a la última página visitada (la cima de la pila).
+    ```java
+    Deque<String> historial = new ArrayDeque<>();
+
+    // Visitamos páginas
+    historial.push("google.com");
+    historial.push("github.com");
+    historial.push("stackoverflow.com");
+
+    // El usuario pulsa el botón "Atrás"
+    String ultimaPagina = historial.pop(); // Devuelve "stackoverflow.com"
+    System.out.println("Volviendo de: " + ultimaPagina);
+    System.out.println("Ahora estás en: " + historial.peek()); // Estás en "github.com"
+    ```
 
 ---
 
-## 5.6. LinkedList (Lista Enlazada)
+## 5.6. LinkedList vs ArrayList
 
-Ideal cuando hay muchas inserciones o eliminaciones al principio o en medio de la lista.
+Aunque ambas implementan la interfaz `List`, su funcionamiento interno es radicalmente distinto, lo que afecta a su rendimiento según el uso.
+
+### 5.6.1. Diferencias Clave
+
+| Característica | ArrayList | LinkedList |
+| :--- | :--- | :--- |
+| **Estructura** | Basada en un Array dinámico. | Basada en Nodos doblemente enlazados. |
+| **Acceso Aleatorio** | Muy rápido: `get(index)` es **O(1)**. | Lento: debe recorrer la lista hasta el índice **O(n)**. |
+| **Inserción/Borrado** | Lento: debe desplazar el resto de elementos. | Muy rápido en los extremos **O(1)**. |
+| **Memoria** | Menor consumo (solo almacena datos). | Mayor consumo (almacena dato + punteros). |
+
+### 5.6.2. ¿Cuándo usar cada una?
+
+- Usa **`ArrayList`** por defecto. Es el más eficiente para lectura y para añadir elementos al final (que es lo más común).
+- Usa **`LinkedList`** solo si tu aplicación realiza constantemente inserciones y eliminaciones en el **inicio** o en el **medio** de la lista, o si la usas específicamente como una **Cola** o **Pila**.
 
 ```java
-LinkedList<String> listaEnlazada = new LinkedList<>();
-
-listaEnlazada.addFirst("Inicio");
-listaEnlazada.addLast("Fin");
-
-// Uso de Iteradores para recorrer y modificar de forma segura
-Iterator<String> it = listaEnlazada.iterator();
-while (it.hasNext()) {
-    String valor = it.next();
-    if (valor.equals("Borrar")) {
-        it.remove(); // Elimina el elemento actual de forma segura
-    }
-}
+// Ejemplo de eficiencia en inserción de LinkedList
+LinkedList<String> lista = new LinkedList<>();
+lista.addFirst("Cabeza"); // Operación O(1)
+lista.addLast("Cola");   // Operación O(1)
 ```
 
 ---
 
 ## 5.7. Colecciones Ordenadas (`TreeMap` y `TreeSet`)
 
-Estas colecciones mantienen los elementos ordenados automáticamente.
+A diferencia de `HashMap` y `HashSet`, que no garantizan ningún orden, estas colecciones mantienen sus elementos ordenados de forma automática siguiendo una estructura de **Árbol Roji-Negro** (un tipo de árbol binario de búsqueda auto-equilibrado).
 
-```java
-// TreeMap: Ordenado por clave
-Map<String, String> capitales = new TreeMap<>();
-capitales.put("España", "Madrid");
-capitales.put("Alemania", "Berlín");
-// Al recorrer, saldrán por orden alfabético: Alemania, España...
+### 5.7.1. El mecanismo de ordenación
 
-// TreeSet: Ordenado por valor
-Set<Integer> ranking = new TreeSet<>();
-ranking.add(100);
-ranking.add(50);
-ranking.add(150);
-// Al recorrer: 50, 100, 150
-```
+Para que estas estructuras funcionen, los elementos (o las claves en el mapa) deben ser comparables entre sí. Existen dos formas de definir este orden:
+
+1.  **Orden Natural (`Comparable<T>`)**: El objeto guardado implementa la interfaz `Comparable` y define el método `compareTo`. Es el que usan por defecto tipos como `String`, `Integer` o `LocalDate`.
+2.  **Orden Personalizado (`Comparator<T>`)**: Se le proporciona un objeto `Comparator` al constructor de la colección para definir una regla de ordenación distinta (por ejemplo, ordenar cadenas por su longitud en lugar de alfabéticamente).
+
+### 5.7.2. TreeSet (Conjunto Ordenado)
+
+Es ideal cuando necesitas un conjunto de elementos únicos que siempre estén ordenados y quieres realizar búsquedas de rangos.
+
+!!! example "Ejemplo: Gestión de una Agenda alfabética"
+    ```java
+    Set<String> alumnos = new TreeSet<>();
+    alumnos.add("Zaira");
+    alumnos.add("Bernardo");
+    alumnos.add("Álvaro");
+    alumnos.add("Bernardo"); // Duplicado, se ignora
+
+    // Al imprimir, el orden será: Álvaro, Bernardo, Zaira
+    System.out.println("Lista de alumnos: " + alumnos);
+    ```
+
+### 5.7.3. TreeMap (Mapa Ordenado por Clave)
+
+Mantiene los pares clave-valor ordenados según la **clave**. Es muy útil para generar listados ordenados o diccionarios.
+
+!!! example "Ejemplo: Diccionario de Códigos de Error"
+    ```java
+    Map<Integer, String> errores = new TreeMap<>();
+    errores.put(500, "Internal Server Error");
+    errores.put(404, "Not Found");
+    errores.put(200, "OK");
+    errores.put(403, "Forbidden");
+
+    // Al recorrerlo, saldrán ordenados por el código numérico: 200, 403, 404, 500
+    for (var entry : errores.entrySet()) {
+        System.out.println(entry.getKey() + " -> " + entry.getValue());
+    }
+    ```
+
+!!! tip "Rendimiento O(log n)"
+    Debido a su estructura de árbol, operaciones como `add`, `remove` y `contains` tienen una complejidad logarítmica. Son ligeramente más lentas que las versiones `Hash` (que son O(1)), pero ofrecen el beneficio del orden.
 
 ---
 
 ## 5.8. Resumen y Guía de Selección
+
+### 5.8.1. Diagrama de Decisión: ¿Qué elegir?
+
+```mermaid
+graph TD
+    A[¿Qué quieres almacenar?] --> B{¿Pares<br/>Clave-Valor?}
+    
+    B -- Sí (Map) --> C{¿Necesitas<br/>ordenarlos?}
+    C -- Sí --> C1[TreeMap]
+    C -- No --> C2[HashMap]
+    
+    B -- No --> D{¿Permite<br/>duplicados?}
+    
+    D -- No (Set) --> E{¿Necesitas<br/>ordenarlos?}
+    E -- Sí --> E1[TreeSet]
+    E -- No --> E2[HashSet]
+    
+    D -- Sí (List/Queue) --> F{¿Cómo vas a<br/>acceder?}
+    F -- Por índice --> F1[ArrayList]
+    F -- FIFO (Cola) --> F2[ArrayDeque / LinkedList]
+    F -- LIFO (Pila) --> F3[ArrayDeque]
+    F -- Frecuentes inserciones/borrados<br/>al inicio o centro --> F4[LinkedList]
+```
+
+### 5.8.2. Tabla Comparativa General
 
 | Necesidad | Colección Recomendada | Característica Principal |
 | :--- | :--- | :--- |
@@ -340,4 +447,40 @@ ranking.add(150);
 | **HashMap** | O(1) | O(n) | O(1) |
 | **TreeMap** | O(log n) | O(log n) | O(log n) |
 
-> **📝 Nota del Profesor**: En Java, evita usar las clases antiguas (legacy) como `Vector`, `Stack` (clase) o `Hashtable`. Estas clases están sincronizadas internamente y son más lentas que sus equivalentes modernas (`ArrayList`, `ArrayDeque`, `HashMap`).
+!!! note "Nota del Profesor"
+    En Java, evita usar las clases antiguas (legacy) como `Vector`, `Stack` (clase) o `Hashtable`. Estas clases están sincronizadas internamente y son más lentas que sus equivalentes modernas (`ArrayList`, `ArrayDeque`, `HashMap`).
+
+---
+
+# Anexo: Complejidad Algorítmica (Notación Big O)
+
+La **Notación Big O** es la forma en que los programadores medimos la eficiencia de un algoritmo o una estructura de datos. No medimos segundos (porque eso depende del procesador), sino **cómo aumenta el tiempo de ejecución a medida que crece el número de elementos ($n$)**.
+
+### Principales Niveles de Complejidad
+
+| Notación | Nombre | ¿Qué significa? | Ejemplo en Colecciones |
+| :--- | :--- | :--- | :--- |
+| **O(1)** | **Constante** | El tiempo es siempre el mismo, sea 1 elemento o 1 millón. | `ArrayList.get(i)`, `HashMap.put()` |
+| **O(log n)** | **Logarítmica** | El tiempo crece muy poco aunque los datos crezcan mucho. | `TreeSet.add()`, `TreeMap.get()` |
+| **O(n)** | **Lineal** | El tiempo crece en la misma proporción que los datos. | Recorrer una lista con un `for`, `contains()` en una lista |
+| **O(n²)** | **Cuadrática** | El tiempo aumenta al cuadrado. Muy ineficiente para datos grandes. | Bucles anidados (ej. comparar todos con todos) |
+
+### Comparativa Visual Proporcional
+
+```mermaid
+graph LR
+    subgraph Eficiencia ["Escalabilidad (Tiempo vs Elementos)"]
+    direction LR
+    A["O(1) - Excelente"] --> B["O(log n) - Muy Buena"]
+    B --> C["O(n) - Aceptable"]
+    C --> D["O(n²) - Pobre"]
+    end
+```
+
+### ¿Por qué es vital elegir bien?
+Si tienes 100 elementos, la diferencia entre O(n) y O(n^2) es pequeña. Pero si tienes **1.000.000** de elementos:
+
+- Un algoritmo **O(n)** daría 1.000.000 de pasos (instantáneo).
+- Un algoritmo **O(n²)** daría **1.000.000.000.000** de pasos (podría tardar horas o días).
+
+Por eso, entender la complejidad te permite elegir la colección adecuada (como un `HashMap` en lugar de un `ArrayList` para búsquedas frecuentes) y escribir código que escale correctamente.
