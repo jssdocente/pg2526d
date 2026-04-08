@@ -23,12 +23,12 @@ nav:
     - "Introducción": temas/08/01_index.md
     - "Apuntes": 
       - "Genéricos": temas/08/02-genericos.md
-      - "Ordenación": temas/08/03-ordenacion-comparacion.md
       - "Colecciones": temas/08/04-colecciones.md
+      - "Ordenación": temas/08/03-ordenacion-comparacion.md
       - "Anexo: Programación Funcional": temas/08/99-anexo_programacion-funcional.md
     - "Actividades":
-      - "Actividad 1": temas/08/actividades/01-ejercicios-colecciones.md
-      - "Actividad 2": temas/08/actividades/02-ejercicios-genericos.md
+      - "Act-1: Colecciones": temas/08/actividades/01-ejercicios-colecciones.md
+      - "Act-2: Genéricos": temas/08/actividades/02-ejercicios-genericos.md
 
   - "09 - Ficheros": temas/09/index.md
   - "10 - Interfaces gráficas": temas/10/index.md
@@ -118,7 +118,7 @@ extra_css:
 
 plugins:
   - search
-  - macros
+  # - macros
   - glightbox:
        touchNavigation: true
        loop: false
