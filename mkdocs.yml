@@ -29,6 +29,7 @@ nav:
     - "Actividades":
       - "Act-1: Colecciones": temas/08/actividades/01-ejercicios-colecciones.md
       - "Act-2: Genéricos": temas/08/actividades/02-ejercicios-genericos.md
+      - "Act-3: Ordenación": temas/08/actividades/03-ejercicios-collec-sorting.md
 
   - "09 - Ficheros": temas/09/index.md
   - "10 - Interfaces gráficas": temas/10/index.md
