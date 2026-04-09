@@ -1621,10 +1621,12 @@
     ContenedorLogistico ..&gt; Comparable : T extends</code></pre>
 <hr>
 <h2 id="ejercicio-0-la-entidad-paquete">📦 Ejercicio 0: La Entidad <code>Paquete</code><a class="headerlink" href="#ejercicio-0-la-entidad-paquete" title="Permanent link">¶</a></h2>
-<p><strong>Tarea</strong>: Implementa la clase <code>Paquete</code>.
-- <strong>Atributos</strong>: <code>trackingID</code> (String), <code>peso</code> (double), <code>codigoPostal</code> (String), <code>urgencia</code> (int).
-- <strong>Constructor</strong>: Debe inicializar todos los atributos.
-- <strong>Getters</strong>: Para todos los atributos mencionados.</p>
+<p><strong>Tarea</strong>: Implementa la clase <code>Paquete</code>.</p>
+<ul>
+<li><strong>Atributos</strong>: <code>trackingID</code> (String), <code>peso</code> (double), <code>codigoPostal</code> (String), <code>urgencia</code> (int).</li>
+<li><strong>Constructor</strong>: Debe inicializar todos los atributos.</li>
+<li><strong>Getters</strong>: Para todos los atributos mencionados.</li>
+</ul>
 <hr>
 <h2 id="ejercicio-1-la-cinta-de-carga-fifo-queue">🚛 Ejercicio 1: La Cinta de Carga (FIFO - Queue)<a class="headerlink" href="#ejercicio-1-la-cinta-de-carga-fifo-queue" title="Permanent link">¶</a></h2>
 <p><strong>Escenario</strong>: Los paquetes llegan al muelle de salida y se colocan en una cinta transportadora. El primero en llegar a la cinta debe ser el primero en entrar al camión.</p>
@@ -1632,10 +1634,14 @@
 <summary>Concepto: FIFO (First-In, First-Out)</summary>
 <p>Es como una fila de espera. Usaremos la interfaz <code>Queue</code> y la implementación <code>ArrayDeque</code> o <code>LinkedList</code>.</p>
 </details>
-<p><strong>Tarea</strong>: Implementa la clase <code>MuelleCarga</code>.
-- <strong>Método</strong> <code>void recibirPaquete(Paquete p)</code>: Añade el paquete a la cola.
-- <strong>Método</strong> <code>Paquete cargarCamion()</code>: Extrae el siguiente paquete de la cinta.
-    - <strong>Retorno</strong>: El objeto <code>Paquete</code> extraído o <code>null</code> si la cinta está vacía.</p>
+<p><strong>Tarea</strong>: Implementa la clase <code>MuelleCarga</code>.</p>
+<ul>
+<li><strong>Método</strong> <code>void recibirPaquete(Paquete p)</code>: Añade el paquete a la cola.</li>
+<li><strong>Método</strong> <code>Paquete cargarCamion()</code>: Extrae el siguiente paquete de la cinta.<ul>
+<li><strong>Retorno</strong>: El objeto <code>Paquete</code> extraído o <code>null</code> si la cinta está vacía.</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h2 id="ejercicio-2-el-almacen-de-devoluciones-lifo-stack">🔄 Ejercicio 2: El Almacén de Devoluciones (LIFO - Stack)<a class="headerlink" href="#ejercicio-2-el-almacen-de-devoluciones-lifo-stack" title="Permanent link">¶</a></h2>
 <p><strong>Escenario</strong>: Las devoluciones se van apilando en una mesa. El operario siempre coge el que está <strong>arriba de la pila</strong>.</p>
@@ -1643,42 +1649,60 @@
 <summary>Concepto: LIFO (Last-In, First-Out)</summary>
 <p>Es como una pila de platos. Usaremos la interfaz <code>Deque</code> (Double Ended Queue).</p>
 </details>
-<p><strong>Tarea</strong>: Implementa la clase <code>MesaDevoluciones</code>.
-- <strong>Método</strong> <code>void apilarPaquete(Paquete p)</code>: El paquete llega y se pone encima de los demás.
-- <strong>Método</strong> <code>Paquete inspeccionar()</code>: Extrae el paquete que está en la cima de la pila.
-    - <strong>Retorno</strong>: El objeto <code>Paquete</code> de la cima o <code>null</code> si no hay nada.</p>
+<p><strong>Tarea</strong>: Implementa la clase <code>MesaDevoluciones</code>.</p>
+<ul>
+<li><strong>Método</strong> <code>void apilarPaquete(Paquete p)</code>: El paquete llega y se pone encima de los demás.</li>
+<li><strong>Método</strong> <code>Paquete inspeccionar()</code>: Extrae el paquete que está en la cima de la pila.<ul>
+<li><strong>Retorno</strong>: El objeto <code>Paquete</code> de la cima o <code>null</code> si no hay nada.</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h2 id="ejercicio-3-orden-natural-de-carga-comparable">⚖️ Ejercicio 3: Orden Natural de Carga (Comparable)<a class="headerlink" href="#ejercicio-3-orden-natural-de-carga-comparable" title="Permanent link">¶</a></h2>
 <p><strong>Escenario</strong>: Queremos que, por defecto, los paquetes se ordenen por su <strong>peso</strong> (menor a mayor).</p>
-<p><strong>Tarea</strong>: Haz que <code>Paquete</code> implemente <code>Comparable&lt;Paquete&gt;</code>. Luego, en <code>Almacen</code>, implementa:
-- <strong>Método</strong> <code>List&lt;Paquete&gt; ordenarPorPeso(List&lt;Paquete&gt; lista)</code>: Ordena la lista recibida por peso.
-    - <strong>Retorno</strong>: La lista ya ordenada.</p>
+<p><strong>Tarea</strong>: Haz que <code>Paquete</code> implemente <code>Comparable&lt;Paquete&gt;</code>. Luego, en <code>Almacen</code>, implementa:</p>
+<ul>
+<li><strong>Método</strong> <code>List&lt;Paquete&gt; ordenarPorPeso(List&lt;Paquete&gt; lista)</code>: Ordena la lista recibida por peso.<ul>
+<li><strong>Retorno</strong>: La lista ya ordenada.</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h2 id="ejercicio-4-filtros-especiales-comparator">🚨 Ejercicio 4: Filtros Especiales (Comparator)<a class="headerlink" href="#ejercicio-4-filtros-especiales-comparator" title="Permanent link">¶</a></h2>
 <p><strong>Escenario</strong>: El jefe quiere dos listados nuevos: por <strong>Urgencia</strong> (descendente) y por <strong>Código Postal</strong> (ascendente).</p>
-<p><strong>Tarea</strong>: Crea las clases <code>ComparadorUrgencia</code> y <code>ComparadorCP</code>.
-- <strong>Método</strong> <code>int compare(Paquete p1, Paquete p2)</code> en cada clase.</p>
+<p><strong>Tarea</strong>: Crea las clases <code>ComparadorUrgencia</code> y <code>ComparadorCP</code>.</p>
+<ul>
+<li><strong>Método</strong> <code>int compare(Paquete p1, Paquete p2)</code> en cada clase.</li>
+</ul>
 <hr>
 <h2 id="ejercicio-5-reparto-por-zonas-treemap">🗺️ Ejercicio 5: Reparto por Zonas (TreeMap)<a class="headerlink" href="#ejercicio-5-reparto-por-zonas-treemap" title="Permanent link">¶</a></h2>
 <p><strong>Escenario</strong>: Queremos un mapa donde la clave sea el <strong>Código Postal</strong> y el valor sea el <strong>Paquete</strong>. Las zonas deben estar ordenadas numéricamente de forma automática.</p>
-<p><strong>Tarea</strong>: Implementa la clase <code>HojaReparto</code>.
-- <strong>Método</strong> <code>void registrarEnvio(Paquete p)</code>: Guarda el paquete asociado a su Código Postal.
-- <strong>Método</strong> <code>int totalZonas()</code>: Indica cuántos códigos postales diferentes hay registrados.</p>
+<p><strong>Tarea</strong>: Implementa la clase <code>HojaReparto</code>.</p>
+<ul>
+<li><strong>Método</strong> <code>void registrarEnvio(Paquete p)</code>: Guarda el paquete asociado a su Código Postal.</li>
+<li><strong>Método</strong> <code>int totalZonas()</code>: Indica cuántos códigos postales diferentes hay registrados.</li>
+</ul>
 <hr>
 <h2 id="ejercicio-6-el-almacen-universal-genericos">🏗️ Ejercicio 6: El Almacén Universal (Genéricos)<a class="headerlink" href="#ejercicio-6-el-almacen-universal-genericos" title="Permanent link">¶</a></h2>
 <p><strong>Escenario</strong>: Amazon-Z quiere reutilizar su tecnología de organización para otros departamentos. Necesitan un contenedor genérico que funcione con cualquier objeto que se pueda comparar.</p>
-<p><strong>Tarea 1</strong>: Implementa la clase <code>Mantenimiento</code>.
-- <strong>Atributos</strong>: <code>id</code> (String), <code>coste</code> (double), <code>criticidad</code> (int de 1 a 10).
-- <strong>Orden Natural</strong>: Debe implementar <code>Comparable</code> basándose en la <strong>criticidad</strong> (de mayor a menor).</p>
-<p><strong>Tarea 2</strong>: Crea la clase genérica <code>ContenedorLogistico&lt;T extends Comparable&lt;T&gt;&gt;</code>.
-- <strong>Atributo</strong>: Una <code>List&lt;T&gt;</code> de elementos.
-- <strong>Método</strong> <code>void añadir(T elemento)</code>: Añade un elemento al contenedor.
-- <strong>Método</strong> <code>T obtenerMasImportante()</code>: Devuelve el elemento máximo según el orden natural de T.
-    - <strong>Retorno</strong>: El objeto <code>T</code> más importante.
-- <strong>Método</strong> <code>List&lt;T&gt; obtenerOrdenados()</code>: Devuelve la lista ordenada.
-    - <strong>Retorno</strong>: La lista de tipo <code>T</code>.</p>
-<div class="language-text highlight"><pre><span></span><code>```
-</code></pre></div>
+<p><strong>Tarea 1</strong>: Implementa la clase <code>Mantenimiento</code>.</p>
+<ul>
+<li><strong>Atributos</strong>: <code>id</code> (String), <code>coste</code> (double), <code>criticidad</code> (int de 1 a 10).</li>
+<li><strong>Orden Natural</strong>: Debe implementar <code>Comparable</code> basándose en la <strong>criticidad</strong> (de mayor a menor).</li>
+</ul>
+<p><strong>Tarea 2</strong>: Crea la clase genérica <code>ContenedorLogistico&lt;T extends Comparable&lt;T&gt;&gt;</code>.</p>
+<ul>
+<li><strong>Atributo</strong>: Una <code>List&lt;T&gt;</code> de elementos.</li>
+<li><strong>Método</strong> <code>void añadir(T elemento)</code>: Añade un elemento al contenedor.</li>
+<li><strong>Método</strong> <code>T obtenerMasImportante()</code>: Devuelve el elemento máximo según el orden natural de T.<ul>
+<li><strong>Retorno</strong>: El objeto <code>T</code> más importante.</li>
+</ul>
+</li>
+<li><strong>Método</strong> <code>List&lt;T&gt; obtenerOrdenados()</code>: Devuelve la lista ordenada.<ul>
+<li><strong>Retorno</strong>: La lista de tipo <code>T</code>.</li>
+</ul>
+</li>
+</ul>
 
 
 
