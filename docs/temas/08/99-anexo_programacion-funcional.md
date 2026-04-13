@@ -1,41 +1,51 @@
 # 3. Programación Funcional en Java
 
-La programación funcional es un paradigma que trata las funciones como **ciudadanos de primera clase**. En Java, este enfoque se introdujo con fuerza en Java 8 y ha seguido evolucionando, permitiéndonos escribir código más declarativo, expresivo y menos propenso a errores.
+Históricamente, hemos aprendido a programar de forma **imperativa**. Sin embargo, el mundo del software ha evolucionado hacia un modelo más **declarativo** (funcional). Entender este cambio es clave para cualquier desarrollador moderno.
 
-## 3.1. Conceptos Fundamentales
+## 3.1. De lo Imperativo a lo Declarativo
 
-En el paradigma funcional, las funciones pueden:
-- **Asignarse a variables** (usando Interfaces Funcionales).
-- **Pasarse como argumentos** (Inyección de comportamiento).
-- **Devolverse como resultado** (Fábricas de lógica).
+Para entender la diferencia, imagina que estás en un restaurante:
+
+*   **Estilo Imperativo (El "Cómo"):** Entras en la cocina y le das instrucciones detalladas al chef: *"Coge un tomate, lávalo, trocéalo en dados de 1cm, ponlo en un bol, añade 5g de sal..."*. Tú controlas cada detalle del proceso y el estado de los ingredientes.
+*   **Estilo Declarativo (El "Qué"):** Te sientas en la mesa y pides: *"Quiero una ensalada de tomate"*. No te importa cómo se prepare internamente, solo defines el resultado esperado.
+
+### 3.1.1. ¿Por qué evolucionar?
+
+El código imperativo tiende a llenarse de bucles `for`, variables temporales que cambian de valor (estado mutable) y detalles lógicos que ocultan la verdadera intención del programa. La **Programación Funcional** nace para:
+
+1.  **Reducir Errores:** Al evitar cambiar el estado de las variables (Inmutabilidad).
+2.  **Mejorar la Legibilidad:** El código se lee como una serie de transformaciones, no como una lista de tareas.
+3.  **Facilitar el Paralelismo:** Es mucho más fácil ejecutar código en varios procesadores si los datos no cambian mientras se procesan.
+
+### 3.1.2. Ciudadanos de Primera Clase
+
+La base de este cambio en Java es que las funciones ahora son **ciudadanos de primera clase**. Esto significa que una función puede:
+
+- **Asignarse a variables.**
+- **Pasarse como argumentos** a otros métodos (Inyección de comportamiento).
+- **Devolverse como resultado** de otro método.
 
 ```mermaid
 graph TD
-    A[Programacion Funcional Java] --> B[Interfaces Funcionales]
-    A --> C[Lambdas]
+    A[Programacion Funcional Java] --> B[Pipeline y Ejemplos]
+    A --> C[Mecanismo: Interfaces]
     A --> D[Stream API]
-    A --> E[Inmutabilidad]
+    A --> E[Otros conceptos]
     
-    B --> B1[Predicate&lt;T&gt;]
-    B --> B2[Function&lt;T,R&gt;]
-    B --> B3[Consumer&lt;T&gt;]
-    B --> B4[Supplier&lt;T&gt;]
-    
-    C --> C1[Sintaxis compacta]
-    C --> C2[Closures]
-    
-    D --> D1[Intermediate Ops<br/>filter, map]
-    D --> D2[Terminal Ops<br/>collect, reduce]
+    B --> B1[Pensar en QUÉ]
+    C --> C1[Lambdas]
+    C --> C2[Method Refs]
+    D --> D1[Filter/Map/Reduce]
 ```
 
-### 3.1.1. Inmutabilidad y Records
+### 3.1.3. Inmutabilidad y Records
 
-Java moderno fomenta la inmutabilidad mediante los **Records** (introducidos en Java 16).
+Java moderno fomenta la inmutabilidad mediante los **Records** (introducidos en Java 16). En funcional, preferimos crear "objetos nuevos" en lugar de modificar los existentes.
 
 ```java
 // Un Record es inmutable por defecto: campos final, sin setters
 public record Persona(String nombre, int edad) {
-    // Podemos crear métodos que devuelven nuevas instancias
+    // En lugar de cambiar 'edad', devolvemos una NUEVA Persona
     public Persona cumplirAnio() {
         return new Persona(this.nombre, this.edad + 1);
     }
@@ -44,78 +54,215 @@ public record Persona(String nombre, int edad) {
 
 ---
 
-## 3.2. Interfaces Funcionales
+## 3.2. ¿Cómo pensamos en funcional? (Mentalidad Pipeline)
 
-Para que Java pueda tratar una función como un objeto, utiliza **Interfaces Funcionales** (aquellas que tienen exactamente **un** método abstracto).
+Antes de ver la sintaxis técnica, lo más importante es cambiar el "chip". En programación funcional, pensamos en **Pipelines** (tuberías de datos).
 
-### 3.2.1. Las 4 interfaces clave en `java.util.function`
+!!! example "Ejemplo 1: Filtrar y transformar estudiantes"
+    **Reto:** Obtener los nombres en MAYÚSCULAS de los alumnos aprobados (nota >= 5), ordenados alfabéticamente.
 
-| Interfaz | Firma | Propósito | Ejemplo Lambda |
-| :--- | :--- | :--- | :--- |
-| **`Predicate<T>`** | `T -> boolean` | Filtrar / Validar | `n -> n > 10` |
-| **`Function<T, R>`**| `T -> R` | Transformar datos | `s -> s.length()` |
-| **`Consumer<T>`** | `T -> void` | Consumir / Acción | `s -> System.out.println(s)` |
-| **`Supplier<T>`** | `() -> T` | Proveer / Generar | `() -> Math.random()` |
+    === "Antes (Imperativo)"
+        ```java
+        // 1. Necesitamos una lista auxiliar para ir guardando resultados
+        List<String> resultado = new ArrayList<>();
+        
+        // 2. Recorremos manualmente toda la colección
+        for (Estudiante e : estudiantes) {
+            // 3. Comprobamos la condición (Filtro)
+            if (e.getNota() >= 5) {
+                // 4. Transformamos el dato y lo añadimos a la lista
+                resultado.add(e.getNombre().toUpperCase());
+            }
+        }
+        
+        // 5. Ordenamos la lista final (Estado mutable)
+        Collections.sort(resultado);
+        ```
 
-### 3.2.2. Pasar funciones como parámetros
+    === "Ahora (Declarativo / Pipeline)"
+        ```java
+        List<String> resultado = estudiantes.stream()
+            .filter(e -> e.getNota() >= 5)      // 1. Qué quiero filtrar
+            .map(e -> e.getNombre().toUpperCase()) // 2. Qué quiero transformar
+            .sorted()                          // 3. Qué quiero ordenar
+            .toList();                         // 4. Qué quiero obtener
+        ```
 
-Esta es la base de la **Inyección de Comportamiento**.
+### 3.2.1. Anatomía Visual de un Pipeline
+
+Es fundamental entender que un pipeline **no modifica la lista original**. Imaginalo como una cinta transportadora donde en cada estación ocurre algo:
+
+1.  **`filter`**: Algunos elementos se caen de la cinta (cambia el **número** de elementos).
+2.  **`map`**: Los elementos que quedan se transforman en otra cosa (puede cambiar el **tipo** del dato).
+3.  **`sorted`**: Se reorganiza el orden de lo que hay en la cinta.
+
+```mermaid
+graph LR
+    subgraph "Fuente"
+    A[Lista Original] --> B{stream}
+    end
+
+    subgraph "Operaciones Intermedias (Transformación)"
+    B --> C["filter (aprobados)"]
+    C -->|Menos elementos| D["map (a Mayúsculas)"]
+    D -->|Mismo número,<br/>distinto TIPO| E["sorted (alfabético)"]
+    end
+
+    subgraph "Operación Terminal (Resultado)"
+    E --> F["toList / collect"]
+    F --> G[Nueva Lista]
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style G fill:#9f9,stroke:#333,stroke-width:2px
+```
+
+!!! tip "Diferencia entre Filter y Map"
+    *   **Filter:** Entran `N` elementos y salen `M` (donde $M \le N$). El tipo de objeto sigue siendo el mismo.
+    *   **Map:** Entran `N` elementos y salen `N` elementos, pero transformados (por ejemplo, pasamos de un objeto `Estudiante` a un simple `String`).
+    **Reto:** Encontrar el primer producto que cueste menos de 10€ o devolver un aviso de "No encontrado".
+
+    === "Antes (Imperativo)"
+        ```java
+        // 1. Variable auxiliar para seguir el estado de la búsqueda
+        Producto barato = null;
+        
+        // 2. Recorremos los productos
+        for (Producto p : productos) {
+            // 3. Si cumple la condición...
+            if (p.getPrecio() < 10) {
+                // 4. Guardamos y cortamos el bucle (Eficiencia manual)
+                barato = p;
+                break;
+            }
+        }
+        
+        // 5. Gestión manual de posibles nulos (Null Check)
+        if (barato != null) {
+            System.out.println(barato.getNombre());
+        } else {
+            System.out.println("No hay productos baratos");
+        }
+        ```
+
+    === "Ahora (Declarativo / Pipeline)"
+        ```java
+        productos.stream()
+            .filter(p -> p.getPrecio() < 10)
+            .findFirst()
+            .map(Producto::getNombre)
+            .ifPresentOrElse(
+                System.out::println,
+                () -> System.out.println("No hay productos baratos")
+            );
+        ```
+
+---
+
+## 3.3. El Mecanismo: Interfaces Funcionales
+
+¿Cómo puede Java tratar una "lógica" como si fuera un objeto? La respuesta son las **Interfaces Funcionales**.
+
+Una interfaz funcional es un **contrato** que tiene exactamente **un método abstracto**.
+
+!!! info "Nota histórica: Las Clases Anónimas"
+    Una **Clase Anónima** en Java es una clase que **no tiene nombre** y que se **declara e instancia en una única expresión**. 
+
+    *   **¿Para qué se usan?** Se emplean cuando necesitamos implementar una interfaz (o extender una clase) para un solo uso puntual, sin necesidad de crear un archivo `.java` dedicado para ello.
+    *   **¿Por qué no usamos `implements`?** En su sintaxis, el nombre que sigue al `new` es el del "padre" (interfaz o clase). Java sobreentiende la relación: si pones un nombre de Interfaz, *estás implementando*; si pones un nombre de Clase, *estás extendiendo*. Por eso no se escriben esas palabras clave.
+    *   **Importancia en Funcional:** Eran la única forma técnica de "pasar comportamiento" como argumento antes de la llegada de las Lambdas (Java 8). Son el puente lógico que conecta la Orientación a Objetos pura con el mundo funcional.
+
+    ```java
+    // 1. FORMA NORMAL: Crear una clase con nombre que implementa la interfaz
+    class MiSaludador implements Saludador {
+        public void saludar(String n) { System.out.println("Hola " + n); }
+    }
+    Saludador s1 = new MiSaludador();
+
+    // 2. CLASE ANÓNIMA: Se crea la implementación y el objeto "al vuelo"
+    Saludador s2 = new Saludador() {
+        @Override
+        public void saludar(String n) { System.out.println("Hola " + n); }
+    };
+    ```
+
+### 3.3.1. La evolución: De Clase Anónima a Lambda
+
+Imagina que queremos que un método salude de diferentes formas:
 
 ```java
-public class Calculadora {
-    // El tercer parámetro es una función que acepta dos Double y devuelve un Double
-    public static double ejecutar(double a, double b, BinaryOperator<Double> operacion) {
-        return operacion.apply(a, b);
+@FunctionalInterface
+interface Saludador {
+    void saludar(String nombre); 
+}
+```
+
+=== "Antes (Clase Anónima)"
+    ```java
+    Saludador formal = new Saludador() {
+        @Override
+        public void saludar(String nombre) {
+            System.out.println("Estimado " + nombre);
+        }
+    };
+    ```
+
+=== "Ahora (Lambda)"
+    ```java
+    Saludador informal = (nombre) -> System.out.println("¡Hola " + nombre + "!");
+    ```
+
+### 3.3.2. El "Kit de herramientas" estándar (`java.util.function`)
+
+| Interfaz | Analogía | Recibe | Devuelve | Uso común |
+| :--- | :--- | :--- | :--- | :--- |
+| **`Predicate<T>`** | El **Filtro** | Un objeto | `boolean` | `filter()` |
+| **`Function<T, R>`**| El **Transformador** | Un objeto | Otro objeto | `map()` |
+| **`Consumer<T>`** | El **Gasto** | Un objeto | `nothing` | `forEach()` |
+| **`Supplier<T>`** | El **Grifo** | Nada | Un objeto | Generar datos |
+
+### 3.3.3. Inyección de Comportamiento
+
+```java
+public class Tienda {
+    // Recibe la lógica como un parámetro (Function)
+    public static double aplicarDescuento(double precio, Function<Double, Double> logica) {
+        return logica.apply(precio);
     }
 
     public static void main(String[] args) {
-        // Pasamos la lógica como si fuera un dato
-        double suma = ejecutar(10, 5, (x, y) -> x + y);
-        double multi = ejecutar(10, 5, (x, y) -> x * y);
+        double p = 100.0;
+        double conIva = aplicarDescuento(p, precio -> precio * 1.21);
+        double oferta = aplicarDescuento(p, precio -> precio - 10);
     }
 }
 ```
 
 ---
 
-## 3.3. Referencias a Métodos (`::`)
+## 3.4. Referencias a Métodos (`::`)
 
-Las referencias a métodos son una sintaxis aún más compacta que las lambdas cuando estas solo llaman a un método existente.
+Es el nivel máximo de síntesis. Si una Lambda solo llama a un método que ya existe, usamos `::`.
 
-| Tipo de Referencia | Sintaxis | Equivalente Lambda |
+| Tipo | Lambda equivalente | Referencia a Método |
 | :--- | :--- | :--- |
-| **Método Estático** | `Integer::sum` | `(a, b) -> Integer.sum(a, b)` |
-| **Instancia Específica** | `objeto::metodo` | `x -> objeto.metodo(x)` |
-| **Instancia Arbitraria** | `String::toUpperCase` | `s -> s.toUpperCase()` |
-| **Constructor** | `ArrayList::new` | `() -> new ArrayList<>()` |
-
-**Ejemplo de uso:**
-
-```java
-List<String> nombres = Arrays.asList("ana", "pedro", "juan");
-
-// Usando Lambda
-nombres.forEach(s -> System.out.println(s));
-
-// Usando Referencia a Método (más limpio)
-nombres.forEach(System.out::println);
-```
+| **Estático** | `(n1, n2) -> Math.max(n1, n2)` | `Math::max` |
+| **Objeto específico** | `s -> System.out.println(s)` | `System.out::println` |
+| **Objeto arbitrario** | `s -> s.toLowerCase()` | `String::toLowerCase` |
+| **Constructor** | `() -> new ArrayList<>()` | `ArrayList::new` |
 
 ---
 
-## 3.4. El Stream API
+## 3.5. El Stream API
 
-Los **Streams** son la joya de la corona de la programación funcional en Java. Permiten procesar colecciones de datos de forma fluida y declarativa.
+Los **Streams** son la implementación real de los Pipelines en Java.
 
-### 3.4.1. El Pipeline de un Stream
-
-Un Stream siempre se compone de tres partes:
-
+### 3.5.1. Partes de un Stream
 1. **Source (Fuente)**: `lista.stream()`
-2. **Intermediate Operations (Transformación)**: Son "lazy", no se ejecutan hasta el final.
-3. **Terminal Operation (Resultado)**: Ejecuta todo el proceso.
+2. **Operaciones Intermedias**: Son "lazy" (no se ejecutan hasta el final). Devuelven un nuevo Stream.
+3. **Operación Terminal**: Cierra el stream y genera el resultado.
 
-### 3.4.2. Operaciones Principales
+### 3.5.2. Operaciones Comunes
 
 ```java
 List<Integer> numeros = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -130,37 +277,25 @@ int resultado = numeros.stream()
 System.out.println(resultado); // (2+4+6) = 12
 ```
 
-### 3.4.3. Recolección de resultados (`collect`)
-
-```java
-List<String> filtrados = nombres.stream()
-    .filter(s -> s.startsWith("A"))
-    .map(String::toUpperCase)
-    .collect(Collectors.toList()); // Convierte el stream de vuelta a una lista
-```
-
 ---
 
-## 3.5. Manejo de Nulos: `Optional<T>`
+## 3.6. Manejo de Nulos: `Optional<T>`
 
-En programación funcional, se evitan los `null` para prevenir el famoso `NullPointerException`. `Optional` es un contenedor que puede o no tener un valor.
+`Optional` es un contenedor que evita el uso de `null`.
 
 ```java
 Optional<String> nombre = buscarEnBaseDeDatos(id);
 
-// Forma funcional de manejar el resultado
 nombre.map(String::toUpperCase)
-      .ifPresent(System.out::println);
-
-// Proporcionar un valor por defecto
-String valor = nombre.orElse("Desconocido");
+      .ifPresentOrElse(
+          System.out::println,
+          () -> System.out.println("No se encontró el nombre")
+      );
 ```
 
 ---
 
-## 3.6. Pattern Matching en Java (v17+)
-
-Java ha introducido expresiones `switch` mucho más potentes similares a la programación funcional.
+## 3.7. Pattern Matching en Java (v17+)
 
 ```java
 public String obtenerDescripcion(Object obj) {
