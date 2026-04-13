@@ -1,4 +1,4 @@
-# 3. Programación Funcional en Java
+# 5. Programación Funcional en Java
 
 Históricamente, hemos aprendido a programar de forma **imperativa**. Sin embargo, el mundo del software ha evolucionado hacia un modelo más **declarativo** (funcional). Entender este cambio es clave para cualquier desarrollador moderno.
 
@@ -238,18 +238,56 @@ public class Tienda {
 }
 ```
 
+### 3.3.4. Resumen: 4 formas de pasar lógica a un método
+
+Para que lo veas todo en perspectiva, aquí tienes las 4 formas que existen en Java para pasar un comportamiento como parámetro a un método que recibe una interfaz funcional.
+
+#### El escenario
+Tenemos una interfaz funcional y un método que la utiliza:
+
+```java
+@FunctionalInterface
+interface Saludador {
+    void mostrarSaludo(String texto);
+}
+
+// Un método que "inyecta" el comportamiento del saludo
+public void decirHola(String nombre, Saludador s) {
+    s.mostrarSaludo(nombre);
+}
+```
+
+#### Las 4 opciones de implementación
+
+| Opción | Ejemplo de Código | Explicación |
+| :--- | :--- | :--- |
+| **1. Clase Externa** | `decirHola("Ana", new MiSaludador());` | Creamos una clase tradicional en un archivo `.java` aparte que implementa la interfaz. |
+| **2. Clase Anónima** | `decirHola("Ana", new Saludador() { ... });` | Definimos la lógica dentro del mismo paréntesis de la llamada. |
+| **3. Lambda** | `decirHola("Ana", n -> System.out.println("Hola " + n));` | Usamos la flecha `->` para definir solo los parámetros y el cuerpo. |
+| **4. Ref. a Método** | `decirHola("Ana", System.out::println);` | El nivel más alto. "Enchufamos" un método que ya existe directamente. |
+
 ---
 
 ## 3.4. Referencias a Métodos (`::`)
 
-Es el nivel máximo de síntesis. Si una Lambda solo llama a un método que ya existe, usamos `::`.
+Es el nivel máximo de síntesis. Si una Lambda solo llama a un método que ya existe, usamos `::`. 
 
-| Tipo | Lambda equivalente | Referencia a Método |
-| :--- | :--- | :--- |
-| **Estático** | `(n1, n2) -> Math.max(n1, n2)` | `Math::max` |
-| **Objeto específico** | `s -> System.out.println(s)` | `System.out::println` |
-| **Objeto arbitrario** | `s -> s.toLowerCase()` | `String::toLowerCase` |
-| **Constructor** | `() -> new ArrayList<>()` | `ArrayList::new` |
+### 3.4.1. ¿Cómo se pasan los parámetros?
+
+Muchos alumnos se preguntan: *"¿Dónde están los parámetros? ¿Cómo sabe Java qué enviarle al método?"*. 
+
+La respuesta es la **Inyección Automática**. Java mira la "firma" (los parámetros) de la interfaz y los conecta directamente con los del método referenciado. Es como un cableado que ya viene hecho:
+
+!!! tip "La analogía del puzzle"
+    Imagina que la Interfaz Funcional es un **molde** con un hueco de una forma (un `String`). La referencia `::` es una **pieza** que tiene exactamente esa misma forma. Como encajan perfectamente, Java sabe que puede pasar el dato de un lado al otro sin que tú tengas que escribirlo.
+
+**Comparativa visual:**
+
+| Tipo | Lambda equivalente | Referencia a Método | Explicación |
+| :--- | :--- | :--- | :--- |
+| **Estático** | `(a, b) -> Math.max(a,b)` | `Math::max` | Java le pasa `a` y `b` a `max`. |
+| **Instancia** | `s -> System.out.println(s)` | `System.out::println`| Java le pasa `s` a `println`. |
+| **Objeto arbitrario** | `s -> s.toUpperCase()` | `String::toUpperCase` | Java llama a `toUpperCase()` **sobre** el objeto `s`. |
 
 ---
 
