@@ -34,7 +34,10 @@ nav:
       - "Act-5: Prog. Funcional": temas/08/actividades/05-ejercicios-funcional.md
       
 
-  - "09 - Ficheros": temas/09/index.md
+  - "09 - Ficheros": 
+      - "Apuntes": temas/09/index.md
+      - "Actividades": temas/09/actividades/Actividades.md
+
   - "10 - Interfaces gráficas": temas/10/index.md
   - "11 - Acceso a BBDD orientadas a objetos": temas/11/index.md
   - "12 - Acceso a BBDD realacionales": temas/12/index.md
