@@ -38,6 +38,9 @@ nav:
       - "Apuntes": temas/09/index.md
       - "Actividades": temas/09/actividades/Actividades.md
 
+  - "3Evaluación":
+    - "Simulacro 1": temas/10_3Eval/simulacro/enunciado.md
+
   - "10 - Interfaces gráficas": temas/10/index.md
   - "11 - Acceso a BBDD orientadas a objetos": temas/11/index.md
   - "12 - Acceso a BBDD realacionales": temas/12/index.md
