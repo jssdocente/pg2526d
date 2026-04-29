@@ -32,11 +32,11 @@ nav:
       - "Act-3: Ordenación": temas/08/actividades/03-ejercicios-collec-sorting.md
       - "Act-4: Prog. Funcional (Solucionados)": temas/08/actividades/04-ejercicios-funcional-solucionados.md
       - "Act-5: Prog. Funcional": temas/08/actividades/05-ejercicios-funcional.md
-      
-
+    - "Actividades Soluciones": temas/08/actividades_solucion/08_actividades_soluciones.md
   - "09 - Ficheros": 
       - "Apuntes": temas/09/index.md
       - "Actividades": temas/09/actividades/Actividades.md
+      - "Actividades Soluciones": temas/09/actividades_solucion/09_actividades_soluciones.md
 
   - "3Evaluación":
     - "Simulacro 1": temas/10_3Eval/simulacro/enunciado.md
